@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    border-top: 10px solid #76C38F;
+    overflow-x: hidden;
+}
+#entrance{
+    background: #290000;
+    width:100vw;
+    height:100vh;
+}
+#content{
+    background: #660000;
+    width:100vw;
+    height:1000px;
+}
