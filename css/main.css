@@ -18,3 +18,39 @@
     width:100vw;
     height:1000px;
 }
+#entrance p{
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top:2.7%;
+    margin-left:5%;
+    letter-spacing: 1px;
+    font-size:3em;
+    display: inline-block;
+    vertical-align: baseline;
+    
+}
+#entrance nav{
+    display: inline-block;
+    margin-left:18.7%;
+    margin-right:5%;
+    width:51vw; 
+}
+#entrance ul{
+    display: inline;
+}
+#entrance nav ul li{
+    list-style-type: none;
+    display: inline;
+    padding-left:3.5%;
+}
+#entrance ul li a{
+    text-decoration: none;
+    color: white;
+    font-size:1.55vw; 
+    font-family: 'Courier New', Courier, monospace;
+    padding: 1% 1.5%;
+}
+a:hover{
+    background: #76C38F;
+    border-radius:0.6em;
+}
