@@ -4,39 +4,43 @@
 }
 body{
     overflow-x: hidden;
+    background: #222222;
 }
 .wrapper{
-    width: 100vw;
+    width: 1200px;
     height: 100vh;
-    border-top: 10px solid #76C38F;
-    overflow-x: hidden;
+    border-top: 6px solid #76C38F;
+    margin:0 auto;
+
 }
+
 #entrance{
-    background: #290000;
-    width:100vw;
-    height:100vh;
+    background-color:rgba(41,0,0,0.7); 
+    background-image: url('../images/candle.jpg');
+    background-size: cover;
+    background-blend-mode: color;
+
 }
+ 
 #po{
-    width:100vw;
+    background: #660000; 
     height:1000px;
-    background: crimson;
 }
 #entrance>p{
     color:white;
     font-family: 'Times New Roman', Times, serif;
     padding-top:2.7%;
-    margin-left:5%;
-    letter-spacing: 1px;
-    font-size:3em;
+    margin-left:9%;
+    font-size:2em;
     display: inline-block;
     vertical-align: baseline;
     
 }
 #entrance nav{
     display: inline-block;
-    margin-left:18.7%;
-    margin-right:5%;
-    width:51vw; 
+    margin-left:10.5%;
+    margin-right:8%;
+    width:44vw; 
 }
 #entrance ul{
     display: inline;
@@ -49,7 +53,7 @@ body{
 #entrance ul li a{
     text-decoration: none;
     color: white;
-    font-size:1.55vw; 
+    font-size:1.3vw; 
     font-family: 'Courier New', Courier, monospace;
     padding: 1% 1.5%;
 }
@@ -58,15 +62,13 @@ body{
     border-radius:0.6em;
 }
 #content{
-    width:90%;
-    margin-left:5%;
-    margin-top: 4%;
-    height: 550px;
+    margin:4% 8% 0 8%;
+    padding-bottom: 7%;
 }
 #entrance #content>a{
     color: #76C38F;
     display: inline;
-    font-size: 2.7em;
+    font-size: 2.5em;
     margin-top:5%;
     text-decoration: none;
 }
@@ -74,20 +76,21 @@ body{
     width:30%;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 8%;
+    margin-left: 4%;
 }
 #text h1{
-    font-size: 3.2em;
+    font-size: 2.7em;
+    letter-spacing: 2px;
     font-weight: normal;
     color: white;
     margin-bottom: 5%;
 }
 #text p{
-    font-size: 1em;
+    font-size: 0.8em;
     font-family: 'Courier New', Courier, monospace;
     color: #979797;
     text-align: justify;
-    margin-bottom: 5.5%;
+    margin-bottom: 5.9%;
 }
 #text button{
     background-color: #76C38F;
@@ -102,11 +105,11 @@ body{
     text-decoration: none;
 }
 #content img{
-    border: 20px solid #6b6b6b;
+    border: 23px solid #290000;
     border-radius: 50%;
-    margin:0 10%;
-    width:470px;
-    height:470px;
+    margin:0 4% 0 12%;
+    width:380px;
+    height:380px;
     vertical-align: middle;
 }
 .SlideShow{
