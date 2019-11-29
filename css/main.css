@@ -85,10 +85,15 @@ body{
     color: white;
     margin-bottom: 5%;
 }
+
+p {
+    color: #979797;
+}
+
 #text p{
     font-size: 0.8em;
     font-family: 'Courier New', Courier, monospace;
-    color: #979797;
+    
     text-align: justify;
     margin-bottom: 5.9%;
 }
@@ -114,4 +119,119 @@ body{
 }
 .SlideShow{
     display:none;
+}
+footer{
+    
+    height:449px;
+    
+}
+
+footer >div{
+    padding: 42px 120px;
+    height: 306px;
+    float:left;
+    background-color: #303030;  
+    border-bottom: 1px solid black;
+    
+    
+}
+.footerDivs{
+    
+    display: inline-block;
+    width:23.1%;
+    margin-left:20px;
+    height: 304px;
+    padding-left:0.1%;
+    float: left;
+}
+
+
+
+#blog { margin-left:0px; }
+
+.greenText {
+    color: #76C38F;
+    padding-top: 15px;
+}
+
+a {
+    color: #76C38F;
+    text-decoration:none;
+}
+
+.divHeader{
+    color: white;
+    padding-bottom:15px;
+}
+
+.smallText {
+    color: #666666;
+    font-size:0.8em;
+    padding-top:5px;
+    padding-bottom:5px;
+    
+}
+
+footer nav ul {
+    padding-top:15px;
+    list-style-type:none;
+}
+
+footer nav ul li{
+    color:#979797;
+    font-size:0.5em;
+    padding-top:7.5px;
+    border-bottom: 1px solid #404040;
+    padding-bottom:7.5px;
+    
+}
+
+footer nav ul li a{
+    color: #76C38F;
+    font-size:2em;
+    text-decoration:none;
+}
+
+.aligner {
+    padding-top:25px;
+}
+
+
+form{
+    padding-top:15px;
+}
+
+footer [name]{
+    margin-bottom:8px;
+    padding: 10px;
+    width: 95%;
+    background-color: #222222;
+    border: none;
+    border-radius:6px;
+    resize:none;
+    
+}
+
+[type=submit]{
+    color:#222222;
+    background-color: #76C38F;
+    font-weight:bold;
+    border:none;
+    border-radius:6px;
+    width: 30%;
+    height:30px;;
+}
+
+[type=submit]:hover{
+    background-color: #505050;
+    color: #76C38F;
+    cursor: pointer;
+}
+
+footer > p{
+    border-top: 1px solid #3A3A3A;
+    padding: 20px 120px;
+    background-color: #2B2B2B;
+    float:left;
+    width: 960px;;
 }
