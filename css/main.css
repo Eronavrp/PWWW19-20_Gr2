@@ -172,27 +172,28 @@ p {
     
 }
 
-.service:hover
+.service:hover,.service:hover h1,.service:hover p
 {
 background-color :#76C38F;
+color:white;
 
 }
 
-.service p:hover
+/* .service p:hover
 {
     color: white;
-}
+} */
 
 a
 {
     text-decoration: none;
 }
 
-.service h1:hover
+/* .service h1:hover
 {
     color: white;
    
-}
+} */
 
 #line
 {
@@ -235,9 +236,7 @@ fieldset legend
 }
 #f1, #f2
 {
-    display: flex;
-    
-    
+    display: flex;   
 }
 #f1
 {
@@ -249,6 +248,9 @@ fieldset legend
     height: 189px;    
     margin-left: 30px;    
     border:6px solid white ;
+
+}
+.feature1:hover,.feature2:hover{
 
 }
 
