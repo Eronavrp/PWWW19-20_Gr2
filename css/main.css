@@ -250,8 +250,8 @@ fieldset legend
     border:6px solid white ;
 
 }
-.feature1:hover,.feature2:hover{
-
+.feature1:hover .title,.feature2:hover .title{
+display: none;
 }
 
 #features img
