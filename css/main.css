@@ -4,7 +4,7 @@
 }
 body{
     overflow-x: hidden;
-    background: #222222;
+    background: white;
 }
 .wrapper{
     width: 1200px;
@@ -15,15 +15,16 @@ body{
 }
 
 #entrance{
-    background-color:rgba(41,0,0,0.7); 
-    background-image: url('../images/candle.jpg');
+    background-color: rgba(13, 21, 60,0.7) ;
+    background-image: url('../images/Germia2.jpg');
     background-size: cover;
-    background-blend-mode: color;
+    background-blend-mode: darken;
+    
 
 }
  
 #body{
-    background: #660000; 
+    background: white; 
     height:1000px;
 }
 #entrance>p{
@@ -110,12 +111,13 @@ p {
     text-decoration: none;
 }
 #content img{
-    border: 23px solid #290000;
+    border: 23px solid #E2CBA0;
     border-radius: 50%;
     margin:0 4% 0 12%;
     width:380px;
     height:380px;
     vertical-align: middle;
+    opacity: 0.9;
 }
 .SlideShow{
     display:none;
