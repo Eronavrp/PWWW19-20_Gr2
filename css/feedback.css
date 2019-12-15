@@ -95,11 +95,13 @@ table{
 }
 
 td{
-    padding-top: 15px;
+    padding-top: 30px;
     border-bottom: 1px solid #0D153C;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
     width: 50%;
 }
+
+
 
 .buttons {
     width: 25px;

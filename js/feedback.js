@@ -63,14 +63,16 @@ function validate()
       //var x = getElementById("selectContinent");
       //if(x.value  == 0) {x.classList.add("error");}
    }
-
+   var givenDate = document.getElementById("date");
    var currentDate = new Date().getTime();
-  var date = new Date(document.getElementById("date").value + ' 00:00').getTime();
-  if(currentDate<date) {window.alert("Date is invalid. Please insert an older date to proceed"); proceed = false;}
-
+  var date = new Date(givenDate.value + ' 00:00').getTime();
+  if(currentDate<date) {window.alert("Date is invalid. Please insert an older date to proceed"); proceed = false; givenDate.classList.add("error");}
+   else {removeErrors(givenDate);}
   var x = document.getElementById("telephone");
 
-  if(!isBlank(x))if(!correctFormat()) {proceed=false; x.classList.add("error");window.alert("Please follow the correct format of the telephone element");}
+  if(!isBlank(x)){if(!correctFormat()) {proceed=false; x.classList.add("error");window.alert("Please follow the correct format of the telephone element")} else{removeErrors(x);}}
+  else { removeErrors(x);}
+
    return proceed;
 }
 
