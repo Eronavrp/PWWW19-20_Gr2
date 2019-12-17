@@ -1,0 +1,116 @@
+
+#blur{
+    width:100%;
+    height:565px;
+    background-color: rgba(13, 21, 60,0.7) ;
+    background-image: url('../images/po.jpg');
+    background-size: cover;
+    background-blend-mode: lighten;
+    filter:blur(10px);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+#entrance1{
+    background-color:  rgba(13, 21, 60,0.7) ;
+    background-image: url('../images/po.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+#entrance1 h1{
+    font-size: 4em;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    margin:17% 19% 0 19%;
+}
+#entrance1 h3{
+    font-size: 1.3em;
+    color:white;
+    font-weight: 300;
+    display: flex;
+    margin:0.5% 15% 0 17%;
+    padding-bottom: 15%;
+}
+
+
+
+#col img
+{
+    width: 280px;
+    height: 160px;
+    position:relative;
+    z-index: -1;
+}
+
+
+
+
+#service1, #service2,#service3,#service4,#service5,#service6
+{
+    display: flex;
+}
+
+
+
+#list1
+{
+    float:left;
+    margin-bottom:900px;       
+    padding: 20px 100px 20px 1px;    
+    border: none;
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+    border-color:#E2CBA0 ;
+
+}
+
+#list1 nav ul li
+{
+    list-style-type: none;
+    padding: 0.1em;
+    
+}
+#services #list1 a{
+    color:black;
+    font-size: 22px;
+    font-weight: 300;
+    font-family: sans-serif;
+    margin:1% 0;
+}
+
+#services
+{
+    margin: 40px 40px 0px 25px;
+}
+
+.service
+{
+    margin-left:20px ;
+    border: none;
+    border-bottom: 1px solid #303030;
+ border-color:#E2CBA0 ;
+}
+
+
+.text p
+{
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+    text-align: center;
+    margin:15px 0 15px 0 ;
+
+}
+#services>p
+{
+    font-size: 50px;
+    font-weight: 300;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0D153C;
+
+}
+
