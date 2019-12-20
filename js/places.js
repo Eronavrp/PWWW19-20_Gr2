@@ -47,7 +47,9 @@ function showStory(n)
     if(n!=4)stories[n+slideIndex-1].className = "readMore";
     else stories[n+slideIndex-2].className = "readMore";
     document.getElementById("main").style.height = "1500px";
-    
+    var span = document.getElementById("exponentialNumber");
+    var value = parseInt(span.innerHTML);
+    span.innerHTML = value.toExponential();
 }
 var current = "miniSlideShow";
 var currentPlace;
@@ -146,6 +148,7 @@ function resetSize()
         a[i].className = "images";
     }
 }
+
 
 
 /*$(document).ready(function(){

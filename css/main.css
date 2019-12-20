@@ -253,13 +253,19 @@ fieldset legend
     border:6px solid #0D153C;
 
 }
+
+
+
+
+
 .feature1:hover .title,.feature2:hover .title{
 display: none;
 
 }
 
 .feature1:hover, .feature2:hover{
-    border-color:  #E2CBA0;;
+    border-color:  #E2CBA0;
+    box-shadow: 0px 0px 20px #0D153C;
 }
 
 #features img
