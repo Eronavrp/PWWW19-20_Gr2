@@ -1,0 +1,44 @@
+img{
+    width:25%;
+    margin:-2px;
+    height:22vh;
+}
+#gallery1,#gallery2,#gallery3,#gallery4{
+    
+    margin: 1% 8%;
+}
+#entrance{
+    height:30vh;
+}
+#blur{
+    width:100%;
+    height:250px;
+    background-color: rgba(13, 21, 60,0.5) ;
+    background-blend-mode: lighten;
+    filter:blur(10px);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+h1{
+    font:2.2em sans-serif;
+    color: darkblue;
+    margin:3% 8% 1% 8%;
+}
+button{
+    margin:1% 8%;
+    /* background: white; */
+    border: 2px solid darkblue;
+    font-size:1em;
+    padding: 0.5% 1.5%;
+    border-radius: 35px;
+    /* color:dimgray; */
+}
+button:hover{
+    background: darkblue;
+    color: white;
+}
+video{
+    margin:2% 15%;
+}
