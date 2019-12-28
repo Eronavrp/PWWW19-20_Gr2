@@ -19,7 +19,7 @@
     background-blend-mode: darken;
 }
 #entrance1 h1{
-    font-size: 4em;
+    font-size: 63px;
     color: white;
     font-weight: 500;
     display: flex;
@@ -38,8 +38,8 @@
 
 #col img
 {
-    width: 280px;
-    height: 160px;
+    width: 260px;
+    height: 220px;
     position:relative;
     z-index: -1;
 }
@@ -49,16 +49,19 @@
 
 #service1, #service2,#service3,#service4,#service5,#service6
 {
+    display: none;
+}
+#service1
+{
     display: flex;
 }
-
 
 
 #list1
 {
     float:left;
     margin-bottom:900px;       
-    padding: 20px 100px 20px 1px;    
+    padding: 20px 60px 20px 1px;    
     border: none;
     border-top: 1px solid #303030;
     border-bottom: 1px solid #303030;
@@ -74,7 +77,7 @@
 }
 #services #list1 a{
     color:black;
-    font-size: 22px;
+    font-size: 35px;
     font-weight: 300;
     font-family: sans-serif;
     margin:1% 0;
@@ -87,7 +90,7 @@
 
 .service
 {
-    margin-left:20px ;
+    margin-left:25px ;
     border: none;
     border-bottom: 1px solid #303030;
  border-color:#E2CBA0 ;
@@ -96,11 +99,11 @@
 
 .text p
 {
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 300;
     font-family: sans-serif;
     text-align: center;
-    margin:15px 0 15px 0 ;
+    margin:20px 0 20px 0 ;
 
 }
 #services>p
@@ -114,3 +117,15 @@
 
 }
 
+#list1 #s1:hover,#list1 #s2:hover ,#list1 #s3:hover ,#list1 #s4:hover ,#list1 #s5:hover,#list1 #s6:hover   
+{
+    color: #E2CBA0;
+
+}
+
+
+#services #list1 #s2:active   
+{
+    color: aquamarine;
+
+}
