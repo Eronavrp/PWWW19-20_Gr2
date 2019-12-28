@@ -8,11 +8,11 @@ img{
     margin: 1% 8%;
 }
 #entrance{
-    height:30vh;
+    height:50vh;
 }
 #blur{
     width:100%;
-    height:250px;
+    height:410px;
     background-color: rgba(13, 21, 60,0.5) ;
     background-blend-mode: lighten;
     filter:blur(10px);
@@ -28,12 +28,10 @@ h1{
 }
 button{
     margin:1% 8%;
-    /* background: white; */
     border: 2px solid darkblue;
     font-size:1em;
     padding: 0.5% 1.5%;
     border-radius: 35px;
-    /* color:dimgray; */
 }
 button:hover{
     background: darkblue;
@@ -41,4 +39,17 @@ button:hover{
 }
 video{
     margin:2% 15%;
+}
+#entrance h1{
+    font-size: 3em;
+    color:white;
+    font-weight: 500;
+    display: flex;
+    margin:13% 35% 0 40%;
+}
+
+.card{
+    width:27%;
+    height:200px;
+    border:2px dotted darkkhaki;
 }

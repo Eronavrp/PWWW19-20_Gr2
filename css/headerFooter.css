@@ -30,11 +30,9 @@ body{
     
 }
 #entrance nav,#entrance1 nav{
-    display: inline-block;
-    margin-left:10.5%;
+    display: inline;
+    margin-left:11.5%;
     margin-right:8%;
-    width:44vw; 
-    
 }
 #entrance ul,#entrance1 ul{
     display: inline;
@@ -42,12 +40,12 @@ body{
 #entrance nav ul li,#entrance1 nav ul li{
     list-style-type: none;
     display: inline;
-    padding-left:3.5%;
+    padding-left:2%;
 }
 #entrance ul li a,#entrance1 ul li a{
     text-decoration: none;
     color: white;
-    font-size:1.3vw; 
+    font-size:1.2em; 
     font-family: 'Courier New', Courier, monospace;
     padding: 1% 1.5%;
 }
