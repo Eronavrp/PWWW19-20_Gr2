@@ -50,7 +50,8 @@ body{
     padding: 1% 1.5%;
 }
 #entrance ul li a:hover,#entrance1 ul li a:hover{
-    background: #76C38F;
+    background: #E2CBA0;
+    color: #0D153C;
     border-radius:0.6em;
 }
 
@@ -86,12 +87,12 @@ footer >div{
 #blog { margin-left:0px; }
 
 .greenText {
-    color: #76C38F;
+    color: #E2CBA0;
     padding-top: 15px;
 }
 
 a {
-    color: #76C38F;
+    color: #E2CBA0;
     text-decoration:none;
 }
 
@@ -123,7 +124,7 @@ footer nav ul li{
 }
 
 footer nav ul li a{
-    color: #76C38F;
+    color: #E2CBA0;
     font-size:2em;
     text-decoration:none;
 }
@@ -150,7 +151,7 @@ footer [name]{
 
 [type=submit]{
     color:#222222;
-    background-color: #76C38F;
+    background-color: #E2CBA0;
     font-weight:bold;
     border:none;
     border-radius:6px;
