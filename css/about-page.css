@@ -63,13 +63,17 @@ button{
 }
 #culture img{
     width:100%;
+    height: auto;
 }
 td{
-    width:50%;
+    width:48%;
 }
 aside{
     text-align: center;
     color:#777777;
     background: #dadada;
     padding: 10%;
+}
+table{
+    border-collapse: collapse;
 }

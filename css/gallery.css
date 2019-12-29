@@ -3,16 +3,22 @@ img{
     margin:-2px;
     height:22vh;
 }
+#foto .card img{
+  width:100%;
+  height: 300px;
+  border:2px dotted darkkhaki;
+  
+}
 #gallery1,#gallery2,#gallery3,#gallery4{
     
     margin: 1% 8%;
 }
 #entrance{
-    height:50vh;
+    height:57vh;
 }
 #blur{
     width:100%;
-    height:410px;
+    height:460px;
     background-color: rgba(13, 21, 60,0.5) ;
     background-blend-mode: lighten;
     filter:blur(10px);
@@ -27,7 +33,7 @@ h1{
     margin:3% 8% 1% 8%;
 }
 button{
-    margin:1% 8%;
+    margin:1% 7.5%;
     border: 2px solid darkblue;
     font-size:1em;
     padding: 0.5% 1.5%;
@@ -38,18 +44,106 @@ button:hover{
     color: white;
 }
 video{
-    margin:2% 15%;
+    margin:4% 15%;
 }
 #entrance h1{
     font-size: 3em;
     color:white;
     font-weight: 500;
     display: flex;
-    margin:13% 35% 0 40%;
+    margin:10% 35% 0 40%;
+    animation: myAnim 5s;
+    -webkit-animation: myAnim 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes myAnim{
+        0%{color: crimson;}
+        25%{color: cornflowerblue;}
+        50%{color: cornsilk;}
+        100%{color: yellowgreen}
 }
 
 .card{
-    width:27%;
-    height:200px;
-    border:2px dotted darkkhaki;
+    width:25%;
+    height:300px;
+    position: relative;
+    top:-30px;
+    margin-left: 5%;
+    display: inline-block;
 }
+#foto{
+    margin:0 13%;
+}
+#anim-two
+  {text-align: center;
+  }
+#anim-two ul
+    {text-align: center;
+    list-style: none}
+#anim-two ul li
+     { width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: red;
+      display: inline-block;
+      margin: 0 30px;
+      transform: translateY(-120px);
+      animation: bounce-balls 3s cubic-bezier(0.245, 0.325, 0.510, 1.305)  alternate;}
+      #anim-two ul li:nth-child(1)
+        {background: crimson;
+        animation-delay: 1s;}
+      #anim-two ul li:nth-child(2)
+        {background: cornsilk;
+        animation-delay: .8s;}
+      #anim-two ul li:nth-child(3)
+        {background: cornflowerblue;
+        animation-delay: 1.1s;}
+      #anim-two ul li:nth-child(4)
+        {background: yellowgreen;
+        animation-delay: 1.8s;}
+      #anim-two ul li:nth-child(5)
+        {background: lightcoral;
+        animation-delay: 1.2s;}
+      #anim-two ul li:nth-child(6)
+        {background: yellow;
+        animation-delay: 1.5;}
+        #anim-two ul li:nth-child(7)
+        {background-color: cadetblue;
+        animation-delay: 1s;}
+        #anim-two ul li:nth-child(8)
+        {background: cornsilk;
+        animation-delay: .9s;}
+      #anim-two ul li:nth-child(9)
+        {background: cornflowerblue;
+        animation-delay: 1.1s;}
+      #anim-two ul li:nth-child(10)
+        {background: yellowgreen;
+        animation-delay: 1.7s;}
+      #anim-two ul li:nth-child(11)
+        {background: lightcoral;
+        animation-delay: 2.2s;}
+      #anim-two ul li:nth-child(13)
+        {background: yellow;
+        animation-delay: 1.2s;}
+        #anim-two ul li:nth-child(12)
+        {background-color: cadetblue;
+        animation-delay: 2s;}
+
+@keyframes bounce-balls
+ {   0%{opacity:0.2;
+    transform: translateY(-120px)}
+    30%
+    {transform: translateY(-30px);
+    opacity: 0.3;}
+  60%
+    {transform: translateY(77px);
+        opacity: 0.5;}
+  80%
+    {transform: translateY(65px);
+    opacity: 0.5;}
+  100%
+    {transform: translateY(90px);
+        opacity: 0.3;}
+ }
