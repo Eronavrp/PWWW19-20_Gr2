@@ -34,8 +34,14 @@
     margin:0.5% 15% 0 30%;
     padding-bottom: 15%;
 }
-body article {
+
+main{
+    height: 1000px;
     background-color:white;
+}
+
+body article {
+    
     z-index: -1;
 }
 
@@ -71,7 +77,7 @@ article nav ul li div{
     width: 200px;
     height: 200px;
     margin-left:10px;
-    box-shadow: inset 0px 0px 20px 0px #0D153C;
+    /*box-shadow: inset 0px 0px 20px 0px #0D153C;*/
     margin-bottom: 10px;
    }
 
@@ -88,6 +94,10 @@ article nav ul li div img{
     width: 6000px;
 }
 
+#last, #last:hover, article nav ul li div#last{
+    display: none;
+}
+
 .images{
     display:inline;
     float:left;
@@ -98,7 +108,7 @@ article nav ul li div img{
 .images:hover{
     
     margin-top: -40px;
-    
+    cursor: pointer;
     
     width:300px;
     height:280px;
@@ -154,6 +164,61 @@ article nav ul li div img{
 }
 
 .hide {
-    opacity: 0;
+    opacity: 0px;
 }
+
+.story{
+    float:left;
+    display: inline;
+}
+
+#shortInfo{
+    width: 30%;
+}
+
+#longInfo {
+    width: 70%;
+    
+}
+#shortInfo img{
+    width: 350px;
+    height: 500px;
+}
+#shortInfo h2,h3,h4,h5,h6 {
+    text-align: center;
+}
+
+#longInfo h2{
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+#longInfo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #E2CBA0;
+    border-radius: 50%;
+    display: inline-block;
+    
+  }
+
+  .dot:hover{
+    cursor: pointer;
+    background-color: #0D153C;
+  }
+
+  .dot:visited{
+    background-color: #0D153C;
+  }
+  
 

@@ -33,7 +33,7 @@ and open the template in the editor.
             <h1>NO SEA?! NO PROBLEM</h1>
             <h3>There are still plenty of places you can visit...</h3>
             </div>
-           
+           <main id="main">
             <article>
                 
                 <h1 align="center" id="V"> Where to go?</h1> 
@@ -42,7 +42,7 @@ and open the template in the editor.
                     <nav>
                         <ul>
                             <li>
-                                <a href="#">
+                                <a onclick="showStory(0)">
                                     <div class="images">
                                         <img src="images/canada.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit</p>
@@ -50,7 +50,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a onclick="showStory(1)">
                                     <div class="images">
                                         <img src="images/candle.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit2</p>
@@ -58,7 +58,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a onclick="showStory(2)">
                                     <div class="images">
                                         <img src="images/tree.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit3</p>
@@ -66,7 +66,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a onclick="showStory(3)">
                                     <div class="images">
                                         <img src="images/lights.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit4</p>
@@ -74,7 +74,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a onclick="showStory(4)">
                                     <div class="images">
                                         <img src="images/service13.jpg" alt="canada.jpg"/>
                                         <p>Emri i vendit5</p>
@@ -82,7 +82,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a onclick="showStory(5)">
                                     <div class="images">
                                         <img src="images/rodo.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit6</p>
@@ -90,12 +90,17 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a onclick="showStory(6)">
                                     <div class="images">
                                         <img src="images/serviceh.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit7</p>
                                     </div>
                                 </a>
+                            </li>
+                            <li >
+
+                                    <div class="images" ></div>
+
                             </li>
                             
                         </ul>
@@ -107,7 +112,235 @@ and open the template in the editor.
                     
                 </div>
             </article>
-            
+
+            <article>
+                <div class="readMore hidden">
+                    
+                    <div class="story" id="shortInfo">
+                        <div id="foto">
+                            <img src="images/service15.jpg" alt="kosovo.jpg" class="miniSlideShow"/>
+                        </div>
+                        <div id="info">
+                            <h2>Germia National Park</h2>
+                            <h3>A cool place to spend a Sunday</h3>
+                            <h4>Prishtina</h4>
+                            
+                        </div>
+                        <div id="photos" style="margin-left: 35%;">
+                                <span class="dot" onclick="showNextPicture(0,0)"></span>
+                                <span class="dot" onclick="showNextPicture(0,1)"></span>
+                                <span class="dot" onclick="showNextPicture(0,2)"></span>
+                                <span class="dot" onclick="showNextPicture(0,3)"></span>
+                            </div>
+                    </div>
+                    <div class="story" id="longInfo">
+                        <h2>HISTORY:</h2>
+                        <p>Germia National Park is a park located in the north-east of Kosova's capital city Prishtina. It is a part of the Rhodope Mountains, which
+                        connect Kosova and Macedonia. Since 1987 the municipality of Prishtina took it under protection. </p>
+                        <h2>What can you do there</h2>
+                        <p>Germia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
+                            the nature and the air purity there, among several activities that the park provides. Starting from the big space, in which you can organize 
+                            picnics, and a variety of games for everyone, no matter the age differences. Moving on to the children's playgrounds, and restaurants for the 
+                            parents to relax. Also there are several Volleyball, Basketball and Football fields in which sometimes are organized events. Summer is the 
+                            best season to visit this park, because of Germia Swimming Pool. And, last but not least, if you came for experimental purposes (Biology),
+                            Germia is the place with the richest fauna in Kosova. As you can see, there is no one that can't enjoy that place. If you won't, then you are 
+                            crazy.</p>
+                    </div>
+                </div>
+
+                <div class="readMore hidden" >
+                    
+                        <div class="story" id="shortInfo">
+                            <div id="foto">
+                                <img src="images/serviceh.jpg" alt="kosovo.jpg" class="miniSlideShow"/>
+                            </div>
+                            <div id="info">
+                                <h2>Germia National Park</h2>
+                                <h3>A cool place to spend a Sunday</h3>
+                                <h4>Prishtina</h4>
+                            </div>
+                            <div id="photos" style="margin-left: 35%;">
+                                <span class="dot" onclick="showNextPicture(1,0)"></span>
+                                <span class="dot" onclick="showNextPicture(1,1)"></span>
+                                <span class="dot" onclick="showNextPicture(1,2)"></span>
+                                <span class="dot" onclick="showNextPicture(1,3)"></span>
+                            </div>
+                        </div>
+                        <div class="story" id="longInfo">
+                            <h2>HISTORY:</h2>
+                            <p>Germia National Park is a park located in the north-east of Kosova's capital city Prishtina. It is a part of the Rhodope Mountains, which
+                            connect Kosova and Macedonia. Since 1987 the municipality of Prishtina took it under protection. </p>
+                            <h2>What can you do there</h2>
+                            <p>Germia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
+                                the nature and the air purity there, among several activities that the park provides. Starting from the big space, in which you can organize 
+                                picnics, and a variety of games for everyone, no matter the age differences. Moving on to the children's playgrounds, and restaurants for the 
+                                parents to relax. Also there are several Volleyball, Basketball and Football fields in which sometimes are organized events. Summer is the 
+                                best season to visit this park, because of Germia Swimming Pool. And, last but not least, if you came for experimental purposes (Biology),
+                                Germia is the place with the richest fauna in Kosova. </p>
+                        </div>
+                    </div>
+
+                    <div class="readMore hidden">
+                    
+                            <div class="story" id="shortInfo">
+                                <div id="foto">
+                                    <img src="images/service14.jpg" alt="kosovo.jpg" class="miniSlideShow"/>
+                                </div>
+                                <div id="info">
+                                    <h2>Germia National Park</h2>
+                                    <h3>A cool place to spend a Sunday</h3>
+                                    <h4>Prishtina</h4>
+                                </div>
+                                <div id="photos" style="margin-left: 35%;">
+                                <span class="dot" onclick="showNextPicture(2,0)"></span>
+                                <span class="dot" onclick="showNextPicture(2,1)"></span>
+                                <span class="dot" onclick="showNextPicture(2,2)"></span>
+                                <span class="dot" onclick="showNextPicture(2,3)"></span>
+                            </div>
+                            </div>
+                            <div class="story" id="longInfo">
+                                <h2>HISTORY:</h2>
+                                <p>Germia National Park is a park located in the north-east of Kosova's capital city Prishtina. It is a part of the Rhodope Mountains, which
+                                connect Kosova and Macedonia. Since 1987 the municipality of Prishtina took it under protection. </p>
+                                <h2>What can you do there</h2>
+                                <p>Germia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
+                                    the nature and the air purity there, among several activities that the park provides. Starting from the big space, in which you can organize 
+                                    picnics, and a variety of games for everyone, no matter the age differences. Moving on to the children's playgrounds, and restaurants for the 
+                                    parents to relax. Also there are several Volleyball, Basketball and Football fields in which sometimes are organized events. Summer is the 
+                                    best season to visit this park, because of Germia Swimming Pool. And, last but not least, if you came for experimental purposes (Biology),
+                                    Germia is the place with the richest fauna in Kosova. </p>
+                            </div>
+                        </div>
+
+                        <div class="readMore hidden">
+                    
+                            <div class="story" id="shortInfo">
+                                <div id="foto">
+                                    <img src="images/service10.jpg" alt="kosovo.jpg" class="miniSlideShow"/>
+                                </div>
+                                <div id="info">
+                                    <h2>Germia National Park</h2>
+                                    <h3>A cool place to spend a Sunday</h3>
+                                    <h4>Prishtina</h4>
+                                </div>
+                                <div id="photos" style="margin-left: 35%;">
+                                <span class="dot" onclick="showNextPicture(3,0)"></span>
+                                <span class="dot" onclick="showNextPicture(3,1)"></span>
+                                <span class="dot" onclick="showNextPicture(3,2)"></span>
+                                <span class="dot" onclick="showNextPicture(3,3)"></span>
+                            </div>
+                            </div>
+                            <div class="story" id="longInfo">
+                                <h2>HISTORY:</h2>
+                                <p>Germia National Park is a park located in the north-east of Kosova's capital city Prishtina. It is a part of the Rhodope Mountains, which
+                                connect Kosova and Macedonia. Since 1987 the municipality of Prishtina took it under protection. </p>
+                                <h2>What can you do there</h2>
+                                <p>Germia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
+                                    the nature and the air purity there, among several activities that the park provides. Starting from the big space, in which you can organize 
+                                    picnics, and a variety of games for everyone, no matter the age differences. Moving on to the children's playgrounds, and restaurants for the 
+                                    parents to relax. Also there are several Volleyball, Basketball and Football fields in which sometimes are organized events. Summer is the 
+                                    best season to visit this park, because of Germia Swimming Pool. And, last but not least, if you came for experimental purposes (Biology),
+                                    Germia is the place with the richest fauna in Kosova. </p>
+                            </div>
+                        </div>
+
+                        <div class="readMore hidden">
+                    
+                                <div class="story" id="shortInfo">
+                                    <div id="foto">
+                                        <img src="images/service3.jpg" alt="kosovo.jpg" class="miniSlideShow"/>
+                                    </div>
+                                    <div id="info">
+                                        <h2>Germia National Park</h2>
+                                        <h3>A cool place to spend a Sunday</h3>
+                                        <h4>Prishtina</h4>
+                                    </div>
+                                    <div id="photos" style="margin-left: 35%;">
+                                    <span class="dot" onclick="showNextPicture(4,0)"></span>
+                                    <span class="dot" onclick="showNextPicture(4,1)"></span>
+                                    <span class="dot" onclick="showNextPicture(4,2)"></span>
+                                    <span class="dot" onclick="showNextPicture(4,3)"></span>
+                                </div>
+                                </div>
+                                <div class="story" id="longInfo">
+                                    <h2>HISTORY:</h2>
+                                    <p>Germia National Park is a park located in the north-east of Kosova's capital city Prishtina. It is a part of the Rhodope Mountains, which
+                                    connect Kosova and Macedonia. Since 1987 the municipality of Prishtina took it under protection. </p>
+                                    <h2>What can you do there</h2>
+                                    <p>Germia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
+                                        the nature and the air purity there, among several activities that the park provides. Starting from the big space, in which you can organize 
+                                        picnics, and a variety of games for everyone, no matter the age differences. Moving on to the children's playgrounds, and restaurants for the 
+                                        parents to relax. Also there are several Volleyball, Basketball and Football fields in which sometimes are organized events. Summer is the 
+                                        best season to visit this park, because of Germia Swimming Pool. And, last but not least, if you came for experimental purposes (Biology),
+                                        Germia is the place with the richest fauna in Kosova. </p>
+                                </div>
+                            </div>
+
+                            <div class="readMore hidden">
+                    
+                                    <div class="story" id="shortInfo">
+                                        <div id="foto">
+                                            <img src="images/service2.jpg" alt="kosovo.jpg" class="miniSlideShow"/>
+                                        </div>
+                                        <div id="info">
+                                            <h2>Germia National Park</h2>
+                                            <h3>A cool place to spend a Sunday</h3>
+                                            <h4>Prishtina</h4>
+                                        </div>
+                                        <div id="photos" style="margin-left: 35%;">
+                                        <span class="dot" onclick="showNextPicture(5,0)"></span>
+                                        <span class="dot" onclick="showNextPicture(5,1)"></span>
+                                        <span class="dot" onclick="showNextPicture(5,2)"></span>
+                                        <span class="dot" onclick="showNextPicture(5,3)"></span>
+                                    </div>
+                                    </div>
+                                    <div class="story" id="longInfo">
+                                        <h2>HISTORY:</h2>
+                                        <p>Germia National Park is a park located in the north-east of Kosova's capital city Prishtina. It is a part of the Rhodope Mountains, which
+                                        connect Kosova and Macedonia. Since 1987 the municipality of Prishtina took it under protection. </p>
+                                        <h2>What can you do there</h2>
+                                        <p>Germia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
+                                            the nature and the air purity there, among several activities that the park provides. Starting from the big space, in which you can organize 
+                                            picnics, and a variety of games for everyone, no matter the age differences. Moving on to the children's playgrounds, and restaurants for the 
+                                            parents to relax. Also there are several Volleyball, Basketball and Football fields in which sometimes are organized events. Summer is the 
+                                            best season to visit this park, because of Germia Swimming Pool. And, last but not least, if you came for experimental purposes (Biology),
+                                            Germia is the place with the richest fauna in Kosova. </p>
+                                    </div>
+                                </div>
+
+                                <div class="readMore hidden">
+                    
+                                        <div class="story" id="shortInfo">
+                                            <div id="foto">
+                                                <img src="images/service4.jpg" alt="kosovo.jpg" class="miniSlideShow"/>
+                                            </div>
+                                            <div id="info">
+                                                <h2>Germia National Park</h2>
+                                                <h3>A cool place to spend a Sunday</h3>
+                                                <h4>Prishtina</h4>
+                                            </div>
+                                            <div id="photos" style="margin-left: 35%;">
+                                            <span class="dot" onclick="showNextPicture(6,0)"></span>
+                                            <span class="dot" onclick="showNextPicture(6,1)"></span>
+                                            <span class="dot" onclick="showNextPicture(6,2)"></span>
+                                            <span class="dot" onclick="showNextPicture(6,3)"></span>
+                                        </div>
+                                        </div>
+                                        <div class="story" id="longInfo">
+                                            <h2>HISTORY:</h2>
+                                            <p>Germia National Park is a park located in the north-east of Kosova's capital city Prishtina. It is a part of the Rhodope Mountains, which
+                                            connect Kosova and Macedonia. Since 1987 the municipality of Prishtina took it under protection. </p>
+                                            <h2>What can you do there</h2>
+                                            <p>Germia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
+                                                the nature and the air purity there, among several activities that the park provides. Starting from the big space, in which you can organize 
+                                                picnics, and a variety of games for everyone, no matter the age differences. Moving on to the children's playgrounds, and restaurants for the 
+                                                parents to relax. Also there are several Volleyball, Basketball and Football fields in which sometimes are organized events. Summer is the 
+                                                best season to visit this park, because of Germia Swimming Pool. And, last but not least, if you came for experimental purposes (Biology),
+                                                Germia is the place with the richest fauna in Kosova. </p>
+                                        </div>
+                                    </div>
+            </article>
+        </main>
             <footer>
             <div>
                 <div class="footerDivs" id="blog">
