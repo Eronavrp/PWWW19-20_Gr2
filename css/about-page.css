@@ -44,13 +44,21 @@
 #about h1{
     font-size: 2.3em;
     font-weight: 300;
-    margin:1% 0;
+    margin:1% 0 2% 0;
 }
-button{
-    padding: 2% 7%;
+#details button {
+    padding: 4% 9%;
     color:white;
     background: #76C38F;
-    margin:3% auto;
+    margin:10% 150%;
+    border: none;
+    border-radius: 10px;
+}
+#about button{
+    padding:2% 7%;
+    color:white;
+    background: #76C38F;
+    margin:2% auto;
     border: none;
     border-radius: 10px;
 }
@@ -69,10 +77,24 @@ td{
     width:48%;
 }
 aside{
-    text-align: center;
     color:#777777;
     background: #dadada;
-    padding: 10%;
+    padding: 5%;
+}
+aside img{
+    vertical-align: middle;
+}
+#details{
+    display: inline-block;
+    font-size: 1.2em;
+    margin-left: 5%;
+    vertical-align: middle;
+}
+#details h2{
+    margin-bottom: 5%;
+}
+#details p{
+    padding: 2%;
 }
 table{
     border-collapse: collapse;
