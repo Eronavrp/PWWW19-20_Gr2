@@ -14,12 +14,10 @@ function HideContent1(obj) {
       else
       {
         document.getElementById(obj).style.display = 'none';
-      }
-       
-
+      }    
     
 }
-s
+
 // Filename: script.js
 function myFunction() {
     var element = document.getElementById("map");

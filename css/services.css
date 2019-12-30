@@ -6,7 +6,7 @@ body
     width:100%;
     height:565px;
     background-color: rgba(13, 21, 60,0.7) ;
-    background-image: url('../images/serviceh.jpg');
+    background-image: url('../images/service16_1.jpg');
     background-size: cover;
     background-blend-mode: lighten;
     filter:blur(10px);
@@ -133,25 +133,31 @@ body
 }
 
 
-#info2
+#hide1
 {
     display: none;
 }
 
- #info 
+ .info 
 {display: block;
     width:550px;
     border: none;
     border-top: 1px solid #303030;
     border-color:#E2CBA0 ;
-    margin: 50px 50px 100px 10px;
+    margin: 50px 50px 0px 0px;
     border-right:150px ;
 }
 
 
-#information
+.information
 {
     display: inline-flex;
+    
+    
+}
+footer
+{
+    margin-top: 50px;
 }
 
 h3
@@ -162,28 +168,28 @@ h3
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-#info img
-{width: 500px;
+.info img
+{width: 550px;
 height: 500px;  
 padding-top: 30px;
 
 }
 
-#info p
+.info p
 {
     
     color: #121416;
     font-family: Helvetica, sans-serif;
 
 }
-#info #emri
+.info .emri
 {
     color: black;
     font-weight: bold;
     font-size: 18px;
     padding: 30px 0 5px 0;
 }
-#info #emri1
+.info .emri1
 {
     color: #121416;
     font-size: 18px;
@@ -194,9 +200,17 @@ figcaption {
     
     padding: 10px 10px 30px 0;
 }
-
-
-#info #text
+.info2 div, table
+{
+    display: inline;
+}
+.info2 img
+{
+    width: 15px;
+    height: 15px;
+    padding-right: 10px;
+}
+.info .text
 {
     text-align: justify;
 font-size: 17x;
@@ -208,31 +222,38 @@ figcaption>p
 {font-size: 13.5px;
 }
  
-#info2{display: block;}
-#info a, #t1
+.info2{display: block;}
+
+.info .t2
 {
     color: #121416;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     
     line-height:25px ;
 
 }
 
-#info>a
-{font-weight: bold;}
-#info address
+.info>a
+{font-weight: bold;
+color: black;
+}
+.info2  a
+{
+    color: black;
+}
+
+.info address
 {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
-    padding-bottom: 15px;
-    padding-top: 20px;
+    padding-bottom: 1px;
     color: #121416;
-    line-height: 35px;
+    line-height: 5px;
     text-decoration: underline;
 }
 table
 {
-    color: #121416;
+    color: #0d1f30;
 }
 table .t1
 {
@@ -242,4 +263,8 @@ table .t1
 table tr>td
 { 
     padding: 5px;
+}
+.info2>address
+{
+    padding-bottom: 30px;
 }
