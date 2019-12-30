@@ -23,15 +23,15 @@ if(n==1)
 btn[0].style.color="white"
 btn[0].style.backgroundColor="darkblue"}
 else if(n==2)
-    {gall[1].style.display="block";
+    {
     btn[1].style.color="white"
     btn[1].style.backgroundColor="darkblue"}
     else if(n==3)
-   { gall[2].style.display="block";
+   {
     btn[2].style.color="white"
     btn[2].style.backgroundColor="darkblue"}
         else 
-       { gall[3].style.display="block";
+       {
         btn[3].style.color="white"
         btn[3].style.backgroundColor="darkblue"}
 
