@@ -11,61 +11,100 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/headerFooter.css"/>
         <link rel="stylesheet" type="text/css" href="css/places.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Sacramento|Tangerine&display=swap" rel="stylesheet">
+        <script src="js/places.js"></script>
     </head>
     <body>
+        <div id="blur"></div>
         <div class="wrapper">
+            
             <div id="entrance">
-            <p>The Modernist</p>
+            <p>Kosovo</p>
             <nav>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About.html">ABOUT</a></li>
-                    <li><a href="Gallery.html">GALLERY</a></li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">GALLERY</a></li>
                     <li><a href="#">NEWS</a></li>
-                    <li><a href="Services.html">SERVICES</a></li>
+                    <li><a href="#">SERVICES</a></li>
                     <li><a href="#">MORE</a></li>
                 </ul>
             </nav>
+            <h1>NO SEA?! NO PROBLEM</h1>
+            <h3>There are still plenty of places you can visit...</h3>
             </div>
            
             <article>
-            <h1 align="center"> PLACES</h1>     
-                <div>
+                
+                <h1 align="center" id="V"> Where to go?</h1> 
+
+                <div id="slider">
                     <nav>
                         <ul>
                             <li>
-                                <div class="images">
-                                    <img src="images/canada.jpg" alt="canada.jpg"/>
-                                </div>
+                                <a href="#">
+                                    <div class="images">
+                                        <img src="images/canada.jpg" alt="canada.jpg" />
+                                        <p>Emri i vendit</p>
+                                    </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="images">
-                                    <img src="images/candle.jpg" alt="canada.jpg"/>
-                                </div>
+                                <a href="#">
+                                    <div class="images">
+                                        <img src="images/candle.jpg" alt="canada.jpg" />
+                                        <p>Emri i vendit2</p>
+                                    </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="images">
-                                    <img src="images/tree.jpg" alt="canada.jpg"/>
-                                </div>
+                                <a href="#">
+                                    <div class="images">
+                                        <img src="images/tree.jpg" alt="canada.jpg" />
+                                        <p>Emri i vendit3</p>
+                                    </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="images">
-                                    <img src="images/lights.jpg" alt="canada.jpg"/>
-                                </div>
+                                <a href="#">
+                                    <div class="images">
+                                        <img src="images/lights.jpg" alt="canada.jpg" />
+                                        <p>Emri i vendit4</p>
+                                    </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="images">
-                                    <img src="images/lights.jpg" alt="canada.jpg"/>
-                                </div>
+                                <a href="#">
+                                    <div class="images">
+                                        <img src="images/service13.jpg" alt="canada.jpg"/>
+                                        <p>Emri i vendit5</p>
+                                    </div>  
+                                </a>
                             </li>
                             <li>
-                                <div class="images">
-                                    <img src="images/lights.jpg" alt="canada.jpg"/>
-                                </div>
+                                <a href="#">
+                                    <div class="images">
+                                        <img src="images/rodo.jpg" alt="canada.jpg" />
+                                        <p>Emri i vendit6</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="images">
+                                        <img src="images/serviceh.jpg" alt="canada.jpg" />
+                                        <p>Emri i vendit7</p>
+                                    </div>
+                                </a>
                             </li>
                             
                         </ul>
                     </nav>
+                    
+                    <a  onclick="plusDivs(-1)"><span id="leftArrow" ><</span></a>
+                    <a  onclick="plusDivs(1)"><span id="rightArrow" >></span></a>
+                    
+                    
                 </div>
             </article>
             
@@ -118,6 +157,8 @@ and open the template in the editor.
             </div>
             <p>Copyright &COPY; 2013 Domain Name <span style="float:right">Template by OS Templates</span></p>
         </footer>
+        
         </div>
+        
     </body>
 </html>

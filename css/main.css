@@ -30,7 +30,7 @@
     padding-bottom: 7%;
 }
 #entrance1 #content>a{
-    color: #76C38F;
+    color: #E2CBA0;
     display: inline;
     font-size: 2.5em;
     margin-top:5%;
@@ -62,13 +62,13 @@ p {
     margin-bottom: 5.9%;
 }
 #text button{
-    background-color: #76C38F;
+    background-color: #E2CBA0;
     padding: 2% 3%;
     border:none;
     border-radius: 13px;
 }
 #text button a{
-    color:white;
+    color:#0D153C;
     font-size:1.2em;
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
@@ -140,7 +140,7 @@ p {
 
 .service:hover,.service:hover h1,.service:hover p
 {
-background-color : #76C38F;
+background-color : #E2CBA0;
 color:white;
 
 }
@@ -184,8 +184,8 @@ fieldset legend
     width: 230px;
     font-size: 2em;
     font-weight: normal;
-    color: white;
-    background-color: #303030;
+    color: #E2CBA0;
+    background-color: #0D153C;
     border-radius: 15px;
     padding: 13px 16px 13px 16px;
     
@@ -222,7 +222,7 @@ display: none;
 }
 
 .feature1:hover, .feature2:hover{
-    border-color:  #76C38F;;
+    border-color:  #E2CBA0;;
 }
 
 #features img
