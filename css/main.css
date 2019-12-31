@@ -2,7 +2,7 @@
     width:100%;
     height:642px;
     background-color: rgba(13, 21, 60,0.2) ;
-    background-image: url('../images/blur.jpg');
+    background-image: url('../images/sheshi.jpg');
     background-size: cover;
     background-blend-mode: lighten;
     filter:blur(10px);
@@ -13,7 +13,7 @@
 }
 #entrance1{
     background-color: rgba(13, 21, 60,0.7) ;
-    background-image: url('../images/Germia2.jpg');
+    background-image: url('../images/sheshi.jpg');
     background-size: cover;
     background-blend-mode: darken;
     
