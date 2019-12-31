@@ -38,16 +38,19 @@
 main{
     height: 1000px;
     background-color:white;
+    
 }
 
 body article {
     
     z-index: -1;
+    margin-left: 9%;
+    margin-right: 9%;
 }
 
 article {
     padding: 5% 0% 30% 0%;
-    clip-path: polygon(0px 0px, 1200px 0px, 1200px 2000px, 0px 2000px);
+    clip-path: polygon(0px 0px, 100% 0px, 100% 2000px, 0px 2000px);
 }
 
 article h1{
@@ -128,7 +131,7 @@ article nav ul li div img{
     font-size: 4em;
     position:absolute;
     top:745px;
-    left: 375px;
+    left: 25%;
     font-weight: bolder;
     z-index: 10;
     
@@ -140,7 +143,7 @@ article nav ul li div img{
     font-weight: bolder;
     position:absolute;
     top:745px;
-    left: 1500px;
+    right: 25%;
     
     z-index: 2;
     
@@ -173,11 +176,12 @@ article nav ul li div img{
 }
 
 #shortInfo{
-    width: 30%;
+    width: 36%;
 }
 
 #longInfo {
-    width: 70%;
+    width: 63%;
+    margin-left: 1%;
     
 }
 #shortInfo img{
@@ -196,7 +200,7 @@ article nav ul li div img{
 #longInfo p{
     margin-bottom: 30px;
     text-align: justify;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .hidden {
@@ -222,3 +226,6 @@ article nav ul li div img{
   }
   
 
+.blueDot {
+    background-color: #0D153C;
+}

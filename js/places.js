@@ -15,7 +15,7 @@ function showDivs(n)
 {
     var divs = document.getElementsByClassName("images");
     
-    if (slideIndex+n > divs.length-5 && n>0   ) {n=0; }
+    if (slideIndex+n > divs.length-4     && n>0   ) {n=0; }
     else if (slideIndex+n < 1 && n<0) {n=0; }
   
     if(n!=0 )
@@ -40,18 +40,49 @@ function showStory(n)
     for( i = 0; i< stories.length; i++){
         stories[i].className = "readMore hidden";
     }
-    stories[n].className = "readMore";
+    stories[n+slideIndex-1].className = "readMore";
     document.getElementById("main").style.height = "1300px";
 }
 
 function showNextPicture(place,index)
-{
+{   
+    resetColors(place);
     var pictures = [
         ["images/a1.jpg","images/a2.jpg","images/a3.jpg","images/a4.jpg"],
         ["images/a5.jpg","images/a6.jpg","images/a7.jpg","images/a8.jpg"],
         ["images/a9.jpg","images/a10.jpg","images/a11.jpg","images/a12.jpg"]];
     var s = document.getElementsByClassName("miniSlideShow");
+    
+    var d = document.getElementsByClassName("dot");
+    
     s[place].src = pictures[place][index];
     
+    //d[index+(place*4)].style.backgroundColor = "#0D153C";
+    d[index+(place*4)].className = "dot blueDot";
+    setTimeout(this,2000);
     
 }
+
+function resetColors(c)
+{
+    var d = document.getElementsByClassName("blueDot");
+    //d[c].style.backgroundColor = "#E2CBA0";
+    d[c].className = "dot";
+    
+}
+
+function test() {
+    $(".foto").each(function(index) {
+        $(this).hide();
+        $(this).delay(2000*i).fadeIn(10000).fadeOut();
+    });
+}
+test();
+
+
+/*$(document).ready(function(){
+       $('#fff').click(
+             function(){
+                 $('.images').slideDown();
+             });
+            });*/
