@@ -77,15 +77,19 @@ article nav ul li {
     
 }
 
-article nav ul li div{
+.images{
     width: 200px;
     height: 200px;
     margin-left:10px;
     /*box-shadow: inset 0px 0px 20px 0px #0D153C;*/
     margin-bottom: 10px;
+    display:inline;
+    float:left;
+    max-width: 300px;
+    max-height: 280px;
    }
 
-article nav ul li div img{
+.images img{
     width: 200px;
     height: 200px;
     position:relative;
@@ -102,15 +106,27 @@ article nav ul li div img{
     display: none;
 }
 
-.images{
-    display:inline;
-    float:left;
-    max-width: 300px;
-    max-height: 280px;
+.expanded {
+    margin-top: -40px;
+    cursor: pointer;
     
     
+    width:300px;
+    height:280px;
 }
 
+.expanded img{
+    width:300px;
+    height:280px;
+}
+
+.expanded p{
+    background-color: #E2CBA0;
+}
+.hide {
+    visibility: hidden;
+    cursor: default;
+}
 .images:hover, .images:active{
     
     margin-top: -40px;
@@ -132,6 +148,8 @@ article nav ul li div img{
     width:300px;
     height:280px;
 }
+
+
 
 /*.images:active {
     margin-top: -40px;
@@ -193,38 +211,36 @@ article nav ul li div img{
     border-bottom: 2px solid #E2CBA0;
 }
 
-.hide {
-    opacity: 0px;
-}
+
 
 .story{
     float:left;
     display: inline;
 }
 
-#shortInfo{
+.short{
     width: 36%;
 }
 
-#longInfo {
+.long {
     width: 63%;
     margin-left: 1%;
     
 }
-#shortInfo img{
+.short img{
     width: 350px;
     height: 500px;
 }
-#shortInfo h2,h3,h4,h5,h6 {
+.short h2,h3,h4,h5,h6 {
     text-align: center;
 }
 
-#longInfo h2{
+.long h2{
     margin-bottom: 15px;
     font-size: 2em;
 }
 
-#longInfo p{
+.long p{
     margin-bottom: 30px;
     text-align: justify;
     font-size: 1.2em;
