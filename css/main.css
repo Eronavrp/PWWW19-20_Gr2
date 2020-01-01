@@ -106,13 +106,11 @@ p {
 {
     width: 120px;
     height: 120px;
-    vertical-align: middle;
     padding: 21px 53px 10px 53px ;
 }
 .text2
 {    height: 123px;
-    width: 160px;
-    vertical-align: middle;    
+     width: 160px;  
 }
 
 .text2 h1{
@@ -122,7 +120,6 @@ p {
     font-weight: normal;
     color: #333333;
     text-align: center;
-    vertical-align: middle;
     padding-left: 45px;
     
 }
@@ -132,9 +129,8 @@ p {
     letter-spacing: 0.1px;
     font-family: 'Courier New', Courier, monospace;
     color: #979797;
-    text-align: justify;
-    text-align: center;
-    padding:20px 30px 19px 30px ;    
+    text-align: left;
+    padding:20px 30px 0 30px ;    
     
 }
 
@@ -169,7 +165,7 @@ a
 fieldset{
     border: none;
     border-top: 3px solid #303030;
-    vertical-align: middle;
+    text-align: center;
 }
 fieldset legend
 {
@@ -196,7 +192,7 @@ fieldset legend
     
     margin-right: 120px;
      margin-left: 90px;
-     vertical-align: middle;
+    text-align: center;
      width: 960px;
     
 }
