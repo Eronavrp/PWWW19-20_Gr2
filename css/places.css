@@ -6,25 +6,26 @@
     background-size: cover;
     background-blend-mode: lighten;
     filter:blur(10px);
-    position: fixed;
+    position: absolute;
     top:0;
     left:0;
-    z-index: -2;
+    z-index: -1;
 }
 #entrance{
     background-color: rgba(13, 21, 60,0.7) ;
     background-image: url('../images/collage.jpg');
     background-size: cover;
     background-blend-mode: darken;
-    height: 650px;
-}
+    
 
+}
 #entrance h1{
     font-size: 4em;
     color:white;
     font-weight: 500;
     display: flex;
     margin:17% 19% 0 19%;
+    font-style: normal;
 }
 #entrance h3{
     font-size: 1.3em;
@@ -104,12 +105,35 @@ article nav ul li div img{
 .images{
     display:inline;
     float:left;
+    max-width: 300px;
+    max-height: 280px;
     
     
 }
 
-.images:hover{
+.images:hover, .images:active{
     
+    margin-top: -40px;
+    cursor: pointer;
+    
+    
+    width:300px;
+    height:280px;
+}
+
+.images:hover p{
+    background-color: #E2CBA0;
+}
+
+
+
+
+.images:hover img, .images:active img{
+    width:300px;
+    height:280px;
+}
+
+/*.images:active {
     margin-top: -40px;
     cursor: pointer;
     
@@ -117,21 +141,22 @@ article nav ul li div img{
     height:280px;
 }
 
-
-
-
-.images:hover img{
+.images:active img{
     width:300px;
     height:280px;
-}
+}*/
+
 
 
 #leftArrow{
     color: #E2CBA0;
     font-size: 4em;
-    position:absolute;
+    /*position:absolute;
     top:745px;
-    left: 25%;
+    left: 25%;*/
+    position: relative;
+    top: 140px;
+    left: 1.2%;
     font-weight: bolder;
     z-index: 10;
     
@@ -141,10 +166,12 @@ article nav ul li div img{
     color: #E2CBA0;
     font-size: 4em;
     font-weight: bolder;
-    position:absolute;
+    /*position:absolute;
     top:745px;
-    right: 25%;
-    
+    right: 25%;*/
+    position: relative;
+    top: 140px;
+    left: 92%;
     z-index: 2;
     
 }
@@ -221,11 +248,19 @@ article nav ul li div img{
     background-color: #0D153C;
   }
 
-  .dot:visited{
-    background-color: #0D153C;
-  }
+  
   
 
 .blueDot {
     background-color: #0D153C;
+}
+
+mark 
+{
+    background-color : #E2CBA0;
+    font-style: oblique;
+}
+
+b{
+    text-transform: capitalize;
 }

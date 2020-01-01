@@ -13,6 +13,11 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/places.css"/>
         <link href="https://fonts.googleapis.com/css?family=Sacramento|Tangerine&display=swap" rel="stylesheet">
         <script src="js/places.js"></script>
+        <style>
+            
+            
+}
+        </style>
     </head>
     <body>
         <div id="blur"></div>
@@ -37,12 +42,13 @@ and open the template in the editor.
             <article>
                 
                 <h1 align="center" id="V"> Where to go?</h1> 
-
+                <a  onclick="plusDivs(-1)" id="leftArrow"><span  > &lt;</span></a>
+                <a  onclick="plusDivs(1)" id="rightArrow"><span  > &gt;</span></a>
                 <div id="slider">
                     <nav>
                         <ul>
                             <li>
-                                <a onclick="showStory(0)">
+                                <a  href="#story" onclick="showStory(0)">
                                     <div class="images">
                                         <img src="images/canada.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit</p>
@@ -50,7 +56,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a onclick="showStory(1)">
+                                <a href="#story" onclick="showStory(1)">
                                     <div class="images">
                                         <img src="images/candle.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit2</p>
@@ -58,7 +64,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a onclick="showStory(2)">
+                                <a href="#story" onclick="showStory(2)">
                                     <div class="images">
                                         <img src="images/tree.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit3</p>
@@ -66,7 +72,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a onclick="showStory(3)">
+                                <a href="#story" onclick="showStory(3)">
                                     <div class="images">
                                         <img src="images/lights.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit4</p>
@@ -74,7 +80,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a onclick="showStory(4)">
+                                <a href="#story" onclick="showStory(4)">
                                     <div class="images">
                                         <img src="images/service13.jpg" alt="canada.jpg"/>
                                         <p>Emri i vendit5</p>
@@ -82,7 +88,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a onclick="showStory(5)">
+                                <a href="#story" onclick="showStory(5)">
                                     <div class="images">
                                         <img src="images/rodo.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit6</p>
@@ -90,7 +96,7 @@ and open the template in the editor.
                                 </a>
                             </li>
                             <li>
-                                <a onclick="showStory(6)">
+                                <a href="#story" onclick="showStory(6)">
                                     <div class="images">
                                         <img src="images/serviceh.jpg" alt="canada.jpg" />
                                         <p>Emri i vendit7</p>
@@ -106,20 +112,20 @@ and open the template in the editor.
                         </ul>
                     </nav>
                     
-                    <a  onclick="plusDivs(-1)"><span id="leftArrow" ><</span></a>
-                    <a  onclick="plusDivs(1)"><span id="rightArrow" >></span></a>
+                    
                     
                     
                 </div>
+                
             </article>
 
-            <article>
+            <article id="story">
                 <div class="readMore hidden">
                     
                     <div class="story" id="shortInfo">
-                        <div id="foto">
-                            <img src="images/service15.jpg" alt="kosovo.jpg" class="miniSlideShow"/>
-                        </div>
+                        <figure>
+                            <img src="images/service15.jpg" alt="kosovo.jpg" class="miniSlideShow" width="360px" height="500px"/>
+                        
 
                         <div id="photos" style="margin-left: 35%;">
                                 <span class="dot blueDot" onclick="showNextPicture(0,0)" onload="test()"></span>
@@ -127,20 +133,20 @@ and open the template in the editor.
                                 <span class="dot" onclick="showNextPicture(0,2)"></span>
                                 <span class="dot" onclick="showNextPicture(0,3)"></span>
                             </div>
-                        <div id="info">
-                            <h2>Germia National Park</h2>
-                            <h3>A cool place to spend a Sunday</h3>
-                            <h4>Prishtina</h4>
+                        <figcaption>
+                            <h2>G&EumlRMIA NATIONAL PARK</h2>
+                            <h3><i>A cool place to spend a Sunday</i></h3>
+                            <h4><mark>Prishtina</mark></h4>
                             
-                        </div>
-                        
+                        </figcaption>
+                    </figure>
                     </div>
                     <div class="story" id="longInfo">
-                        <h2>HISTORY:</h2>
-                        <p>Germia National Park is a park located in the north-east of Kosova's capital city Prishtina. It is a part of the Rhodope Mountains, which
+                        <h2><u>History:</u></h2>
+                        <p><b>G&eumlrmia national park</b> is a park located in the north-east of <abbr title="Kosova">KS</abbr>'s capital city Prishtina. It is a part of the Rhodope Mountains, which
                         connect Kosova and Macedonia. Since 1987 the municipality of Prishtina took it under protection. </p>
-                        <h2>What can you do there</h2>
-                        <p>Germia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
+                        <h2><u>What can you do there"</u></h2>
+                        <p>G&eumlrmia National Park is one of the people's favorite place to spend a day off, especially in the summer weekends. This comes as a result of
                             the nature and the air purity there, among several activities that the park provides. Starting from the big space, in which you can organize 
                             picnics, and a variety of games for everyone, no matter the age differences. Moving on to the children's playgrounds, and restaurants for the 
                             parents to relax. Also there are several Volleyball, Basketball and Football fields in which sometimes are organized events. Summer is the 

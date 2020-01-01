@@ -41,7 +41,7 @@ function showStory(n)
         stories[i].className = "readMore hidden";
     }
     stories[n+slideIndex-1].className = "readMore";
-    document.getElementById("main").style.height = "1300px";
+    document.getElementById("main").style.height = "1500px";
 }
 
 function showNextPicture(place,index)
@@ -67,17 +67,9 @@ function resetColors(c)
 {
     var d = document.getElementsByClassName("blueDot");
     //d[c].style.backgroundColor = "#E2CBA0";
-    d[c].className = "dot";
+    d[c].className = "dot fadeOut";
     
 }
-
-function test() {
-    $(".foto").each(function(index) {
-        $(this).hide();
-        $(this).delay(2000*i).fadeIn(10000).fadeOut();
-    });
-}
-test();
 
 
 /*$(document).ready(function(){
