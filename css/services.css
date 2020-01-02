@@ -273,7 +273,7 @@ table tr>td
     display: none;
 }
 
-#rugova img
+#rugova, #ulpiana img
 {
  width:600px;
 margin: 60px 30px 30px 300px;
@@ -283,7 +283,7 @@ border-color:#E2CBA0 ;
 padding-top: 60px;
 }
 
-#rugova .text
+#rugova, #ulpiana .text
 {
     text-align: justify;
 font-size: 17x;
@@ -292,8 +292,9 @@ line-height: 25px;
 margin: 30px 300px 0px 300px;
 
 } 
-#rugova .t1
+#rugova, #ulpiana .t1
 { margin-left: 300px;
+    margin-right: 300px;
     color: black;
     font-weight: bold;
     font-size: 20px;
