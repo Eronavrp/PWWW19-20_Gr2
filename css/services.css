@@ -6,7 +6,7 @@ body
     width:100%;
     height:565px;
     background-color: rgba(13, 21, 60,0.7) ;
-    background-image: url('../images/service16_1.jpg');
+    background-image: url('../images/landscape.jpg');
     background-size: cover;
     background-blend-mode: lighten;
     filter:blur(10px);
@@ -17,34 +17,34 @@ body
 }
 #entrance1{
     background-color:  rgba(13, 21, 60,0.7) ;
-    background-image: url('../images/service16_1.jpg');
+    background-image: url('../images/landscape.jpg');
     background-size:cover;
     background-blend-mode: darken;
     
 }
 #entrance1 h1{
-    font-size: 63px;
+    font-size: 53px;
     color: white;
     font-weight: 500;
     display: flex;
     margin:17% 19% 0 19%;
+    text-align: center;
 }
 #entrance1 h3{
     font-size: 1.3em;
     color:white;
     font-weight: 300;
     display: flex;
-    margin:0.5% 15% 0 17%;
+    margin:0.5% 15% 0 20%;
     padding-bottom: 15%;
+    text-align: center;
 }
-
 
 
 #col img
 {
     width: 250px;
     height: 220px;
-    position:relative;
     z-index: -1;
 }
 
@@ -133,7 +133,7 @@ body
 }
 
 
-#hide1
+#hide1, #hide2, #hide3, #hide4
 {
     display: none;
 }
@@ -267,4 +267,35 @@ table tr>td
 .info2>address
 {
     padding-bottom: 30px;
+}
+#rugova, #ulpiana
+{
+    display: none;
+}
+
+#rugova img
+{
+ width:600px;
+margin: 60px 30px 30px 300px;
+border: none;
+border-top: 1px solid #303030;
+border-color:#E2CBA0 ;
+padding-top: 60px;
+}
+
+#rugova .text
+{
+    text-align: justify;
+font-size: 17x;
+color: #121416;
+line-height: 25px;
+margin: 30px 300px 0px 300px;
+
+} 
+#rugova .t1
+{ margin-left: 300px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    
 }
