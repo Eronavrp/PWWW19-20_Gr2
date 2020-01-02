@@ -6,7 +6,7 @@
     background-size: cover;
     background-blend-mode: lighten;
     filter:blur(10px);
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     z-index: -1;
@@ -235,6 +235,8 @@ article nav ul li {
     text-align: center;
 }
 
+.short h2 {text-transform: uppercase;}
+
 .long h2{
     margin-bottom: 15px;
     font-size: 2em;
@@ -243,7 +245,7 @@ article nav ul li {
 .long p{
     margin-bottom: 30px;
     text-align: justify;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .hidden {
@@ -279,4 +281,74 @@ mark
 
 b{
     text-transform: capitalize;
+}
+
+.activities
+{
+    width: 50%;
+    display:inline;
+    float:left;
+}
+
+.tables
+{
+    width: 50%;
+    display: inline;
+}
+
+.activities ul{
+    padding-left: 30px;
+    margin-top: -20px;
+    font-size: 1.1em;
+    list-style-type: disc;
+}
+
+.tables table
+{
+    
+    border-style: solid;
+    border-color: #E2CBA0;
+    border-width: 2px;
+}
+
+th, td 
+{
+    padding: 15px;
+    border:1px solid #0D153C;
+}
+
+#third {
+    border-spacing: 5px;
+    border-style: outset;
+}
+
+#third th {
+    text-align: right;
+    background-color: #E2CBA0;
+}
+
+#primary{
+    list-style-type: square;
+}
+
+#nested
+{
+    list-style-type: circle;
+    margin-top: 0px;
+}
+
+ol{
+    padding-left: 30px;
+}
+
+.video {
+    width: 60%;
+    display: inline;
+    float: left;
+}
+
+.fourth {
+    width: 40%;
+    display: inline;
+    float:left;
 }
