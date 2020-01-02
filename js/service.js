@@ -7,10 +7,18 @@ function HideContent(obj) {
     }
 }
 
+function HideContent2(obj) {
+  for (var i = 1; i < obj.length; i++) {
+      document.getElementById([obj[0]]).style.display = 'block';
+      document.getElementById([obj[i]]).style.display = 'none';
+
+  }
+}
+
 function HideContent1(obj) {
     
       if(  document.getElementById(obj).style.display == 'none')
-      {document.getElementById(obj).style.display = 'block';}
+      {document.getElementById(obj).style.display = 'block'}
       else
       {
         document.getElementById(obj).style.display = 'none';
@@ -33,3 +41,17 @@ function myFunction() {
     else {
         element.style.cssText += "position: relative; top: 40px; bottom: auto; right: auto; left: 20px;";
     }}
+    
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
