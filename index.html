@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/headerFooter.css">
-    <script src="js/main.js"></script>
 </head>
 <body>
     <div id="blur">
@@ -108,28 +107,28 @@
                 <div>
                     <div class="popupCloseButton">X</div>
                     <h1>Book now</h1>
-                    <form id="book">
+                    <form id="book" name="form" method="POST" action="#" onsubmit="return validateForm()">
                         <label>Name:
-                            <input type="text">
+                            <input type="text" name="name">
                         </label><br/>
                         <label>Email:
-                            <input type="email" placeholder="e.x. name@domain.com">
+                            <input name="email" type="email" placeholder="e.x. name@domain.com">
                         </label></br>
                         <label>Check-in:
-                            <input type="date">
+                            <input name="data1" type="date" required>
                         </label><br/>
                         <label>Check-out:
-                            <input type="date" style="margin:2% 7.8%;">
+                            <input name="data2" type="date" style="margin:2% 7.8%;" required>
                         </label><br/>
                         <label>Room :
-                            <select>
+                            <select name="room">
                                 <option>Single room</option>
                                 <option>Double room</option>
                                 <option>Triple room</option>
                                 <option>Villa</option>
                             </select>
                         </label><br/>
-                            <input type="radio" name="rez">All-inclusive
+                            <input type="radio" name="rez" checked>All-inclusive
                             <input type="radio" name="rez">Just breakfast
                             <input type="radio" name="rez">No  food
                             <br/>
