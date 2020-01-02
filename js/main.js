@@ -23,6 +23,11 @@ $(window).on('load',function () {
   $('.popupCloseButton').click(function(){
       $('.hover_bkgr_fricc').hide();
   });
+  $('#drop').hover(function(){
+    $('.dropdown-content').slideDown(2500);
+  },function(){
+    $('.dropdown-content').slideUp(500);
+  });
 });
 //form validation
 function validateForm() {
