@@ -47,9 +47,9 @@
                         <li><a href="javascript:HideContent(['service1', 'service2','service3','service4','service5','service6'])"
                                 id="s1">Activities</a></li>
                         <li><a href="javascript:HideContent(['service2','service1','service3','service4','service5','service6'])"
-                                id="s2">Events</a></li>
+                                id="s2">Festivals</a></li>
                         <li><a href="javascript:HideContent(['service3','service2','service1','service4','service5','service6'])"
-                                id="s3">Festivals</a></li>
+                                id="s3">Events</a></li>
                         <li><a href="javascript:HideContent(['service4','service2','service3','service1','service5','service6'])"
                                 id="s4">Monuments</a></li>
                         <li><a href="javascript:HideContent(['service5','service2','service3','service4','service1','service6'])"
@@ -107,13 +107,13 @@
                             </div>
                         </a>
                         <a href="javascript:HideContent2(['sunii','suni','sunnyhill','ulpiana','Nightlife','rugova'])">
-                        <div class="service">
-                            <img src="images/po.jpg" alt="foto">
-                            <div class="text">
-                                <p>Sunny Hill Festival</p>
+                            <div class="service">
+                                <img src="images/po.jpg" alt="foto">
+                                <div class="text">
+                                    <p>Sunny Hill Festival</p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
                 </div>
                 <div class="row1">
@@ -661,16 +661,88 @@
             </div>
         </div>
         <div id="sunnyhill">
-            <h3>sunnyhill</h3>
-            <audio width="350" height="200" controls>
-                <source src="images/sunnyhill.mp3" type="audio/mp3">
-                Your browser does not support the video tag.
-            </audio>
+            <h3>Sunny Hill Festival</h3>
+
+            <p id="textd"> Drag video into the box and play it. </p>
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                <audio id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69" controls>
+                    <source src="images/sunnyhill.mp3" type="audio/mp3">
+                    Your browser does not support the video tag.
+                </audio>
+            </div>
+
+
+            <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <p class="text">Would you like to see a performance of this song... <br>Stay Tuned</p>
+            <div>
+                <img src="images/sunnyhill9.jpg" alt="fotot">
+                <p class="t1"> Sunny Hill Festival's queen.</p>
+                <p class="text">SUNNY HILL Festival is the biggest festival organized in Kosovo. </p>
+            </div>
+            <div>
+                <img src="images/sunnyhill2.jpg" alt="fotot">
+                <p class="t1"> Miley Cyrus performing in Kosovo</p>
+                <p class="text">Sunny Hill Festival is an international music festival of the highest standards, one
+                    that puts Prishtina on the festival map as a not-to-be-missed cultural place, in a country that
+                    loves music and knows how to have fun. </p>
+            </div>
+            <div>
+                <img src="images/sunnyhill3.jpg" alt="fotot">
+                <p class="t1"> GASHI performing for the first time at Sunny Hill Festival</p>
+                <p class="text">We want to invite music lovers from around the world to come and enjoy our country, as
+                    well as performances of some of the best-known performers of our modern time and charts. </p>
+            </div>
+            <div>
+                <img src="images/sunnyhill4.jpg" alt="fotot">
+                <p class="t1"> Miley Cyrus performing in Kosovo</p>
+                <p class="text">We believe we achieved this on our very first edition, with performances from Dua Lipa,
+                    Action Bronson, and Martin Garrix who will always be part of our history as the first ever Sunny
+                    Hill Festival Headliners </p>
+            </div>
+            <div>
+                <img src="images/sunnyhill5.jpg" alt="fotot">
+                <p class="t1"> It's all about having fun... and seeing stars </p>
+                <p class="text">From New York to London, from Milan to Sao Paulo and New Delhi to Los Angeles, Sunny
+                    Hill Festival was a sensation everyone from all corners of the world was talking about and an event
+                    that thousands and thousands wanted to experience. </p>
+            </div>
+            <div>
+                <img src="images/sunnyhill6.jpg" alt="fotot">
+                <p class="t1"> GASHI performing for the first time at Sunny Hill Festival</p>
+               
+                <p class="text">Listen to one of the songs of GASHI...</p>
+                <div id="div3" >
+
+                    <audio  width="336" height="69" controls>
+                        <source src="images/sunnyhill2.mp3" type="audio/mp3">
+                        Your browser does not support the video tag.
+                    </audio>
+                </div>
+                <p class="text">Sunny Hill Festival is an international music festival of the highest standards, one
+                    that puts Prishtina on the festival map as a not-to-be-missed cultural place, in a country that
+                    loves music and knows how to have fun. </p>
+            </div>
+            <div>
+                <img src="images/sunnyhill7.jpg" alt="fotot">
+                <p class="t1"> Live emotions that you never had before</p>
+                <p class="text">In the end, more than 50 thousand people did (unfortunately, the location could not
+                    handle more than that) In the second edition of Sunny Hill, we want to break our own records, by
+                    making the greatest music event in the region. </p>
+            </div>
+            <div>
+                <img src="images/sunnyhill8.jpg" alt="fotot">
+                <p class="t1"> Every year here for you</p>
+                <p class="text">And yes, you are invited. </p>
+            </div>
+
         </div>
         <div id="suni">
             <p>sssssss</p>
         </div>
-        <div id="sunii"><p>ssssssssssaaaaaaaaa</p></div>
+        <div id="sunii">
+            <p>ssssssssssaaaaaaaaa</p>
+        </div>
         <footer>
             <div>
                 <div class="footerDivs" id="blog">

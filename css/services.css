@@ -268,12 +268,12 @@ table tr>td
 {
     padding-bottom: 30px;
 }
-#rugova, #ulpiana
+#rugova, #ulpiana, #sunnyhill, #suni, #sunii   
 {
     display: none;
 }
 
-#rugova img, #ulpiana img
+#rugova img, #ulpiana img, #sunnyhill img
 {
  width:600px;
 margin: 60px 30px 30px 300px;
@@ -283,7 +283,7 @@ border-color:#E2CBA0 ;
 padding-top: 60px;
 }
 
-#rugova .text, #ulpiana .text
+#rugova .text, #ulpiana .text, #sunnyhill .text
 {
     text-align: justify;
 font-size: 17x;
@@ -292,7 +292,7 @@ line-height: 25px;
 margin: 30px 300px 0px 300px;
 
 } 
-#rugova .t1, #ulpiana .t1
+#rugova .t1, #ulpiana .t1 ,#sunnyhill .t1
 { margin-left: 300px;
     margin-right: 300px;
     color: black;
@@ -300,3 +300,34 @@ margin: 30px 300px 0px 300px;
     font-size: 20px;
     
 }
+#div2  {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #E2CBA0;
+    margin: 20px 0 20px 400px;
+  }
+
+  #div1
+  {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    margin: 10px 0 20px 20px;
+  }
+
+  #textd
+  {
+    text-align: justify;
+    font-size: 17x;
+    color: #121416;
+    line-height: 25px;
+    margin: 20px 0 10px 40px;
+
+  }
+  #div3  {
+    width: 350px;
+    height: 70px;
+   
+    margin: 20px 0 20px 400px;
+  }
