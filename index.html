@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/headerFooter.css">
-    <script src="js/main.js"></script>
 </head>
 <body>
     <div id="blur">
@@ -51,7 +50,7 @@
         </div>
         <div id="body">
             <div id="services">
-                <a href="https://sdhprishtina.com/" target="_blank">
+                <a href="#" class="forma">
                     <div class="service">
                         <img src="images/pri4.jpg" alt="foto1">
                         <div class="text2">
@@ -63,7 +62,7 @@
                     </div>
                 </a>
 
-                <a href="http://emeraldhotel.info/" target="_blank">
+                <a href="#" class="forma">
                     <div class="service">
                         <img src="images/emerald.jpg" alt="foto1">
 
@@ -76,7 +75,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="http://hotelgarden-ks.com/" target="_blank">
+                <a href="#" class="forma">
                     <div class="service">
                         <img src="images/garden.jpg" alt="foto1">
 
@@ -89,7 +88,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="http://www.hotelsharri.com/" target="_blank">
+                <a href="#" class="forma">
                     <div class="service">
                         <img src="images/sharr5.jpg" alt="foto1">
 
@@ -102,6 +101,40 @@
                         </div>
                     </div>
                 </a>
+            </div>
+            <div class="hover_bkgr_fricc">
+                <span class="helper"></span>
+                <div>
+                    <div class="popupCloseButton">X</div>
+                    <h1>Book now</h1>
+                    <form id="book" name="form" method="POST" action="#" onsubmit="return validateForm()">
+                        <label>Name:
+                            <input type="text" name="name">
+                        </label><br/>
+                        <label>Email:
+                            <input name="email" type="email" placeholder="e.x. name@domain.com">
+                        </label></br>
+                        <label>Check-in:
+                            <input name="data1" type="date" required>
+                        </label><br/>
+                        <label>Check-out:
+                            <input name="data2" type="date" style="margin:2% 7.8%;" required>
+                        </label><br/>
+                        <label>Room :
+                            <select name="room">
+                                <option>Single room</option>
+                                <option>Double room</option>
+                                <option>Triple room</option>
+                                <option>Villa</option>
+                            </select>
+                        </label><br/>
+                            <input type="radio" name="rez" checked>All-inclusive
+                            <input type="radio" name="rez">Just breakfast
+                            <input type="radio" name="rez">No  food
+                            <br/>
+                        <input type="submit" value="Book!" id="btn">
+                    </form>
+                </div>
             </div>
             <div id="line">
                 <fieldset>
