@@ -71,13 +71,8 @@ body{
     display: block;
   }
   .dropdown-content a:hover {background-color: rgba(119,136,153,0.7)}
-  #entrance1 ul li:nth-child(6){
-      color: white;
-  }
+ 
 
-  /* #entrance1 ul li:nth-child(6):hover .dropdown-content {
-  display: block;
-} */
 
 /*footer*/
 footer{
