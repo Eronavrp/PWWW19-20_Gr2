@@ -15,3 +15,12 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "inline";  
 }
+ //pop up forma
+$(window).on('load',function () {
+  $(".forma").click(function(){
+     $('.hover_bkgr_fricc').show();
+  });
+  $('.popupCloseButton').click(function(){
+      $('.hover_bkgr_fricc').hide();
+  });
+});
