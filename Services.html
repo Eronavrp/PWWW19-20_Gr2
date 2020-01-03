@@ -41,7 +41,18 @@
                     </li>
             </nav>
 
-            <h1>Enjoy Your Dream Vacation</h1>
+            <!-- <h1>Enjoy Your Dream Vacation</h1> -->
+            <canvas id="myCanvas" width="900" height="200">
+            Your browser does not support the canvas element.
+            </canvas>
+            <script>
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+                ctx.font = "45px Arial";
+                ctx.fillStyle = "white";
+                ctx.fillText("Enjoy Your Dream Vacation",310,190);
+                </script>
+
             <h3>Travel to the any corner of Kosovo, without going around in circles.</h3>
         </header>
 
