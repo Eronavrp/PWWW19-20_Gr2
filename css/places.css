@@ -109,6 +109,8 @@ article nav ul li {
     float:left;
     max-width: 300px;
     max-height: 280px;
+    -webkit-transition:  width 2s, height 2s, margin-top 2s;
+                transition: width 0.5s, height 0.5s ,margin-top 0.5s;
    }
 
 .images img{
@@ -116,7 +118,8 @@ article nav ul li {
     height: 200px;
     position:relative;
     z-index: 1;
-    
+    -webkit-transition:  width 2s, height 2s, ;
+                transition: width 0.5s, height 0.5s;
     
 }
 

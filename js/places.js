@@ -3,18 +3,12 @@ var slideIndex = 1;
  var currentClicked = 0;
  var isClicked = false;
 
-function plusDivs(n) {
-    
-    
-    
-  showDivs(n);
-  
 
-}
 
 function showDivs(n) 
 {
     var divs = document.getElementsByClassName("images");
+    
 
     
     //document.getElementById("V").innerHTML = currentClicked + " " + slideIndex;
