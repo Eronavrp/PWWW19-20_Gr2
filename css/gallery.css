@@ -33,6 +33,7 @@ img{
 #entrance{
   background-color: rgba(13, 21, 60,0.7) ;
   background-image: url('../images/kosovoflag.jpg');
+  background-origin: content-box;
   background-size: cover;
   background-blend-mode: darken;
   height: 65vh;
