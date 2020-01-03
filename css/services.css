@@ -55,7 +55,7 @@ body
 }
 
 
-#service1, #service2,#service3,#service4,#service5,#service6
+#service1, #service2, #service3, #service4, #service5
 {
     display: none;
     height: 300px;
@@ -64,6 +64,7 @@ body
 {
     display: flex;
 }
+
 
 #list1
 {
@@ -268,12 +269,13 @@ table tr>td
 {
     padding-bottom: 30px;
 }
-#rugova, #ulpiana, #sunnyhill, #suni, #sunii, #kosova, #prite, #doku   
+#rugova, #ulpiana, #sunnyhill, #suni, #sunii, #kosova, #prite, #doku, #lidhja, #xhamia ,#muzeu ,#prishtina ,#prizreni ,#peja 
 {
     display: none;
 }
 
-#rugova img, #ulpiana img, #sunnyhill img, #suni img, #sunii img ,#kosova img, #prite img, #doku img
+
+#rugova img, #ulpiana img, #sunnyhill img, #suni img, #sunii img ,#kosova img, #prite img, #doku img,#lidhja img, #xhamia img,#muzeu img ,#prishtina img,#prizreni img ,#peja img 
 {
  width:600px;
 
@@ -284,7 +286,7 @@ border-color:#E2CBA0 ;
 padding-top: 60px;
 }
 
-#rugova .text, #ulpiana .text, #sunnyhill .text, #suni .text ,#sunii .text, #kosova .text, #prite .text, #doku .text 
+#rugova .text, #ulpiana .text, #sunnyhill .text, #suni .text ,#sunii .text, #kosova .text, #prite .text, #doku .text ,#lidhja .text, #xhamia .text,#muzeu .text,#prishtina .text ,#prizreni .text,#peja .text 
 {
 text-align: justify;
 font-size: 17x;
@@ -293,7 +295,7 @@ line-height: 25px;
 margin: 30px 300px 0px 300px;
 
 } 
-#rugova .t1, #ulpiana .t1 ,#sunnyhill .t1 ,#suni .t1 ,#sunii .t1, #kosova .t1, #prite .t1, #doku .t1 
+#rugova .t1, #ulpiana .t1 ,#sunnyhill .t1 ,#suni .t1 ,#sunii .t1, #kosova .t1, #prite .t1, #doku .t1 ,#lidhja .t1, #xhamia .t1,#muzeu .t1,#prishtina .t1,#prizreni .t1,#peja .t1 
 { margin-left: 300px;
     margin-right: 300px;
     color: black;
