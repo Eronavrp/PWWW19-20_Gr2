@@ -307,6 +307,25 @@ margin: 30px 300px 0px 300px;
     font-size: 20px;
     
 }
+#rugova #t2, #text2
+{
+    text-align: justify;
+    font-size: 17x;
+    color: #121416;
+    line-height: 25px;
+}
+#rugova #t2
+{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+#rugova #start img
+  {
+      margin: auto;
+      padding: auto;
+      
+  }
 #div2  {
     width: 350px;
     height: 70px;
@@ -349,9 +368,12 @@ margin: 30px 300px 0px 300px;
   }
   #rugova #start
   {
+    width: 600px;
       outline-width: 1px;
       outline-style: dotted;
-      outline-color: #E2CBA0 ;
+      outline-color: #131C39 ;
+      outline-offset: 40px;
+      margin-left: 300px;
  
       
   }
