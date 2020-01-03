@@ -30,14 +30,4 @@
     else if(n==0) {document.getElementById("foundHidden").style.display = "none";}
   }
 
-  function tellUsWhy()
-  {
-      var value = document.getElementById("number").value;
-      if(value<30)
-      {
-          document.getElementById("tellUsWhyHidden").style.display = "block";
-      }
-      else{
-        document.getElementById("tellUsWhyHidden").style.display = "none";
-      }
-  }
+  
