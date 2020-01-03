@@ -2,12 +2,12 @@
 var a=1 
 change(1);
 function change(n){
-    var gall=[document.getElementById('gallery1'),
+    const gall=[document.getElementById('gallery1'),
     document.getElementById('gallery2'),
     document.getElementById('gallery3'),
     document.getElementById('gallery4')]
 
-    var btn=[document.getElementById('btn1'),
+    const btn=[document.getElementById('btn1'),
     document.getElementById('btn2'),
     document.getElementById('btn3'),
     document.getElementById('btn4')]

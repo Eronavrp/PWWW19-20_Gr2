@@ -26,5 +26,29 @@
       Sorry, your browser does not support inline SVG.
       Sorry, your browser does not support inline SVG.
       </svg>
+      <p><output id="result"> </output></p>
+      <script>
+
+        var w;
+        window.addEventListener('load',startWorker);
+        function startWorker() {
+          if(typeof(Worker) !== "undefined") {
+            if(typeof(w) == "undefined") {
+              w = new Worker("count.js");
+            }
+            w.onmessage = function(event) {
+              document.getElementById("result").innerHTML = event.data;
+            };
+          } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+          }
+        }
+        
+        function stopWorker() { 
+          w.terminate();
+          w = undefined;
+        }
+        
+        </script>
 </body>
 </html>
