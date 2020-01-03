@@ -17,6 +17,10 @@ img{
   width:100%;
   height:565px;
   background-color: rgba(13, 21, 60,0.7) ;
+  background-image: -webkit-linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background-image: -moz-linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background-image: -ms-linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background-image: -o-linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
   background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
   background-size: cover;
   background-blend-mode: lighten;
@@ -33,17 +37,7 @@ img{
   background-blend-mode: darken;
   height: 65vh;
 }
-#blur{
-    width:100%;
-    height:460px;
-    background-color: rgba(13, 21, 60,0.5) ;
-    background-blend-mode: lighten;
-    filter:blur(10px);
-    position: fixed;
-    top:0;
-    left:0;
-    z-index: -1;
-}
+
 h1{
     font:2.2em sans-serif;
     color: darkblue;
