@@ -20,8 +20,18 @@ body
 }
 #entrance{
     background-color: rgba(13, 21, 60,0.7) ;
-    background-image: url('../images/collage.jpg');
-    background-size: cover;
+    /*background-image: url('../images/collage.jpg');*/
+    background-image: url('../images/Places/title1.jpg'), url('../images/Places/title2.jpg'), url('../images/Places/title3.jpg'), url('../images/Places/title4.jpg'),
+                        url('../images/Places/title5.jpg'), url('../images/Places/title6.jpg'), url('../images/Places/title7.jpg'), url('../images/Places/title8.jpg'),
+                        url('../images/Places/title9.jpg'), url('../images/Places/title10.jpg'), url('../images/Places/title11.jpg'), url('../images/Places/title12.jpg');
+    background-position: 0px 0px, 240px 0px, 480px 0px, 720px 0px, 960px 0px,
+                         0px 225px, 300px 225px, 600px 225px, 900px 225px,
+                         0px 450px, 400px 450px, 805px 450px;
+
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,
+                        no-repeat,no-repeat,no-repeat,no-repeat,
+                        no-repeat,no-repeat,no-repeat,no-repeat;
+    
     background-blend-mode: darken;
     background-origin: border-box;
 }
