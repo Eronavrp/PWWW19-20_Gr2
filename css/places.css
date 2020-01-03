@@ -327,6 +327,10 @@ th, td
 #third {
     border-spacing: 5px;
     border-style: outset;
+    border-width: 20px;
+    border-image: url("../images/Places/mirusha1.jpg");
+    
+    
 }
 
 #third th {
