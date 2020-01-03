@@ -1,3 +1,8 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #blur{
     width:100%;
     height:642px;
@@ -20,18 +25,19 @@
 
 }
 #entrance h1{
-    font-size: 4em;
+    font-size: 3.5em;
     color:white;
     font-weight: 500;
-    display: flex;
-    margin:17% 19% 0 19%;
+    text-align: center;
+    font-variant: small-caps;
+    margin-top:17%;
     font-style: normal;
 }
 #entrance h3{
     font-size: 1.3em;
     color:white;
     font-weight: 300;
-    display: flex;
+    text-align: center;
     margin:0.5% 15% 0 30%;
     padding-bottom: 15%;
 }
