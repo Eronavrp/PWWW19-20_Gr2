@@ -50,8 +50,8 @@ function showStory(n)
     for( i = 0; i< stories.length; i++){
         stories[i].className = "readMore hidden";
     }
-    stories[n+slideIndex-1].className = "readMore";
-    
+    if(n!=4)stories[n+slideIndex-1].className = "readMore";
+    else stories[n+slideIndex-2].className = "readMore";
     document.getElementById("main").style.height = "1500px";
     
 }
@@ -60,9 +60,16 @@ function showNextPicture(place,index)
 {   
     resetColors(place);
     var pictures = [
-        ["images/a1.jpg","images/a2.jpg","images/a3.jpg","images/a4.jpg"],
-        ["images/a5.jpg","images/a6.jpg","images/a7.jpg","images/a8.jpg"],
-        ["images/a9.jpg","images/a10.jpg","images/a11.jpg","images/a12.jpg"]];
+        ["images/places/germia3.jpg","images/places/germia1.jpg","images/places/germia4.jpg","images/places/germia5.jpg"],
+        ["images/places/kalaja1.jpg","images/places/kalaja7.jpg","images/places/kalaja4.jpg","images/places/kalaja6.jpg"],
+        ["images/places/mirusha1.jpg","images/places/mirusha2.jpg","images/places/mirusha7.jpg","images/places/mirusha6.jpg"],
+        ["images/places/drini6.jpg","images/places/drini3.jpg","images/places/drini2.jpg","images/places/drini7.jpg"],
+        ["images/places/gadime1.jpg","images/places/gadime2.jpg","images/places/gadime3.jpg","images/places/gadime4.jpg"],
+        ["images/places/brezovica1.jpg","images/places/brezovica5.jpg","images/places/brezovica3.jpg","images/places/brezovica4.jpg"],
+        ["images/places/rugova1.jpg","images/places/rugova7.jpg","images/places/rugova3.jpg","images/places/rugova6.jpg"],
+        ["images/places/prevalla4.jpg","images/places/prevalla5.jpg","images/places/prevalla1.jpg","images/places/prevalla3.jpg"],
+        
+    ];
     var s = document.getElementsByClassName("miniSlideShow");
     
     var d = document.getElementsByClassName("dot");

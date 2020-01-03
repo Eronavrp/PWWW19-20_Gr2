@@ -1,0 +1,157 @@
+#blur{
+    width:100%;
+    height:642px;
+    background-color: rgba(13, 21, 60,0.2) ;
+    background-image: url('../images/collage.jpg');
+    background-size: cover;
+    background-blend-mode: lighten;
+    filter:blur(10px);
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -1;
+}
+#entrance{
+    background-color: rgba(13, 21, 60,0.7) ;
+    background-image: url('../images/collage.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+    
+
+}
+#entrance h1{
+    font-size: 4em;
+    color:white;
+    font-weight: 500;
+    display: flex;
+    margin:17% 19% 0 19%;
+    font-style: normal;
+}
+#entrance h3{
+    font-size: 1.3em;
+    color:white;
+    font-weight: 300;
+    display: flex;
+    margin:0.5% 15% 0 30%;
+    padding-bottom: 15%;
+}
+
+main{
+    margin: 5% 10%;
+}
+h2{
+    color: #0D153C;
+}
+#hidden {
+    display: none;
+}
+
+table{
+    margin: 5% 0%;
+    margin-left: -3%;
+    
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.field {
+    
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.label{
+    height: 25px;
+    width: 100%;
+    
+    background-color: rgba(226, 203, 160,0.45);
+    border: 1px solid #0D153C;
+}
+
+.label p{
+    font-size: 0.85em;
+
+    padding: 5px;
+}
+
+.text  {
+    height: 35px;
+    width: 99%;
+    background-color: #F1F4FF;
+    font-size: 1.25em;
+    color: #0D153C;
+    border: 1px solid #0D153C;
+    border-top: 0px;
+    padding-left: 1%;
+}
+
+td{
+    padding-top: 15px;
+    border-bottom: 1px solid #0D153C;
+    padding-bottom: 15px;
+    width: 50%;
+}
+
+.buttons {
+    width: 25px;
+    height: 25px;
+}
+
+.textarea{
+    width: 99%;
+    height: auto;
+    border-top: 1px solid #0D153C;
+}
+#reasonHidden, #foundHidden
+{
+    display: none;
+}
+
+.checkBoxes{
+    display: inline;
+    float:left;
+    padding-left: 5px;
+}
+
+#tellUsWhyHidden{
+    display: none;
+}
+
+tfoot .field{
+    width: 70%;
+    margin-left: 2.5%;
+    
+    
+}
+
+tfoot div{
+    width: 20%;
+    display: inline;
+    float: left;
+    
+}
+
+[type=text],[type=date],[type=tel],select,textarea,[type^="sub"],[type^="res"]{
+    box-shadow: 5px 5px 10px rgba(13, 21, 60,0.7);
+}
+
+[type$="mit"],[type=reset]{
+    background-color: rgba(226, 203, 160,0.75);
+    border-radius: 2px;
+    color: #0D153C;
+    border-style: outset;
+    width: 100px;
+    height: 50px;
+}
+
+[type~=submit]:hover,[type=reset]:hover
+{
+    background-color: #0D153C;
+    color: #E2CBA0;
+    border-color: #E2CBA0;
+}
+
+fieldset{
+    border-color: #0D153C;
+}
+
