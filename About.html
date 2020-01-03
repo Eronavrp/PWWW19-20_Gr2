@@ -105,8 +105,11 @@
             </table>
         </article>
         <aside>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752311.6037919457!2d20.3416435869496!3d42.56129743855055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13537af354bf7df1%3A0xbfffeedfabc31791!2sKosovo!5e0!3m2!1sen!2s!4v1577743552934!5m2!1sen!2s"
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752311.6037919457!2d20.3416435869496!3d42.56129743855055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13537af354bf7df1%3A0xbfffeedfabc31791!2sKosovo!5e0!3m2!1sen!2s!4v1577743552934!5m2!1sen!2s"
                  width="450" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                 -->
+                 <div style="display: inline-block;width: 450px;height: 450px; vertical-align: middle;" id="map">
+                </div>
             <div id="details">
                 <h2>Republic of Kosovo</h2>
                 <p><strong>Area: </strong> <em>10,887</em></p>
@@ -116,8 +119,6 @@
                 <p><strong>Nationality: </strong> <em>Kosovar</em></p>
                 <p><strong>Valute: </strong> <em>Euro </em></p>
                 <p><strong>Language: </strong> <em>Albanian </em></p>
-                <button onclick="getLocation()" style="margin-left:2%;width:150px;background-color: rgba(0,0,0,0.2);" >Show location</button>
-                <p id="demo"></p>
                 <a href="flag.html"><button >Flag</button></a>
             </div>
         </aside>
@@ -172,5 +173,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/dropdown.js"></script> 
     <script src="js/geo.js"></script> 
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPvs2MZNfRqUqOcLPsSo6f1GXOGv9MW7M&callback=initMap">
+    </script>
 </body>
 </html>
