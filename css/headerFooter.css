@@ -128,9 +128,14 @@ footer >div{
     padding-top: 15px;
 }
 
-a {
+
+a:link {
     color: #E2CBA0;
     text-decoration:none;
+}
+
+a:visited{
+    color: white;
 }
 
 .divHeader{
