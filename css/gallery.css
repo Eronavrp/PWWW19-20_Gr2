@@ -14,7 +14,11 @@ img{
     margin: 1% 8%;
 }
 #entrance{
-    height:57vh;
+  background-color: rgba(13, 21, 60,0.7) ;
+  background-image: url('../images/kosovoflag.jpg');
+  background-size: cover;
+  background-blend-mode: darken;
+  height: 65vh;
 }
 #blur{
     width:100%;
