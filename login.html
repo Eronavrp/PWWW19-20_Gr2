@@ -39,36 +39,9 @@ span.psw {
   padding-top: 16px;
 }
 </style>
-<script>
-    function CheckPassword() 
-{ 
-const inputtxt=document.getElementById('psw');
-const inputem=document.getElementById('email');
-if(inputem.value==''){
-    inputem.style.borderBottom='3px solid darkblue'
-}
-var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-if(inputtxt.value.match(decimal)) 
-{ 
-   return true;
-}
-else
-{ 
-document.getElementById('warn').innerHTML='Password must contain at least 8 characters,one uppercase letter one digit and one special character';
-inputtxt.style.borderBottom='3px solid darkblue'
-return false;
-}
-}
-
-function replace(){
-    var str = document.getElementById("some").innerHTML; 
-  var txt = str.replace(/User/i,"Your");
-  document.getElementById("some").innerHTML = txt;
-}
-</script>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="po">
         <div id='blur'>
         </div>
         <header id="entrance1">
@@ -107,5 +80,46 @@ function replace(){
         </div>
         </form>
     </div>
+    <script>
+        function CheckPassword() 
+    { 
+    const inputtxt=document.getElementById('psw');
+    const inputem=document.getElementById('email');
+    if(inputem.value==''){
+        inputem.style.borderBottom='3px solid darkblue'
+    }
+    var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    if(inputtxt.value.match(decimal)) 
+    { 
+       return true;
+    }
+    else
+    { 
+    document.getElementById('warn').innerHTML='Password must contain at least 8 characters,one uppercase letter one digit and one special character';
+    inputtxt.style.borderBottom='3px solid darkblue'
+    return false;
+    }
+    }
+    
+    function replace(){
+        var str = document.getElementById("some").innerHTML; 
+      var txt = str.replace(/User/i,"Your");
+      document.getElementById("some").innerHTML = txt;
+    }
+    
+    function color(){
+        var time=new Date();
+        var h=time.getHours();
+        const el=document.getElementById('po');
+        if(h>0 && h<12 ){
+            el.style.backgroundColor='cornsilk'
+        }
+        else{
+            el.style.backgroundColor='white'
+    
+        }
+    }
+    color()
+    </script>
 </body>
 </html>
