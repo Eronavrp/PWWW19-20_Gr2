@@ -7,13 +7,6 @@ function HideContent(obj) {
     }
 }
 
-//**function HideContent2(obj) {
-//  for (var i = 1; i < obj.length; i++) {
-      //document.getElementById([obj[0]]).style.display = 'block';
-    //  document.getElementById([obj[i]]).style.display = 'none';
-
-  //}
-//}
 
 function HideContent2(obj) {
   var i = 1;
@@ -67,3 +60,6 @@ function myFunction() {
       var data = ev.dataTransfer.getData("text");
       ev.target.appendChild(document.getElementById(data));
     }
+
+
+    

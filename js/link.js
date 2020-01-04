@@ -13,9 +13,3 @@ function HideContent2(obj) {
     }
   } 
 
-function myFunction()
-{
-    HideContent(['service3','service2','service1','service4','service5','service6']);
-    HideContent2(['prite','sunii','suni','sunnyhill','ulpiana','Nightlife','rugova','kosova','doku']);
-    
-}

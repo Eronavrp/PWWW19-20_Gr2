@@ -8,85 +8,151 @@
     <title>Feedback Form</title>
     <link rel="stylesheet" href="css/headerFooter.css">
     <link rel="stylesheet" href="css/feedback.css">
+    <script src="LStorage.js"></script>
+
+
     <script src="js/feedback.js"></script>
-    
+
     <script>
-                function tellUsWhy()
-                {
-                   var value = document.getElementById("number").value;
-                   if(value<30)
-                   {
-                       document.getElementById("tellUsWhyHidden").style.display = "block";
-                   }
-                   else{
-                       
-                     document.getElementById("tellUsWhyHidden").style.display = "none";
-                   }
-                   if(value==100) {document.getElementById("smileFace").className = "reachedMax";
-                                       document.getElementById("output").style.display = "none";}
-                    else {document.getElementById("smileFace").className = "";
-                    document.getElementById("output").style.display = "inline";}
-                   buildSmile(value);
-                   buildSad(value);
-               }
+        function tellUsWhy() {
+            var value = document.getElementById("number").value;
+            if (value < 30) {
+                document.getElementById("tellUsWhyHidden").style.display = "block";
+            }
+            else {
 
-               function buildSmile(expand){
-                var c = document.getElementById("smileFace");
-                
-                var ctx = c.getContext("2d");
-                
-                ctx.clearRect(0,0,c.width,c.height);                
+                document.getElementById("tellUsWhyHidden").style.display = "none";
+            }
+            if (value == 100) {
+                document.getElementById("smileFace").className = "reachedMax";
+                document.getElementById("output").style.display = "none";
+            }
+            else {
+                document.getElementById("smileFace").className = "";
+                document.getElementById("output").style.display = "inline";
+            }
+            buildSmile(value);
+            buildSad(value);
+        }
 
-                var grd = ctx.createLinearGradient(0, 0, 200, 0);
-                grd.addColorStop(0, "orange");
-                grd.addColorStop(1, "yellow");
-                ctx.fillStyle = grd;
-                ctx.beginPath();
-                ctx.arc(25, 25, 15+expand/16, 0, Math.PI * 2, true); // Outer circle
-                ctx.fill();
-                ctx.moveTo(30+expand/16, 25);
-                ctx.arc(25, 25, 5+expand/16, 0, Math.PI, false);  // Mouth (clockwise)
-                ctx.stroke();
-                ctx.beginPath()
-                ctx.moveTo(19-expand/16, 17);
-                ctx.arc(22, 19, 1.5+expand/1000, 0, Math.PI * 2, true);  // Left eye
-                ctx.moveTo(26+expand/16, 17);
-                ctx.arc(28, 19, 1.5+expand/1000, 0, Math.PI * 2, true);  // Right eye
-                ctx.fillStyle = "black";
+        function buildSmile(expand) {
+            var c = document.getElementById("smileFace");
 
-                ctx.fill();
+            var ctx = c.getContext("2d");
 
-                }  
-                function buildSad(expand)
-                {
-                    var c = document.getElementById("sadFace");
-                    var ctx = c.getContext("2d");
-                    expand = 100-expand;
-                    ctx.clearRect(0,0,c.width,c.height);  
-                    var grd = ctx.createLinearGradient(0,0,75,0);
-                    grd.addColorStop(0, "orange");
-                    grd.addColorStop(1, "yellow");
-                    ctx.fillStyle = grd;
-                    ctx.beginPath();
-                    ctx.arc(25, 25, 15+expand/16, 0, Math.PI * 2, true); // Outer circle
-                    ctx.fill();
-                    ctx.moveTo(30+expand/16, 35);
-                    ctx.arc(25, 35, 5+expand/16, 0, Math.PI, true);  // Mouth (clockwise)
-                    ctx.stroke();
-                    ctx.beginPath()
-                    ctx.moveTo(19-expand/16, 17);
-                    ctx.arc(22, 19, 1.5+expand/1000, 0, Math.PI * 2, true);  // Left eye
-                    ctx.moveTo(26+expand/16, 17);
-                    ctx.arc(28, 19, 1.5-expand/1000, 0, Math.PI * 2, true);  // Right eye
-                    ctx.fillStyle = "black";
+            ctx.clearRect(0, 0, c.width, c.height);
 
-                    ctx.fill();
-                }     
-            </script>
+            var grd = ctx.createLinearGradient(0, 0, 200, 0);
+            grd.addColorStop(0, "orange");
+            grd.addColorStop(1, "yellow");
+            ctx.fillStyle = grd;
+            ctx.beginPath();
+            ctx.arc(25, 25, 15 + expand / 16, 0, Math.PI * 2, true); // Outer circle
+            ctx.fill();
+            ctx.moveTo(30 + expand / 16, 25);
+            ctx.arc(25, 25, 5 + expand / 16, 0, Math.PI, false);  // Mouth (clockwise)
+            ctx.stroke();
+            ctx.beginPath()
+            ctx.moveTo(19 - expand / 16, 17);
+            ctx.arc(22, 19, 1.5 + expand / 1000, 0, Math.PI * 2, true);  // Left eye
+            ctx.moveTo(26 + expand / 16, 17);
+            ctx.arc(28, 19, 1.5 + expand / 1000, 0, Math.PI * 2, true);  // Right eye
+            ctx.fillStyle = "black";
+
+            ctx.fill();
+
+        }
+        function buildSad(expand) {
+            var c = document.getElementById("sadFace");
+            var ctx = c.getContext("2d");
+            expand = 100 - expand;
+            ctx.clearRect(0, 0, c.width, c.height);
+            var grd = ctx.createLinearGradient(0, 0, 75, 0);
+            grd.addColorStop(0, "orange");
+            grd.addColorStop(1, "yellow");
+            ctx.fillStyle = grd;
+            ctx.beginPath();
+            ctx.arc(25, 25, 15 + expand / 16, 0, Math.PI * 2, true); // Outer circle
+            ctx.fill();
+            ctx.moveTo(30 + expand / 16, 35);
+            ctx.arc(25, 35, 5 + expand / 16, 0, Math.PI, true);  // Mouth (clockwise)
+            ctx.stroke();
+            ctx.beginPath()
+            ctx.moveTo(19 - expand / 16, 17);
+            ctx.arc(22, 19, 1.5 + expand / 1000, 0, Math.PI * 2, true);  // Left eye
+            ctx.moveTo(26 + expand / 16, 17);
+            ctx.arc(28, 19, 1.5 - expand / 1000, 0, Math.PI * 2, true);  // Right eye
+            ctx.fillStyle = "black";
+
+            ctx.fill();
+        }   
+        
+         
+        //add new key=>value to the HTML5 storage
+		function SaveItem() {
+			
+            var name = document.forms.form.name1.value;
+            var data = document.forms.form.data.value;
+            localStorage.setItem(name, data);
+            doShowAll();
+            
+        }
+  
+      
+    
+        //--------------------------------------------------------------------------------------
+        // dynamically populate the table with shopping list items
+        //below step can be done via PHP and AJAX too. 
+        function doShowAll() {
+            if (CheckBrowser()) {
+                var key = "";
+                var list = "<tr><th>Name of User</th><th>Was the page helpful</th></tr>\n";
+                var i = 0;
+                //for more advance feature, you can set cap on max items in the cart
+                for (i = 0; i <= localStorage.length-1; i++) {
+                    key = localStorage.key(i);
+                    list += "<tr><td>" + key + "</td>\n<td>"
+                            + localStorage.getItem(key) + "</td></tr>\n";
+                }
+                //if no item exists in the cart
+                if (list == "<tr><th>Name of User</th><th>Was the page helpful</th></tr>\n") {
+                    list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td></tr>\n";
+                }
+                //bind the data to html table
+                //you can use jQuery too....
+                document.getElementById('list').innerHTML = list;
+            } else {
+                alert('Cannot save shopping list as your browser does not support HTML 5');
+            }
+        }
+        //-------------------------------------------------------------------------------------
+//restart the local storage
+function ClearAll() {
+	localStorage.clear();
+	doShowAll();
+}
+        /*
+         =====> Checking the browser support
+         //this step may not be required as most of modern browsers do support HTML5
+         */
+         //below function may be redundant
+        function CheckBrowser() {
+            if ('localStorage' in window && window['localStorage'] !== null) {
+                // we can use localStorage object to store data
+                return true;
+            } else {
+                    return false;
+            }
+        }
+        //-------------------------------------------------
+        /*
+        You can extend this script by inserting data to database or adding payment processing API to shopping cart..
+        */
+    </script>
 </head>
 
-<body>
-    
+<body onload="doShowAll()">
+
     <div id="blur"></div>
     <div class="wrapper">
 
@@ -99,584 +165,444 @@
                     <li><a href="Gallery.html">GALLERY</a></li>
                     <li><a href="Places.html">PLACES</a></li>
                     <li><a href="Services.html">SERVICES</a></li>
-                    <li ><a href="#" id="drop">MORE</a>
+                    <li><a href="#" id="drop">MORE</a>
                         <div id="dropdown">
-                            <ul >
-                            <li><a href="Feedback.html">Feedback</a></li>
-                            <li><a href="login.html">Log in</a></li>
-                        </ul>
-                    </div>
+                            <ul>
+                                <li><a href="Feedback.html">Feedback</a></li>
+                                <li><a href="https:\\google.com">Log in</a></li>
+                            </ul>
+                        </div>
                     </li>
             </nav>
-            <h1 id="V">Thank you very much</h1>
+            <h1>Thank you very much</h1>
             <h3>Visit us again...</h3>
         </header>
 
 
-            <main>
-                <form action="#" method="post" id="feedback" oninput="x.value=parseInt(number.value)+'%'">
-                    <fieldset style="padding-left: 50px;">
+        <main >
+            <div onload="doShowAll()">
+            <form  action="#" method="post" name=form id="feedback" oninput="x.value=parseInt(number.value)+'%'">
+                <fieldset style="padding-left: 50px;">
                     <legend>
                         <h2>Please help us improve our service by completing the feedback::</h2>
                     </legend>
                     <table>
                         <tbody>
-                            <tr >
+                            <tr>
                                 <td>
                                     <div class="field">
                                         <div class="label">
-                                            <p><b>Name  </b> (Required)</p>
+                                            <p><b>Name </b> (Required)</p>
                                         </div>
-                                        <input type="text" name="name" class="text" placeholder="Type your first name here..." autofocus autocomplete="on" required/>
+                                        <input type="text" name=name1 class="text"
+                                            placeholder="Type your first name here..." autofocus autocomplete="on"
+                                            required />
                                     </div>
                                 </td>
                                 <td>
-                                        <div class="field">
-                                            <div class="label">
-                                                <p><b>Surname </b> (Required)</p>
-                                            </div>
-                                            <input type="text" name="name" class="text" placeholder="Type your last name here..." autocomplete="on" required/>
+                                    <div class="field">
+                                        <div class="label">
+                                            <p><b>Surname </b> (Required)</p>
                                         </div>
-                                    </td>
+                                        <input type="text" name="name" class="text"
+                                            placeholder="Type your last name here..." autocomplete="on" required />
+                                    </div>
+                                </td>
                             </tr>
-                            <tr >
-                                    <td>
-                                        <div class="field">
-                                            <div class="label">
-                                                <p><b>Telephone </b> (Optional)</p>
-                                            </div>
-                                            <input type="tel" name="name" class="text" placeholder="+123 456789" />
+                            <tr>
+                                <td>
+                                    <div class="field">
+                                        <div class="label">
+                                            <p><b>Telephone </b> (Optional)</p>
                                         </div>
-                                    </td>
-                                    <td>
-                                            <div class="field">
-                                                <div class="label">
-                                                    <p><b>Date of Birth </b> (optional)</p>
-                                                </div>
-                                                <input type="date" name="name" class="text" placeholder="Type your last name here..."/> <!--max date-->
-                                            </div>
-                                        </td>
-                                </tr>
-                                <tr>
-                                    <td id="states" colspan="2">
-                                        <div class="field">
-                                            <div class="label">
-                                                <p><b>Continent </b> (Required)</p>
-                                            </div>
-                                            <select name="continent" class="text" id="selectContinent" onclick="selectChanged()" required>
-                                                <option value="0">Choose your continent:</option>
-                                                <option value="1">Europe</option>
-                                                <option value="2">America</option>
-                                                <option value="3">Africa</option>
-                                                <option value="4">Asia</option>
-                                                <option value="5">Australia</option>
-                                            </select>
-                                            
+                                        <input type="tel" name="name" class="text" placeholder="+123 456789" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="field">
+                                        <div class="label">
+                                            <p><b>Date of Birth </b> (optional)</p>
                                         </div>
-                                    </td>
-                                    <td id="hidden">
-                                            <div class="field">
-                                                <div class="label">
-                                                    <p><b>Country </b> (Optional)</p>
-                                                </div>
-                                                <datalist id="European">
-                                                        <option>Albania</option>
-                                                        <option>France</option>
-                                                        <option>France</option>
-                                                        <option>Spain</option>
-                                                        <option>Sweden</option>
-                                                        <option>Norway</option>
-                                                        <option>Germany</option>
-                                                        <option>Finland</option>
-                                                        <option>Poland</option>
-                                                        <option>Italy</option>
-                                                        <option>United Kingdom</option>
-                                                        <option>Romania</option>
-                                                        <option>Belarus</option>
-                                                        <option>Kazakhstan</option>
-                                                        <option>Greece</option>
-                                                        <option>Bulgaria</option>
-                                                        <option>Iceland</option>
-                                                        <option>Hungary</option>
-                                                        <option>Portugal</option>
-                                                        <option>Austria</option>
-                                                        <option>Czech Republic</option>
-                                                        <option>Ireland</option>
-                                                        <option>Lithuania</option>
-                                                        <option>Latvia</option>
-                                                        <option>Croatia</option>
-                                                        <option>Bosnia and Herzegovina</option>
-                                                        <option>Slovakia</option>
-                                                        <option>Estonia</option>
-                                                        <option>Russia</option>
-                                                        <option>Denmark</option>
-                                                        <option>Switzerland</option>
-                                                        <option>Netherlands</option>
-                                                        <option>Moldova</option>
-                                                        <option>Belgium</option>
-                                                        <option>Armenia</option>
-                                                        <option>North Macedonia</option>
-                                                        <option>Serbia</option>
-                                                        <option>Turkey</option>
-                                                        <option>Slovenia</option>
-                                                        <option>Montenegro</option>
-                                                        <option>Cyprus</option>
-                                                        <option>Azerbaijan</option>
-                                                        <option>Luxembourg</option>
-                                                        <option>Georgia</option>
-                                                        <option>Andorra</option>
-                                                        <option>Malta</option>
-                                                        <option>Liechtenstein</option>
-                                                        <option>San Marino</option>
-                                                        <option>Monaco</option>
-                                                        <option>Vatican City</option>
-                                                    </datalist>
-                                                    <datalist id="American">
-                                                        <option>Antigua and Barbuda</option>
-                                                        <option>Argentina</option>
-                                                        <option>Bahamas</option>
-                                                        <option>Barbados</option>
-                                                        <option>Belize</option>
-                                                        <option>Bolivia</option>
-                                                        <option>Brazil</option>
-                                                        <option>Canada</option>
-                                                        <option>Chile</option>
-                                                        <option>Colombia</option>
-                                                        <option>Costa Rica</option>
-                                                        <option>Cuba</option>
-                                                        <option>Dominica</option>
-                                                        <option>Dominican Republic</option>
-                                                        <option>Ecuador</option>
-                                                        <option>El Salvador</option>
-                                                        <option>Grenada</option>
-                                                        <option>Guatemala</option>
-                                                        <option>Guyana</option>
-                                                        <option>Haiti</option>
-                                                        <option>Honduras</option>
-                                                        <option>Jamaica</option>
-                                                        <option>Mexico</option>
-                                                        <option>Nicaragua</option>
-                                                        <option>Panama</option>
-                                                        <option>Paraguay</option>
-                                                        <option>Peru</option>
-                                                        <option>Saint Kitts and Nevis</option>
-                                                        <option>Saint Lucia</option>
-                                                        <option>Saint Vincent and the Grenadines</option>
-                                                        <option>Suriname</option>
-                                                        <option>Trinidad and Tobago</option>
-                                                        <option>United States</option>
-                                                        <option>Uruguay</option>
-                                                        <option>Venezuela</option>
-                                                    </datalist>
-                
-                                                    <datalist id="African">
-                                                        <option>Algeria</option>
-                                                        <option>Angola</option>
-                                                        <option>Benin</option>
-                                                        <option>Botswana</option>
-                                                        <option>Burkina Faso</option>
-                                                        <option>Burundi</option>
-                                                        <option>Cabo Verde</option>
-                                                        <option>Cameroon</option>
-                                                        <option>Central African Republic</option>
-                                                        <option>Chad</option>
-                                                        <option>Comoros</option>
-                                                        <option>Congo</option>
-                                                        <option>Cote d'Ivoire</option>
-                                                        <option>Djibouti</option>
-                                                        <option>Egypt</option>
-                                                        <option>Equatorial Guinea</option>
-                                                        <option>Eritrea</option>
-                                                        <option>Eswatini</option>
-                                                        <option>Ethiopia</option>
-                                                        <option>Gabo</option>
-                                                        <option>Gambia</option>
-                                                        <option>Ghana</option>
-                                                        <option>Guinea</option>
-                                                        <option>Guinea-Bissau</option>
-                                                        <option>Kenya</option>
-                                                        <option>Lesotho</option>
-                                                        <option>Liberia</option>
-                                                        <option>Lybia</option>
-                                                        <option>Madagascar</option>
-                                                        <option>Malawi</option>
-                                                        <option>Mali</option>
-                                                        <option>Mauritania</option>
-                                                        <option>Mauritius</option>
-                                                        <option>Morocco</option>
-                                                        <option>Mozambique</option>
-                                                        <option>Namibia</option>
-                                                        <option>Niger</option>
-                                                        <option>Nigeria</option>
-                                                        <option>Rwanda</option>
-                                                        <option>Sao Tome and Principe</option>
-                                                        <option>Senegal</option>
-                                                        <option>Seychelles</option>
-                                                        <option>Sierra Leone</option>
-                                                        <option>Somalia</option>
-                                                        <option>South Africa</option>
-                                                        <option>South Sudan</option>
-                                                        <option>Sudan</option>
-                                                        <option>Tanzania</option>
-                                                        <option>Togo</option>
-                                                        <option>Tunisia</option>
-                                                        <option>Uganda</option>
-                                                        <option>Zambia</option>
-                                                        <option>Zimbabwe</option>
-                                                        <option>Wakanda</option>
-                                                    </datalist>
-                
-                                                    <datalist id="Asian">
-                                                        <option>Afghanistan</option>
-                                                        <option>Armenia</option>
-                                                        <option>Azerbaijan</option>
-                                                        <option>Bahrain</option>
-                                                        <option>Bangladesh</option>
-                                                        <option>Bhutan</option>
-                                                        <option>Brunei</option>
-                                                        <option>Cambodia</option>
-                                                        <option>China</option>
-                                                        <option>Cyprus</option>
-                                                        <option>Georgia</option>
-                                                        <option>India</option>
-                                                        <option>Indonesia</option>
-                                                        <option>Iran</option>
-                                                        <option>Iraq</option>
-                                                        <option>Israel</option>
-                                                        <option>Japan</option>
-                                                        <option>Jordan</option>
-                                                        <option>Kazakhstan</option>
-                                                        <option>Kuwait</option>
-                                                        <option>Kyrgyztan</option>
-                                                        <option>Laos</option>
-                                                        <option>Lebanon</option>
-                                                        <option>Malaysia</option>
-                                                        <option>Maldives</option>
-                                                        <option>Mongolia</option>
-                                                        <option>Myanmar</option>
-                                                        <option>Nepal</option>
-                                                        <option>North Korea</option>
-                                                        <option>Oman</option>
-                                                        <option>Pakistan</option>
-                                                        <option>Palestine</option>
-                                                        <option>Philippines</option>
-                                                        <option>Qatar</option>
-                                                        <option>Russia</option>
-                                                        <option>Saudi Arabia</option>
-                                                        <option>Singapore</option>
-                                                        <option>South Korea</option>
-                                                        <option>Sri Lanka</option>
-                                                        <option>Syria</option>
-                                                        <option>Taiwan</option>
-                                                        <option>Tajikistan</option>
-                                                        <option>Thailand</option>
-                                                        <option>Timor-Leste</option>
-                                                        <option>Turkey</option>
-                                                        <option>Turkmenistan</option>
-                                                        <option><abbr title="United Arab Emirates">UAE</abbr></option>
-                                                        <option>Uzbekistan</option>
-                                                        <option>Vietnam</option>
-                                                        <option>Yemen</option>
-                
-                                                    </datalist>
-                
-                                                    <datalist id="Australian">
-                                                        <option>Australia</option>
-                                                        <option>Fiji</option>
-                                                        <option>Kiribati</option>
-                                                        <option>Marshall Islands</option>
-                                                        <option>Micronesia</option>
-                                                        <option>Nauru</option>
-                                                        <option>New Zealand</option>
-                                                        <option>Palau</option>
-                                                        <option>Papua New Guinea</option>
-                                                        <option>Samoa</option>
-                                                        <option>Solomon Islands</option>
-                                                        <option>Tonga</option>
-                                                        <option>Tuvalu</option>
-                                                        <option>Vanuatu</option>
-                                                    </datalist>
-                                                    <input type="text" list="European" class="text" name="country" id="country">
-                                            </div>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td>
-                                                <div class="field">
-                                                    <p>Is this your first visit to the website?</p>
-                                                    <p><input type="radio" value="1" class="buttons" name="firstVisit" onclick="showReason(0)"> <span> Yes</span> </p>
-                                                    <p><input type="radio" value="2" class="buttons" name="firstVisit" onclick="showReason(1)"> <span>No</span>  </p>
-                                                    <div id="reasonHidden"> 
-                                                            What is the primary reason for your visit?
-                                                            <textarea name="reason" class="textarea text" rows="5"></textarea>
-                                                    </div>
-                                                </div>
-                                                
-                                            </td>
-                                                
-                                            <td>
-                                                    <div class="field">
-                                                            <p>Were you able to find what you needed?</p>
-                                                            <p><input type="radio" value="1" class="buttons" name="foundNeeded" onclick="showNeeded(0)"> Yes </p>
-                                                            <p><input type="radio" value="2" class="buttons" name="foundNeeded" onclick="showNeeded(1)"> No  </p>
-                                                            <div id="foundHidden">
-                                                                    Please tell us what info were you seeking:
-                                                                    <textarea name="reason" class="textarea text" rows="5"  form="feedback"></textarea>
-                                                            </div>
-                                                        </div>
-                                            </td>
-                                </tr>
+                                        <input type="date" name="name" class="text"
+                                            placeholder="Type your last name here..." />
+                                        <!--max date-->
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="states" colspan="2">
+                                    <div class="field">
+                                        <div class="label">
+                                            <p><b>Continent </b> (Required)</p>
+                                        </div>
+                                        <select name="continent" class="text" id="selectContinent"
+                                            onclick="selectChanged()" required>
+                                            <option value="0">Choose your continent:</option>
+                                            <option value="1">Europe</option>
+                                            <option value="2">America</option>
+                                            <option value="3">Africa</option>
+                                            <option value="4">Asia</option>
+                                            <option value="5">Australia</option>
+                                        </select>
 
-                                <tr>
-                                    <td>
-                                        <div class="field">
-                                            <p>Which parts of our guide did you find helpful</p>
-                                            <div class="checkBoxes">
-                                            <p><input type="checkbox" value="1" class="buttons" name="helpfulParts"> Accomodation</p>
-                                            <p><input type="checkbox" value="2" class="buttons" name="helpfulParts"> Foods and Drinks</p>
-                                            <p><input type="checkbox" value="3" class="buttons" name="helpfulParts"> Natural Beauties</p>
-                                            <p><input type="checkbox" value="4" class="buttons" name="helpfulParts"> Monuments </p>
-                                            </div>
-                                            <div class="checkBoxes">
-                                            <p><input type="checkbox" value="5" class="buttons" name="helpfulParts"> Festivals and Events</p>
-                                            <p><input type="checkbox" value="6" class="buttons" name="helpfulParts"> History of Kosovo</p>
-                                            <p><input type="checkbox" value="7" class="buttons" name="helpfulParts"> Gallery</p>
-                                            </div>
+                                    </div>
+                                </td>
+                                <td id="hidden">
+                                    <div class="field">
+                                        <div class="label">
+                                            <p><b>Country </b> (Optional)</p>
                                         </div>
-                                    </td>
-                                    <td>
-                                        <div class="field">
-                                            <p>How helpful did you find our guide (1-100)</p>
-                                            <p><canvas id="sadFace" width="50" height="50"  ></canvas>
-                                                <input type="range" id="number" value="50" onchange="tellUsWhy()"> 
-                                                <canvas id="smileFace" width="50" height="50"  ></canvas><span id="output"><output name="x" for="number" ></output></span></p>
-                                            <div id="tellUsWhyHidden">
-                                                Please tell us what went wrong:
-                                                    <textarea name="wrong" class="textarea text" rows="5"></textarea>
-                                            </div>
+                                        <datalist id="European">
+                                            <option>Albania</option>
+                                            <option>France</option>
+                                            <option>France</option>
+                                            <option>Spain</option>
+                                            <option>Sweden</option>
+                                            <option>Norway</option>
+                                            <option>Germany</option>
+                                            <option>Finland</option>
+                                            <option>Poland</option>
+                                            <option>Italy</option>
+                                            <option>United Kingdom</option>
+                                            <option>Romania</option>
+                                            <option>Belarus</option>
+                                            <option>Kazakhstan</option>
+                                            <option>Greece</option>
+                                            <option>Bulgaria</option>
+                                            <option>Iceland</option>
+                                            <option>Hungary</option>
+                                            <option>Portugal</option>
+                                            <option>Austria</option>
+                                            <option>Czech Republic</option>
+                                            <option>Ireland</option>
+                                            <option>Lithuania</option>
+                                            <option>Latvia</option>
+                                            <option>Croatia</option>
+                                            <option>Bosnia and Herzegovina</option>
+                                            <option>Slovakia</option>
+                                            <option>Estonia</option>
+                                            <option>Russia</option>
+                                            <option>Denmark</option>
+                                            <option>Switzerland</option>
+                                            <option>Netherlands</option>
+                                            <option>Moldova</option>
+                                            <option>Belgium</option>
+                                            <option>Armenia</option>
+                                            <option>North Macedonia</option>
+                                            <option>Serbia</option>
+                                            <option>Turkey</option>
+                                            <option>Slovenia</option>
+                                            <option>Montenegro</option>
+                                            <option>Cyprus</option>
+                                            <option>Azerbaijan</option>
+                                            <option>Luxembourg</option>
+                                            <option>Georgia</option>
+                                            <option>Andorra</option>
+                                            <option>Malta</option>
+                                            <option>Liechtenstein</option>
+                                            <option>San Marino</option>
+                                            <option>Monaco</option>
+                                            <option>Vatican City</option>
+                                        </datalist>
+                                        <datalist id="American">
+                                            <option>Antigua and Barbuda</option>
+                                            <option>Argentina</option>
+                                            <option>Bahamas</option>
+                                            <option>Barbados</option>
+                                            <option>Belize</option>
+                                            <option>Bolivia</option>
+                                            <option>Brazil</option>
+                                            <option>Canada</option>
+                                            <option>Chile</option>
+                                            <option>Colombia</option>
+                                            <option>Costa Rica</option>
+                                            <option>Cuba</option>
+                                            <option>Dominica</option>
+                                            <option>Dominican Republic</option>
+                                            <option>Ecuador</option>
+                                            <option>El Salvador</option>
+                                            <option>Grenada</option>
+                                            <option>Guatemala</option>
+                                            <option>Guyana</option>
+                                            <option>Haiti</option>
+                                            <option>Honduras</option>
+                                            <option>Jamaica</option>
+                                            <option>Mexico</option>
+                                            <option>Nicaragua</option>
+                                            <option>Panama</option>
+                                            <option>Paraguay</option>
+                                            <option>Peru</option>
+                                            <option>Saint Kitts and Nevis</option>
+                                            <option>Saint Lucia</option>
+                                            <option>Saint Vincent and the Grenadines</option>
+                                            <option>Suriname</option>
+                                            <option>Trinidad and Tobago</option>
+                                            <option>United States</option>
+                                            <option>Uruguay</option>
+                                            <option>Venezuela</option>
+                                        </datalist>
+
+                                        <datalist id="African">
+                                            <option>Algeria</option>
+                                            <option>Angola</option>
+                                            <option>Benin</option>
+                                            <option>Botswana</option>
+                                            <option>Burkina Faso</option>
+                                            <option>Burundi</option>
+                                            <option>Cabo Verde</option>
+                                            <option>Cameroon</option>
+                                            <option>Central African Republic</option>
+                                            <option>Chad</option>
+                                            <option>Comoros</option>
+                                            <option>Congo</option>
+                                            <option>Cote d'Ivoire</option>
+                                            <option>Djibouti</option>
+                                            <option>Egypt</option>
+                                            <option>Equatorial Guinea</option>
+                                            <option>Eritrea</option>
+                                            <option>Eswatini</option>
+                                            <option>Ethiopia</option>
+                                            <option>Gabo</option>
+                                            <option>Gambia</option>
+                                            <option>Ghana</option>
+                                            <option>Guinea</option>
+                                            <option>Guinea-Bissau</option>
+                                            <option>Kenya</option>
+                                            <option>Lesotho</option>
+                                            <option>Liberia</option>
+                                            <option>Lybia</option>
+                                            <option>Madagascar</option>
+                                            <option>Malawi</option>
+                                            <option>Mali</option>
+                                            <option>Mauritania</option>
+                                            <option>Mauritius</option>
+                                            <option>Morocco</option>
+                                            <option>Mozambique</option>
+                                            <option>Namibia</option>
+                                            <option>Niger</option>
+                                            <option>Nigeria</option>
+                                            <option>Rwanda</option>
+                                            <option>Sao Tome and Principe</option>
+                                            <option>Senegal</option>
+                                            <option>Seychelles</option>
+                                            <option>Sierra Leone</option>
+                                            <option>Somalia</option>
+                                            <option>South Africa</option>
+                                            <option>South Sudan</option>
+                                            <option>Sudan</option>
+                                            <option>Tanzania</option>
+                                            <option>Togo</option>
+                                            <option>Tunisia</option>
+                                            <option>Uganda</option>
+                                            <option>Zambia</option>
+                                            <option>Zimbabwe</option>
+                                            <option>Wakanda</option>
+                                        </datalist>
+
+                                        <datalist id="Asian">
+                                            <option>Afghanistan</option>
+                                            <option>Armenia</option>
+                                            <option>Azerbaijan</option>
+                                            <option>Bahrain</option>
+                                            <option>Bangladesh</option>
+                                            <option>Bhutan</option>
+                                            <option>Brunei</option>
+                                            <option>Cambodia</option>
+                                            <option>China</option>
+                                            <option>Cyprus</option>
+                                            <option>Georgia</option>
+                                            <option>India</option>
+                                            <option>Indonesia</option>
+                                            <option>Iran</option>
+                                            <option>Iraq</option>
+                                            <option>Israel</option>
+                                            <option>Japan</option>
+                                            <option>Jordan</option>
+                                            <option>Kazakhstan</option>
+                                            <option>Kuwait</option>
+                                            <option>Kyrgyztan</option>
+                                            <option>Laos</option>
+                                            <option>Lebanon</option>
+                                            <option>Malaysia</option>
+                                            <option>Maldives</option>
+                                            <option>Mongolia</option>
+                                            <option>Myanmar</option>
+                                            <option>Nepal</option>
+                                            <option>North Korea</option>
+                                            <option>Oman</option>
+                                            <option>Pakistan</option>
+                                            <option>Palestine</option>
+                                            <option>Philippines</option>
+                                            <option>Qatar</option>
+                                            <option>Russia</option>
+                                            <option>Saudi Arabia</option>
+                                            <option>Singapore</option>
+                                            <option>South Korea</option>
+                                            <option>Sri Lanka</option>
+                                            <option>Syria</option>
+                                            <option>Taiwan</option>
+                                            <option>Tajikistan</option>
+                                            <option>Thailand</option>
+                                            <option>Timor-Leste</option>
+                                            <option>Turkey</option>
+                                            <option>Turkmenistan</option>
+                                            <option><abbr title="United Arab Emirates">UAE</abbr></option>
+                                            <option>Uzbekistan</option>
+                                            <option>Vietnam</option>
+                                            <option>Yemen</option>
+
+                                        </datalist>
+
+                                        <datalist id="Australian">
+                                            <option>Australia</option>
+                                            <option>Fiji</option>
+                                            <option>Kiribati</option>
+                                            <option>Marshall Islands</option>
+                                            <option>Micronesia</option>
+                                            <option>Nauru</option>
+                                            <option>New Zealand</option>
+                                            <option>Palau</option>
+                                            <option>Papua New Guinea</option>
+                                            <option>Samoa</option>
+                                            <option>Solomon Islands</option>
+                                            <option>Tonga</option>
+                                            <option>Tuvalu</option>
+                                            <option>Vanuatu</option>
+                                        </datalist>
+                                        <input type="text" list="European" class="text" name="country" id="country">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="field">
+                                        <p>Is this your first visit to the website?</p>
+                                        <p><input type="radio" value="1" class="buttons" name="firstVisit"
+                                                onclick="showReason(0)"> <span> Yes</span> </p>
+                                        <p><input type="radio" value="2" class="buttons" name="firstVisit"
+                                                onclick="showReason(1)"> <span>No</span> </p>
+                                        <div id="reasonHidden">
+                                            What is the primary reason for your visit?
+                                            <textarea name="reason" class="textarea text" rows="5"></textarea>
                                         </div>
-                                    </td>
-                                </tr>
-                                
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    <div class="field">
+                                        <p>Were you able to find what you needed?</p>
+                                        <p><input type="radio" class="buttons" name=data value="yes" onclick="SaveItem()"
+                                                onclick="showNeeded(0)"> Yes </p>
+                                        <p><input type="radio" class="buttons" name=data value="no" onclick="SaveItem()"
+                                                onclick="showNeeded(1)" > No </p>
+                                        <div id="foundHidden">
+                                            Please tell us what info were you seeking:
+                                            <textarea name="reason" class="textarea text" rows="5"
+                                                form="feedback"></textarea>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                 
+                                        
                             
+                                    <div id="items_table">
+                                        <h3>Feedback record</h3>
+                                        <table id=list></table>
+                                       
+                                            <td>
+                                                <p>
+                                                    <label><input type=button value="Clear" onclick="ClearAll()">
+                                                        <i>* Delete all items</i></label>
+                                                </p>
+                                            </td>
+                                       
+                                       
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="field">
+                                        <p>Which parts of our guide did you find helpful</p>
+                                        <div class="checkBoxes">
+                                            <p><input type="checkbox" value="1" class="buttons" name="helpfulParts">
+                                                Accomodation</p>
+                                            <p><input type="checkbox" value="2" class="buttons" name="helpfulParts">
+                                                Foods and Drinks</p>
+                                            <p><input type="checkbox" value="3" class="buttons" name="helpfulParts">
+                                                Natural Beauties</p>
+                                            <p><input type="checkbox" value="4" class="buttons" name="helpfulParts">
+                                                Monuments </p>
+                                        </div>
+                                        <div class="checkBoxes">
+                                            <p><input type="checkbox" value="5" class="buttons" name="helpfulParts">
+                                                Festivals and Events</p>
+                                            <p><input type="checkbox" value="6" class="buttons" name="helpfulParts">
+                                                History of Kosovo</p>
+                                            <p><input type="checkbox" value="7" class="buttons" name="helpfulParts">
+                                                Gallery</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="field">
+                                        <p>How helpful did you find our guide (1-100)</p>
+                                        <p><canvas id="sadFace" width="50" height="50"></canvas>
+                                            <input type="range" id="number" value="50" onchange="tellUsWhy()">
+                                            <canvas id="smileFace" width="50" height="50"></canvas><span
+                                                id="output"><output name="x" for="number"></output></span></p>
+                                        <div id="tellUsWhyHidden">
+                                            Please tell us what went wrong:
+                                            <textarea name="wrong" class="textarea text" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+
                         </tbody>
                         <tfoot>
                             <td colspan="2">
                                 <div class="field rotate3d">
                                     <div class="label">
-                                            <p>Do you have any other comment to add:</p>
-                                        </div>
-                                    
+                                        <p>Do you have any other comment to add:</p>
+                                    </div>
+
                                     <textarea name="comment" class="textarea text" rows="5"></textarea>
                                 </div>
                                 <div>
-                                        <input type="submit" value="SUBMIT" formtarget="_blank" id="submitFeedback"><br><br>
-                                        <input type="reset" value="RESET    " onclick="drawBarriers()" >
+                                    <input type="submit" value="SUBMIT" formtarget="_blank" id="submitFeedback"><br><br>
+                                    <input type="reset" value="RESET    " onclick="resetForm()">
                                 </div>
                             </td>
-                            
+
                         </tfoot>
 
                     </table>
-                    </fieldset>    
-                </form>
-                <img src="images/mouse.jpg" id="mouse">
-                <img src="images/cheese.jpg" id="cheese">
-                <canvas id="labyrinth" style="vertical-align: middle;" >
 
-                </canvas>
-                
-                <script>
-                    var c = document.getElementById("labyrinth");
-                    var ctx = c.getContext("2d");
-                    var mouse = document.getElementById("mouse");
-                    var cheese = document.getElementById("cheese");
-                    ctx.drawImage(mouse, c.width-mouse.width,c.height-mouse.height);  
-                    ctx. drawImage(cheese,0,0);
-                    var yMovement = 1;
-                    var xMovement = 1;
-
-                    //redraw()
-                    //resetCoordinates
-
-                    var coordinates = {
-                        myTop : c.height-mouse.height,
-                        myLeft: c.width-mouse.width,
-                        myRight: this.myLeft+mouse.width,
-                        myBottom: this.myTop + mouse.height
-                    }
-
-                    var barriers = [
-                        {
-                            top: mouse.height,
-                            left: c.width-mouse.width-10,
-                            bottom: c.height,
-                            right: c.width-mouse.width
-                        },
-                        {
-                            top: 0,
-                            left: c.width-2*mouse.width-10,
-                            bottom: c.height-mouse.height,
-                            right: c.width-2*mouse.width
-                        },
-                        {
-                            top: mouse.height,
-                            left: c.width-3*mouse.width-10,
-                            bottom:c.height,
-                            right: c.width-3*mouse.width
-                        },
-                        {
-                            top: 0,
-                            left: c.width-4*mouse.width-10,
-                            bottom:mouse.height,
-                            right: c.width-4*mouse.width
-                        }
-                    ];
-                    function goUp()
-                    {
-                        if(crash(0)){
-                            coordinates.myTop += yMovement;
-                            
-                        }
-                        coordinates.myTop-=yMovement;
-                    }
-                    function goDown()
-                    {
-                        if(crash(1))
-                        {
-                            coordinates.myTop -=yMovement;
-                        }
-                        coordinates.myTop += yMovement;
-                    }
-
-                    function goLeft()
-                    {
-                        if(crash(2))
-                        {
-                            coordinates.myLeft += xMovement;
-                        }
-                        coordinates.myLeft -= xMovement;
-                    }
-
-                    function goRight()
-                    {
-                        if(crash(3))
-                        {
-                            coordinates.myLeft -= xMovement;
-                        }
-                        coordinates.myLeft += xMovement;
-                    }
-                    
-                    function crash(n)
-                    {
-                        switch(n)
-                        {
-                            case 0: {
-                                for(i=0; i<barriers.length; i++)
-                                {
-                                    if(barriers[i].bottom>=coordinates.myTop) {return true;}
-                                }
-                                break;
-                            }
-                            case 1: {
-                                for(i=0; i<barriers.length; i++)
-                                {
-                                    if(barriers[i].top<=coordinates.myBottom) {return true;}
-                                }
-                                break;
-                            }
-                            case 2: {
-                                for(i=0; i<barriers.length; i++)
-                                {
-                                    if(barriers[i].right>=coordinates.myLeft) {return true;}
-                                }
-                                break;
-                            }
-                            case 3: {
-                                for(i=0; i<barriers.length; i++)
-                                {
-                                    if(barriers[i].left<=coordinates.myRight) {return true;}
-                                }
-                                break;
-                            }
-                            default: {return false;}
-                        }
-                        return false;
-                    }
-
-                    function drawBarriers()
-                    {
-                        document.getElementById("V").innerHTML = crash(2);
-                        
-                        for(i = 0; i<barriers.length; i++){
-                            
-                            ctx.fillStyle = "black";
-                            
-                            document.getElementById("V").innerHTML += barriers[i].left +" "+ barriers[i].top +" "+ barriers[i].bottom + " "+barriers[i].right;
-                            
-                        }
-                        ctx.fillRect(267,38,10,112);
-                        //ctx.fillRect(parseInt(barriers[0].top),parseInt(barriers[0].left),parseInt(barriers[0].right-barriers[0].left),parseInt(barriers[0].bottom-barriers[0].top));
-                        ctx.fillRect(234,0,10,112);
-                        ctx.fillRect(201,38,10,112);
-                        ctx.fillRect(168,0,10,112);
-                        ctx.fillRect(135,38,10,112);
-                        ctx.fillRect(102,0,10,112);
-                        ctx.fillRect(69,38,10,112);
-                        ctx.fillRect(36,0,10,112);
-                        
-
-                    }
+            </form>
+        </div>
+        </main>
 
 
-                </script>
-
-<div class="testimonials">
-    <h2 style="margin-bottom: 5%;">Testimonials</h2>
-    <h4 id="emri"></h4>
-    <p id="com"></p>
-    <p id="nat"></p>
-
-</div>
-<script>
-       function Person(first, last, age, comment) {
-            this.name = first;
-            this.surname = last;
-            this.age = age;
-            this.comment = comment;}
-            Person.prototype.nationality='English'
-    
-    Person.prototype.fname = function() {
-    return this.name + " " + this.surname;
-    };
-
-    var person=new Person('Andi','Ahmeti',25,'A very nice and helpful page')
-   
-
-    document.getElementById('com').innerHTML=person['comment']
-    document.getElementById('emri').innerHTML=person.fname()
-    document.getElementById('nat').innerHTML=person['nationality']
-
-     // person['name']='Andi'
-    // person['surname']='Ahmeti'
-    // person['age']=25
-    // person['comment']='A very nice and helpful page'
-    //person.nationality='Albanian'
-   
-</script>
 
 
-            </main>
-            <footer>
+
+        <footer>
             <div>
                 <div class="footerDivs" id="blog">
                     <p class="divHeader">From the blog</p>
-                    <p class="greenText" >Kosovo Republic</p>
+                    <p class="greenText">Kosovo Republic</p>
                     <p class="smallText"><span class="greenText">Britanicca</span>, britanicca.com</p>
                     <p class="smallText">Friday, 6th April 2017</p>
                     <p>Kosovo, self-declared independent country in the Balkans region of Europe. Although the
-                         United States and most members of the European Union (EU) recognized Kosovo’s declaration 
-                         of independence from Serbia in 2008 </p>
+                        United States and most members of the European Union (EU) recognized Kosovo’s declaration
+                        of independence from Serbia in 2008 </p>
                     <p class="greenText"> <a href="https://www.britannica.com/place/Kosovo"> Read More &Gt; </a> </p>
                 </div>
                 <div class="footerDivs" id="links">
@@ -688,35 +614,40 @@
                             <li>&Gt;<a href="https://www.uni-pr.edu/"> University of Prishtina </a></li>
                             <li>&Gt;<a href="https://www.rks-gov.net/"> State Portal </a></li>
                             <li>&Gt;<a href="http://geoportal.rks-gov.net/"> Geoportal</a></li>
-                            <li>&Gt;<a href="https://en.wikipedia.org/wiki/International_recognition_of_Kosovo"> International Recognition</a></li>
-                            <li>&Gt;<a href="https://www.bbc.com/news/world-europe-18328859"> BBC-Kosovo Profile</a></li>
+                            <li>&Gt;<a href="https://en.wikipedia.org/wiki/International_recognition_of_Kosovo">
+                                    International Recognition</a></li>
+                            <li>&Gt;<a href="https://www.bbc.com/news/world-europe-18328859"> BBC-Kosovo Profile</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="footerDivs" id="tweets">
                     <p class="divHeader">Latest Tweets</p>
-                    <p class="aligner"> <span class="greenText"><a href="#">@EUKosovo </a></span> EU Office/EU Special Representative in Kosovo play the pivotal role in 
-                    realising the European agenda for Kosovo with the aim to support its European path.</p>
-                    <p class="aligner"> <span class="greenText"><a href="#">@kenethhandresen </a></span> A rare, 100 year old postcard from Gjakova in Kosovo. It is poststamped 
-                        both in Prizren and Gjakova and was sent to a woman in Zagreb (Croatia) on April 17, 1920 . #Kosovo #postcard</p>
+                    <p class="aligner"> <span class="greenText"><a href="#">@EUKosovo </a></span> EU Office/EU Special
+                        Representative in Kosovo play the pivotal role in
+                        realising the European agenda for Kosovo with the aim to support its European path.</p>
+                    <p class="aligner"> <span class="greenText"><a href="#">@kenethhandresen </a></span> A rare, 100
+                        year old postcard from Gjakova in Kosovo. It is poststamped
+                        both in Prizren and Gjakova and was sent to a woman in Zagreb (Croatia) on April 17, 1920 .
+                        #Kosovo #postcard</p>
                 </div>
                 <div class="footerDivs" id="contact">
                     <p class="divHeader">Contact Us</p>
-                    <form method="post" action="http://www.google.com" id="form2">
-                        <input type="text" name="name" placeholder="Full Name" class="required"/>
-                        <input type="email" name="email" placeholder="Email Address"class="required" />
-                        <input type="text" name="subject" placeholder="Subject" class="required"/>
+                    <form method="post" action="http://www.google.com">
+                        <input type="text" name="name" placeholder="Full Name" />
+                        <input type="text" name="email" placeholder="Email Address" />
+                        <input type="text" name="subject" placeholder="Subject" />
                         <textarea name="message" rows="4" cols="25" placeholder="Message"></textarea>
-                        <input type="submit" value="SUBMIT"/>
+                        <input type="submit" value="SUBMIT" />
                     </form>
-                    
+
                 </div>
             </div>
             <p>Copyright &COPY; 2013 Domain Name <span style="float:right">Template by OS Templates</span></p>
         </footer>
-        </div>
-        <script src="js/contactval.js"></script>
-    
+    </div>
+
+
 </body>
 
 </html>

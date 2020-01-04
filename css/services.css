@@ -109,7 +109,10 @@ body
  border-color:#E2CBA0 ;
 
 }
-
+#col p
+{
+    color: #131C39;
+}
 
 .text p
 {
@@ -172,6 +175,7 @@ h3
     font-weight: normal;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+   
 }
 .info img
 {width: 550px;
@@ -314,12 +318,12 @@ margin: 10px 300px 30px 300px;
     justify-content: center;
     text-align: center;
 }
-#ulpiana 
+#hulpiana 
 {
     display: grid;
     grid-template-columns: 1fr ;
   grid-gap: 20px;
-  grid-template-areas: "a " ;
+  grid-template-areas: "a " "b" "c" "d" "e";
 }
 .card {
     
@@ -327,14 +331,14 @@ margin: 10px 300px 30px 300px;
     color: #FFFFFF;
     line-height: 1.4;
     border-radius: 10px;
-    
+        
       }
   
   #start7 { grid-area: a; border:2px solid #B8B39C; }
-  #start8 { grid-area: a; border:2px solid #C1C0C0; }
-  #start9 { grid-area: a; border:2px solid #D8D09F; }
-  #start10 { grid-area: a;border:2px solid #EAE9DC; }
-  #start11{ grid-area: a; border:2px solid #BBBABA; }
+  #start8 { grid-area: b; border:2px solid #C1C0C0; }
+  #start9 { grid-area: c; border:2px solid #D8D09F; }
+  #start10 { grid-area: d;border:2px solid #EAE9DC; }
+  #start11{ grid-area: e; border:2px solid #BBBABA; }
 #rugova #text2
 {
     text-align: justify;
