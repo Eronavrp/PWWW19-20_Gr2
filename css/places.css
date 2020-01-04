@@ -85,6 +85,7 @@ article h1{
     background-color: #0D153C;
     padding-top: 15px;
     padding-bottom: 15px;
+    transform: skew(15deg);
 }
 
 
@@ -138,6 +139,7 @@ article nav ul li {
     
     width:300px;
     height:280px;
+    
 }
 
 .expanded img{
@@ -249,6 +251,11 @@ article nav ul li {
 .story{
     float:left;
     display: inline;
+}
+
+
+.story a{
+    color: #E2CBA0;
 }
 
 .short{
@@ -400,7 +407,7 @@ ol{
 }
 
 .video:hover video{
-    transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1) ;
 }
 
 .fourth {

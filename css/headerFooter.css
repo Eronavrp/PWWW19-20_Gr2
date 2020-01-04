@@ -35,6 +35,7 @@ body{
 #entrance>p:hover,#entrance1>p:hover{
     transform-style: preserve-3d;
     transform: rotateX(35deg);
+    transform: rotateY(-35deg);
     transform: scale3d(1.5,1.2,1);
     
     
