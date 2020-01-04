@@ -34,19 +34,26 @@ function HideContent1(obj) {
 // Filename: script.js
 function myFunction() {
     var element = document.getElementById("map");
-    var xdesiredPosition = 930;
+    var xdesiredPosition = 1000;
     var elmnt = document.getElementById("w1");
-    var y = elmnt.scrollHeight;
+    var y = Number(elmnt.scrollHeight);
+ 
     
     if (window.pageYOffset >= xdesiredPosition) {
-        element.style.cssText += "position: fixed; top: auto; bottom: 0px; right: 105px; left: auto;";
+      
+        element.style.cssText += "position: fixed; top: auto; bottom: 100px; right: 105px; left: auto;";
+        if(y-window.pageYOffset<720){   element.style.cssText="position: fixed; top: auto; bottom: 800px; right: 105px; left: auto;";
+
+      }
+      
       }
 
     
     else {
-        element.style.cssText += "position: relative; top: 40px; bottom: auto; right: auto; left: 20px;";
-    }}
-    
+      
+        element.style.cssText += "position: relative; top: 40px; bottom: auto; right: auto; left: 100px;";
+    }
+    }
     function allowDrop(ev) {
       ev.preventDefault();
     }
