@@ -25,7 +25,7 @@ form{
     border-bottom: 50px solid #f1f1f1;
     padding: 16px;
 }
-input[type=text], input[type=password] {
+input[type=email], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -39,6 +39,27 @@ span.psw {
   padding-top: 16px;
 }
 </style>
+<script>
+    function CheckPassword() 
+{ 
+const inputtxt=document.getElementById('psw');
+const inputem=document.getElementById('email');
+if(inputem.value==''){
+    inputem.style.borderBottom='3px solid darkblue'
+}
+var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+if(inputtxt.value.match(decimal)) 
+{ 
+   return true;
+}
+else
+{ 
+document.getElementById('warn').innerHTML='Password must contain at least 8 characters,one uppercase letter one digit and one special character';
+inputtxt.style.borderBottom='3px solid darkblue'
+return false;
+}
+}
+</script>
 </head>
 <body>
     <div class="wrapper">
@@ -67,13 +88,13 @@ span.psw {
         </header>
         <form action="#" method="post">
         <div class="container" >
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="uname"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" id="email" >
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-                
-            <button id="bt1" type="submit">Login</button>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                <p id="warn" style="color:darkblue; margin:1%"></p>
+            <button id="bt1" type="submit" onclick="CheckPassword()">Login</button>
             <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
