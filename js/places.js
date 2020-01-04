@@ -53,7 +53,7 @@ var current = "miniSlideShow";
 var currentPlace;
 
 var count = 0;
-function showNextPicture(place,index)
+function showNextPicture(place,index,k)
 {   
     
     
@@ -72,17 +72,17 @@ function showNextPicture(place,index)
     ];
     
     
-    if(current == "shrink") { var s = document.getElementsByClassName("shrink"); current = "miniSlideShow";}
+    if(k==0){if(current == "shrink") { var s = document.getElementsByClassName("shrink"); current = "miniSlideShow";}
     else { var s = document.getElementsByClassName("miniSlideShow"); current = "shrink";}
-    currentPlace = place;
+    currentPlace = place;}
     var d = document.getElementsByClassName("dot");
     d[index+(place*4)].className = "dot blueDot";
     
     
-    
+    if(k!=0) { s = initial("miniSlideShow");if(current=="shrink") {s = initial("miniSlideShow");} else {s = initial("shrink");}}
     s[place].src = pictures[place][index];
-    if(current=="miniSlideShow") switchAll(s,"miniSlideShow")
-    else switchAll(s,"shrink");
+    if(k==0){if(current=="miniSlideShow") s = switchAll(s,"miniSlideShow")
+    else s = switchAll(s,"shrink");}
     
 
     //d[index+(place*4)].style.backgroundColor = "#0D153C";
@@ -103,6 +103,17 @@ function switchAll(array,str)
     {
         arr[i] = (array[i-array.length].className = str);
         
+    }
+    return arr;
+}
+
+function initial(current)
+{
+    var k = document.getElementsByClassName("miniSlideShow");
+    var arr = [k[0],k[0],k[0],k[0],k[0],k[0],k[0],k[0]];
+    for(i = 0; i<arr.length; i++)
+    {
+        arr[i].className = current;
     }
     return arr;
 }
