@@ -69,7 +69,7 @@ span.psw {
         <div class="container" >
             <label for="uname" id="some" onclick="replace()"><b> User Email</b></label>
             <input type="email" placeholder="Enter Email" id="email" >
-
+            <p id="msg" style="color:darkblue; margin:1%"></p>
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
                 <p id="warn" style="color:darkblue; margin:1%"></p>
@@ -79,15 +79,23 @@ span.psw {
             </label>
         </div>
         </form>
+        <h3 style="text-align: center;" id="time"></h3>
+        <br/><br/>
     </div>
     <script>
         function CheckPassword() 
     { 
     const inputtxt=document.getElementById('psw');
     const inputem=document.getElementById('email');
+    const em=document.getElementById('msg');
+
+   try{
     if(inputem.value==''){
         inputem.style.borderBottom='3px solid darkblue'
-    }
+        throw "Input empty"
+    }}
+    catch(err){ msg.innerHTML=err}
+    
     var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
     if(inputtxt.value.match(decimal)) 
     { 
@@ -120,6 +128,12 @@ span.psw {
         }
     }
     color()
+
+    function time(){
+        var koha=new Date()
+        document.getElementById('time').innerHTML=koha
+    }
+    time()
     </script>
 </body>
 </html>
