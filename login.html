@@ -118,8 +118,9 @@ span.psw {
     function color(){
         var time=new Date();
         var h=time.getHours();
+        sessionStorage.setItem(time,h);
         const el=document.getElementById('po');
-        if(h>0 && h<12 ){
+        if(sessionStorage.getItem(time)>0 && sessionStorage.getItem(time)<12 ){
             el.style.backgroundColor='cornsilk'
         }
         else{
