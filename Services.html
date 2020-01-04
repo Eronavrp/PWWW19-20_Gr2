@@ -48,8 +48,12 @@
             <script>
                 var canvas = document.getElementById("myCanvas");
                 var ctx = canvas.getContext("2d");
+                var grd = ctx.createLinearGradient(0, 190, 900, 190);
+                grd.addColorStop(0, "darkblue");
+                grd.addColorStop(1, "white");
+                ctx.fillStyle = grd;
                 ctx.font = "45px Arial";
-                ctx.fillStyle = "white";
+                ctx.fillStyle = grd;
                 ctx.fillText("Enjoy Your Dream Vacation",310,190);
                 </script>
 
