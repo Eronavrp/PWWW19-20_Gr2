@@ -108,7 +108,7 @@
                     </div>
                     </li>
             </nav>
-            <h1>Thank you very much</h1>
+            <h1 id="V">Thank you very much</h1>
             <h3>Visit us again...</h3>
         </header>
 
@@ -471,15 +471,165 @@
                                 </div>
                                 <div>
                                         <input type="submit" value="SUBMIT" formtarget="_blank" id="submitFeedback"><br><br>
-                                        <input type="reset" value="RESET    " onclick="resetForm()" >
+                                        <input type="reset" value="RESET    " onclick="drawBarriers()" >
                                 </div>
                             </td>
                             
                         </tfoot>
 
                     </table>
-                    
+                    </fieldset>    
                 </form>
+                <img src="images/mouse.jpg" id="mouse">
+                <img src="images/cheese.jpg" id="cheese">
+                <canvas id="labyrinth" >
+
+                </canvas>
+                
+                <script>
+                    var c = document.getElementById("labyrinth");
+                    var ctx = c.getContext("2d");
+                    var mouse = document.getElementById("mouse");
+                    var cheese = document.getElementById("cheese");
+                    ctx.drawImage(mouse, c.width-mouse.width,c.height-mouse.height);  
+                    ctx. drawImage(cheese,0,0);
+                    var yMovement = 1;
+                    var xMovement = 1;
+
+                    //redraw()
+                    //resetCoordinates
+
+                    var coordinates = {
+                        myTop : c.height-mouse.height,
+                        myLeft: c.width-mouse.width,
+                        myRight: this.myLeft+mouse.width,
+                        myBottom: this.myTop + mouse.height
+                    }
+
+                    var barriers = [
+                        {
+                            top: mouse.height,
+                            left: c.width-mouse.width-10,
+                            bottom: c.height,
+                            right: c.width-mouse.width
+                        },
+                        {
+                            top: 0,
+                            left: c.width-2*mouse.width-10,
+                            bottom: c.height-mouse.height,
+                            right: c.width-2*mouse.width
+                        },
+                        {
+                            top: mouse.height,
+                            left: c.width-3*mouse.width-10,
+                            bottom:c.height,
+                            right: c.width-3*mouse.width
+                        },
+                        {
+                            top: 0,
+                            left: c.width-4*mouse.width-10,
+                            bottom:mouse.height,
+                            right: c.width-4*mouse.width
+                        }
+                    ];
+                    function goUp()
+                    {
+                        if(crash(0)){
+                            coordinates.myTop += yMovement;
+                            
+                        }
+                        coordinates.myTop-=yMovement;
+                    }
+                    function goDown()
+                    {
+                        if(crash(1))
+                        {
+                            coordinates.myTop -=yMovement;
+                        }
+                        coordinates.myTop += yMovement;
+                    }
+
+                    function goLeft()
+                    {
+                        if(crash(2))
+                        {
+                            coordinates.myLeft += xMovement;
+                        }
+                        coordinates.myLeft -= xMovement;
+                    }
+
+                    function goRight()
+                    {
+                        if(crash(3))
+                        {
+                            coordinates.myLeft -= xMovement;
+                        }
+                        coordinates.myLeft += xMovement;
+                    }
+                    
+                    function crash(n)
+                    {
+                        switch(n)
+                        {
+                            case 0: {
+                                for(i=0; i<barriers.length; i++)
+                                {
+                                    if(barriers[i].bottom>=coordinates.myTop) {return true;}
+                                }
+                                break;
+                            }
+                            case 1: {
+                                for(i=0; i<barriers.length; i++)
+                                {
+                                    if(barriers[i].top<=coordinates.myBottom) {return true;}
+                                }
+                                break;
+                            }
+                            case 2: {
+                                for(i=0; i<barriers.length; i++)
+                                {
+                                    if(barriers[i].right>=coordinates.myLeft) {return true;}
+                                }
+                                break;
+                            }
+                            case 3: {
+                                for(i=0; i<barriers.length; i++)
+                                {
+                                    if(barriers[i].left<=coordinates.myRight) {return true;}
+                                }
+                                break;
+                            }
+                            default: {return false;}
+                        }
+                        return false;
+                    }
+
+                    function drawBarriers()
+                    {
+                        document.getElementById("V").innerHTML = crash(2);
+                        
+                        for(i = 0; i<barriers.length; i++){
+                            
+                            ctx.fillStyle = "black";
+                            
+                            document.getElementById("V").innerHTML += barriers[i].left +" "+ barriers[i].top +" "+ barriers[i].bottom + " "+barriers[i].right;
+                            
+                        }
+                        ctx.fillRect(267,38,10,112);
+                        //ctx.fillRect(parseInt(barriers[0].top),parseInt(barriers[0].left),parseInt(barriers[0].right-barriers[0].left),parseInt(barriers[0].bottom-barriers[0].top));
+                        ctx.fillRect(234,0,10,112);
+                        ctx.fillRect(201,38,10,112);
+                        ctx.fillRect(168,0,10,112);
+                        ctx.fillRect(135,38,10,112);
+                        ctx.fillRect(102,0,10,112);
+                        ctx.fillRect(69,38,10,112);
+                        ctx.fillRect(36,0,10,112);
+                        
+
+                    }
+
+
+                </script>
             </main>
 
             
