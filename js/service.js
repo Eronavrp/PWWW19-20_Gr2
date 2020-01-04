@@ -42,7 +42,7 @@ function myFunction() {
     if (window.pageYOffset >= xdesiredPosition) {
       
         element.style.cssText += "position: fixed; top: auto; bottom: 100px; right: 105px; left: auto;";
-        if(y-window.pageYOffset<720){   element.style.cssText="position: fixed; top: auto; bottom: 800px; right: 105px; left: auto;";
+        if(y-window.pageYOffset<970){   element.style.cssText="position: fixed; top: auto; bottom: 800px; right: 105px; left: auto;";
 
       }
       
