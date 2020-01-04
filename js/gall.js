@@ -18,22 +18,41 @@ for(var i =0;i<4;i++)
     btn[i].style.color="dimgray"
     btn[i].style.backgroundColor="white"
 }
-if(n==1)
-{gall[0].style.display="block";
-btn[0].style.color="white"
-btn[0].style.backgroundColor="darkblue"}
-else if(n==2)
-    {
-    btn[1].style.color="white"
-    btn[1].style.backgroundColor="darkblue"}
-    else if(n==3)
-   {
-    btn[2].style.color="white"
-    btn[2].style.backgroundColor="darkblue"}
-        else 
-       {
-        btn[3].style.color="white"
-        btn[3].style.backgroundColor="darkblue"}
+// if(n==1)
+// {gall[0].style.display="block";
+// btn[0].style.color="white"
+// btn[0].style.backgroundColor="darkblue"}
+// else if(n==2)
+//     {
+//     btn[1].style.color="white"
+//     btn[1].style.backgroundColor="darkblue"}
+//     else if(n==3)
+//    {
+//     btn[2].style.color="white"
+//     btn[2].style.backgroundColor="darkblue"}
+//         else 
+//        {
+//         btn[3].style.color="white"
+//         btn[3].style.backgroundColor="darkblue"}
+switch(n){
+    case 1:
+        gall[0].style.display="block";
+        btn[0].style.color="white";
+        btn[0].style.backgroundColor="darkblue";
+        break;
+    case 2:
+        btn[1].style.color="white";
+        btn[1].style.backgroundColor="darkblue";
+        break;
+    case 3:
+        btn[2].style.color="white";
+        btn[2].style.backgroundColor="darkblue";
+        break;
+    case 4:
+        btn[3].style.color="white";
+        btn[3].style.backgroundColor="darkblue";
+        break;
+}
 
 
 }
