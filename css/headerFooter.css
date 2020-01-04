@@ -130,12 +130,12 @@ footer >div{
 
 
 a:link {
-    color: #E2CBA0;
+    color: white;
     text-decoration:none;
 }
 
 a:visited{
-    color: white;
+    color: #E2CBA0;
 }
 
 .divHeader{
@@ -187,6 +187,7 @@ footer [name]{
     background-color: #222222;
     border: none;
     border-radius:6px;
+    color: white;
     resize:none;
     
 }
@@ -213,4 +214,10 @@ footer > p{
     background-color: #2B2B2B;
     float:left;
     width: 960px;;
+}
+.error {
+    
+    background: #ffcdd2;
+    box-shadow: 0 0 5px white;
+    border-color: white;
 }

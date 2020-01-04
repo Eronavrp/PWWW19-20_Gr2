@@ -246,10 +246,10 @@
                 </div>
                 <div class="footerDivs" id="contact">
                     <p class="divHeader">Contact Us</p>
-                    <form method="post" action="http://www.google.com">
-                        <input type="text" name="name" placeholder="Full Name"/>
-                        <input type="text" name="email" placeholder="Email Address"/>
-                        <input type="text" name="subject" placeholder="Subject"/>
+                    <form method="post" action="http://www.google.com" id="form2">
+                        <input type="text" name="name" placeholder="Full Name" class="required"/>
+                        <input type="email" name="email" placeholder="Email Address" class="required"/>
+                        <input type="text" name="subject" placeholder="Subject" class="required"/>
                         <textarea name="message" rows="4" cols="25" placeholder="Message"></textarea>
                         <input type="submit" value="SUBMIT"/>
                     </form>
@@ -262,7 +262,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>  
-    <script src="js/dropdown.js"></script>  
+    <script src="js/contactval.js"></script>  
 
 </body>
 </html>

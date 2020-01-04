@@ -1249,10 +1249,10 @@
                 </div>
                 <div class="footerDivs" id="contact">
                     <p class="divHeader">Contact Us</p>
-                    <form method="post" action="http://www.google.com">
-                        <input type="text" name="name" placeholder="Full Name" />
-                        <input type="text" name="email" placeholder="Email Address" />
-                        <input type="text" name="subject" placeholder="Subject" />
+                    <form method="post" action="http://www.google.com" id="form2">
+                        <input type="text" name="name" placeholder="Full Name" class="required"/>
+                        <input type="text" name="email" placeholder="Email Address" class="required"/>
+                        <input type="text" name="subject" placeholder="Subject"class="required" />
                         <textarea name="message" rows="4" cols="25" placeholder="Message"></textarea>
                         <input type="submit" value="SUBMIT" />
                     </form>
@@ -1262,7 +1262,7 @@
             <p>Copyright &COPY; 2013 Domain Name <span style="float:right">Template by OS Templates</span></p>
         </footer>
     </div>
-
+    <script src="js/contactval.js"></script>
 </body>
 
 </html>
