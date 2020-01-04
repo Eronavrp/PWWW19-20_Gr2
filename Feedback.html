@@ -635,22 +635,34 @@
     <h2 style="margin-bottom: 5%;">Testimonials</h2>
     <h4 id="emri"></h4>
     <p id="com"></p>
+    <p id="nat"></p>
 
 </div>
 <script>
-    var person={
-        name: "emri",
-        surname: 'mbiemri',
-        age: 20,
-        comment: ''
-    }
+       function Person(first, last, age, comment) {
+            this.name = first;
+            this.surname = last;
+            this.age = age;
+            this.comment = comment;}
+            Person.prototype.nationality='English'
+    
+    Person.prototype.fname = function() {
+    return this.name + " " + this.surname;
+    };
 
-    person['name']='Andi'
-    person['surname']='Ahmeti'
-    person['age']=25
-    person['comment']='A very nice and helpful page'
+    var person=new Person('Andi','Ahmeti',25,'A very nice and helpful page')
+   
+
     document.getElementById('com').innerHTML=person['comment']
-    document.getElementById('emri').innerHTML=person['name']+"  "+person['surname'] 
+    document.getElementById('emri').innerHTML=person.fname()
+    document.getElementById('nat').innerHTML=person['nationality']
+
+     // person['name']='Andi'
+    // person['surname']='Ahmeti'
+    // person['age']=25
+    // person['comment']='A very nice and helpful page'
+    //person.nationality='Albanian'
+   
 </script>
 
 
