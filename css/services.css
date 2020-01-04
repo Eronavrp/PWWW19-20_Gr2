@@ -283,11 +283,12 @@ table tr>td
 {
  width:600px;
 
-margin: 60px 30px 30px 300px;
+
 border: none;
 border-top: 1px solid #303030;
 border-color:#E2CBA0 ;
 padding-top: 60px;
+text-align: center;
 }
 
 #rugova .text, #ulpiana .text, #sunnyhill .text, #suni .text ,#sunii .text, #kosova .text, #prite .text, #doku .text ,#lidhja .text, #xhamia .text,#muzeu .text,#prishtina .text ,#prizreni .text,#peja .text 
@@ -296,7 +297,7 @@ text-align: justify;
 font-size: 17x;
 color: #121416;
 line-height: 25px;
-margin: 30px 300px 0px 300px;
+margin: 10px 300px 30px 300px;
 
 } 
 #rugova .t1, #ulpiana .t1 ,#sunnyhill .t1 ,#suni .t1 ,#sunii .t1, #kosova .t1, #prite .t1, #doku .t1 ,#lidhja .t1, #xhamia .t1,#muzeu .t1,#prishtina .t1,#prizreni .t1,#peja .t1 
@@ -305,20 +306,50 @@ margin: 30px 300px 0px 300px;
     color: black;
     font-weight: bold;
     font-size: 20px;
-    
+    margin: 20px 300px 20px 300px;
 }
-#rugova #t2, #text2
+
+#rugova div, #ulpiana div, #sunnyhill div, #suni div ,#sunii div, #kosova div, #prite div, #doku div,#lidhja div, #xhamia div,#muzeu div,#prishtina div,#prizreni div,#peja div 
+{
+    justify-content: center;
+    text-align: center;
+}
+#ulpiana 
+{
+    display: grid;
+    grid-template-columns: 1fr ;
+  grid-gap: 20px;
+  grid-template-areas: "a " ;
+}
+.card {
+    
+    margin: 5em;
+    color: #FFFFFF;
+    line-height: 1.4;
+    border-radius: 10px;
+    
+      }
+  
+  #start7 { grid-area: a; border:2px solid #B8B39C; }
+  #start8 { grid-area: a; border:2px solid #C1C0C0; }
+  #start9 { grid-area: a; border:2px solid #D8D09F; }
+  #start10 { grid-area: a;border:2px solid #EAE9DC; }
+  #start11{ grid-area: a; border:2px solid #BBBABA; }
+#rugova #text2
 {
     text-align: justify;
     font-size: 17x;
     color: #121416;
     line-height: 25px;
+    margin: 30px 0px 30px 0px;
 }
 #rugova #t2
 {
     color: black;
     font-weight: bold;
     font-size: 20px;
+    margin: 20px 0px 20px 0px;
+
 }
 #rugova #start img
   {
