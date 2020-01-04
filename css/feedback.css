@@ -190,7 +190,7 @@ span{
     background-color: #f1f1f1;
     width: 400px;
     height: 300px;
-    
+    float: left;
 
 }
 #mouse,#cheese

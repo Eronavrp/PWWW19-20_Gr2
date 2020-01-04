@@ -23,11 +23,3 @@
     if(n==0) {document.getElementById("reasonHidden").style.display = "table-cell";}
     else if(n==1) {document.getElementById("reasonHidden").style.display = "none";}
   }
-
-  function showNeeded(n)
-  {
-    if(n==1) {document.getElementById("foundHidden").style.display = "table-cell";}
-    else if(n==0) {document.getElementById("foundHidden").style.display = "none";}
-  }
-
-  

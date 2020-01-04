@@ -174,7 +174,7 @@ function ClearAll() {
                         </div>
                     </li>
             </nav>
-            <h1>Thank you very much</h1>
+            <h1 id="V">Thank you very much</h1>
             <h3>Visit us again...</h3>
         </header>
 
@@ -588,7 +588,7 @@ function ClearAll() {
 
             </form>
         </div>
-        <img src="images/mouse.jpg" id="mouse">
+        <img src="images/mouse.png" id="mouse">
                 <img src="images/cheese.jpg" id="cheese">
                 <canvas id="labyrinth" >
 
@@ -605,8 +605,8 @@ function ClearAll() {
                     var mouse = document.getElementById("mouse");
                     var cheese = document.getElementById("cheese");
                     //ctx.drawImage(mouse, c.width-mouse.width,c.height-mouse.height);  
-                    ctx. drawImage(cheese,0,0);
-                    var yMovement = 25;
+                    
+                    var yMovement = 5;
                     var xMovement = 5;
 
                     //redraw()
@@ -624,14 +624,15 @@ function ClearAll() {
                             left: 267,
                             top: 38,
                             bottom: 140,
-                            right: 277
+                            right: 274
                         },
+                        
                         {
                         
                             left: 234,
                             top: 0,
                             bottom: 112,
-                            right: 244
+                            right: 241
                         },
                         {
                             left: 201,
@@ -643,25 +644,25 @@ function ClearAll() {
                             left: 168,
                             top: 0,
                             bottom: 112,
-                            right: 178
+                            right: 175
                         },
                         {
-                            left: 135,
+                            left: 137,
                             top: 38,
                             bottom: 140,
-                            right: 140
+                            right: 145
                         },
                         {
                             left: 102,
                             top: 0,
                             bottom: 112,
-                            right: 118
+                            right: 109
                         },
                         {
                             left: 69,
                             top: 38,
                             bottom: 140,
-                            right: 79
+                            right: 76
                         },
                         {
                             left: 36,
@@ -737,6 +738,34 @@ function ClearAll() {
                             else if(coordinates.myLeft > c.width - 3*(2*mouse.width +20)) {barrier = 4;}
                             else {barrier = 6;}
                         }
+                        else if(k==2)
+                        {
+                            if(coordinates.myLeft > c.width - (2*mouse.width+10)) {barrier = 0;}
+                            else if(coordinates.myLeft > c.width - 2*(mouse.width+10)-mouse.width) {barrier = 1;}
+                            else if(coordinates.myLeft > c.width - 3*(mouse.width+10)-mouse.width) {barrier = 2;}
+                            else if(coordinates.myLeft > c.width - 4*(mouse.width+10)-mouse.width) {barrier = 3;}
+                            else if(coordinates.myLeft > c.width - 5*(mouse.width+10)-mouse.width) {barrier = 4;}
+                            else if(coordinates.myLeft > c.width - 6*(mouse.width+10)-mouse.width) {barrier = 5;}
+                            else if(coordinates.myLeft > c.width - 7*(mouse.width+10)-mouse.width) {barrier = 6;}
+                            else {barrier = 7;}
+                            
+
+                        }
+
+                        else if(k==3)
+                        {
+                            if(coordinates.myLeft >= 275) {barrier = 1;}
+                            else if(coordinates.myLeft >= 242) {barrier = 0;}
+                            else if(coordinates.myLeft >= 209) {barrier = 1;}
+                            else if(coordinates.myLeft >= 176) {barrier = 0;}
+                            else if(coordinates.myLeft >= 143) {barrier = 1;}
+                            else if(coordinates.myLeft >= 110) {barrier = 0;}
+                            else if(coordinates.myLeft >= 77) {barrier = 1;}
+                            else if(coordinates.myLeft >= 44) {barrier = 0;}
+                            else {barrier = 1;}
+
+                            
+                        }
                         return barrier;
                     }
 
@@ -790,7 +819,7 @@ function ClearAll() {
                             }
                             case 1: {
                                 var barrier = getBarrier(1);
-                                document.getElementById("V").innerHTML = barrier;
+                                
                                 if(Math.abs(barriers[0].top-(coordinates.myBottom+5))<=5)
                                 {
                                     if(inrange(coordinates.myLeft,barrier) || inrange(coordinates.myRight,barrier) || inrange((coordinates.myLeft+coordinates.myRight)/2,barrier))
@@ -803,20 +832,22 @@ function ClearAll() {
                                 break;
                             }
                             case 2: {
-                                for(i=0; i<barriers.length; i++)
-                                {
-                                    if(Math.abs(barriers[i].right-coordinates.myLeft)>1) {return false;}
-                                    //if(barriers[i].right>=coordinates.myLeft && barriers[i].top<coordinates.myBottom) {return true;}
-                                }
-                                if(coordinates.myLeft>0){return false;}
                                 
+                                    var barrier = getBarrier(2);
+                                    if(checkHorizontally(coordinates.myBottom,coordinates.myTop,barrier) ){
+                                        answer = true;
+                                    }
+                                
+
+                                if(coordinates.myLeft<0){answer = true;}
+                                    
                                 break;
                             }
                             case 3: {
-                                for(i=0; i<barriers.length; i++)
-                                {
-                                    if(barriers[i].left<=coordinates.myRight) {return true;}
-                                }
+                                var barrier = getBarrier(3);
+                                if(checkHorizontally1(coordinates.myTop,coordinates.myBottom,barrier) ){
+                                        answer = true;
+                                    }
                                 break;
                             }
                             default: {return false;}
@@ -824,29 +855,76 @@ function ClearAll() {
                         return answer;
                     }
 
+                    function checkHorizontally(a,b,i)
+                    {
+                        
+                        if(i%2==0){
+                            document.getElementById("V").innerHTML = i + " " +  a+ "  " + barriers[i].top;
+                        if(a>barriers[i].top)
+                        {
+                            
+                            return true;
+                        }}
+
+                        else{
+                            
+                            if(b<barriers[i].bottom)
+                            {
+                                document.getElementById("V").innerHTML = i + " " +  b+ "  " + barriers[i].bottom;
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+
+                    function checkHorizontally1(a,b,i)
+                    {
+                        
+                        if(i%2!=0){
+                            document.getElementById("V").innerHTML = i + " " +  a+ "  " + barriers[i].bottom;
+                        if(a<barriers[i].bottom)
+                        {
+                            
+                            return true;
+                        }}
+
+                        else{
+                            
+                            if(b>barriers[i].top)
+                            {
+                                document.getElementById("V").innerHTML = i + " " +  b+ "  " + barriers[i].top;
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+
+                    
+
+
                     function drawBarriers()
                     {
                         
-                        
-                        for(i = 0; i<barriers.length; i++){
-                            
+                        ctx.clearRect(0,0,c.width,c.height);
+                        var eaten = true;
+                        if(coordinates.myLeft < 5 && coordinates.myTop<5) {eaten = false}
+                        if(eaten) {ctx. drawImage(cheese,0,0);}
+                        ctx.drawImage(mouse, coordinates.myLeft,coordinates.myTop); 
                             ctx.fillStyle = "black";
-                            
-                           
-                            
-                        }
                         ctx.fillRect(267,38,8,112);
                         //ctx.fillRect(parseInt(barriers[0].top),parseInt(barriers[0].left),parseInt(barriers[0].right-barriers[0].left),parseInt(barriers[0].bottom-barriers[0].top));
                         ctx.fillRect(234,0,8,112);
                         ctx.fillRect(201,38,8,112);
                         ctx.fillRect(168,0,8,112);
                         ctx.fillRect(135,38,8,112);
-                        ctx.fillRect(102,0,8,112);
+                        ctx.fillRect(102,0,7,112);
                         ctx.fillRect(69,38,8,112);
                         ctx.fillRect(36,0,8,112);
-                        ctx.drawImage(mouse, coordinates.myLeft,coordinates.myTop);  
+                         
 
                     }
+
+
 
 
                 </script>
