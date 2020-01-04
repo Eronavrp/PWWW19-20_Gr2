@@ -163,3 +163,18 @@ fieldset{
     border-color: #0D153C;
 }
 
+span{
+    transform: translate(50px,-10px);
+}
+
+#smileFace{
+    transition: transform 2s, transform 2s;
+}
+
+.reachedMax{
+    transform: rotate(-180deg) scale(1.5,1.5) translate(-50px,-10px) ;
+    
+    
+}
+
+    

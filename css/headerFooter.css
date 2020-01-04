@@ -29,6 +29,17 @@ body{
     display: inline-block;
     vertical-align: baseline;
     
+    transition: transform 1s;
+}
+
+#entrance>p:hover,#entrance1>p:hover{
+    transform-style: preserve-3d;
+    transform: rotateX(35deg);
+    transform: scale3d(1.5,1.2,1);
+    
+    
+    
+    
 }
 #entrance nav,#entrance1 nav{
     display: inline;

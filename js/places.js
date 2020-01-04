@@ -78,7 +78,7 @@ function showNextPicture(place,index)
     var d = document.getElementsByClassName("dot");
     d[index+(place*4)].className = "dot blueDot";
     
-    document.getElementById("V").innerHTML = current + " " +index + " " + s.length;
+    
     
     s[place].src = pictures[place][index];
     if(current=="miniSlideShow") switchAll(s,"miniSlideShow")
@@ -97,37 +97,17 @@ function switchAll(array,str)
     for(i = 0; i<array.length; i++)
     {
         arr[i].className = str;
+        
     }
     for(i = array.length; i<8; i++)
     {
         arr[i] = (array[i-array.length].className = str);
+        
     }
     return arr;
 }
 
 
-function restore(array,str)
-{
-    var arr = array;
-    for(i = 0; i<array.length; i++)
-    {
-        arr[i].className = str;
-    }
-    for(i = array.length; i<8; i++)
-    {
-        arr[i] = (array[i-array.length].className = str);
-    }
-    return arr;
-}
-
-function copyArray(a,i)
-{
-    for(k=i; k<i+4; k++)
-    {
-        s[k].className = a;
-    }
-    return s;
-}
 
 function resetColors(c)
 {

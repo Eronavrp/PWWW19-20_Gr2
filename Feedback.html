@@ -19,8 +19,13 @@
                        document.getElementById("tellUsWhyHidden").style.display = "block";
                    }
                    else{
+                       
                      document.getElementById("tellUsWhyHidden").style.display = "none";
                    }
+                   if(value==100) {document.getElementById("smileFace").className = "reachedMax";
+                                       document.getElementById("output").style.display = "none";}
+                    else {document.getElementById("smileFace").className = "";
+                    document.getElementById("output").style.display = "inline";}
                    buildSmile(value);
                    buildSad(value);
                }
@@ -399,8 +404,8 @@
                                         <td>
                                                 <div class="field">
                                                     <p>Is this your first visit to the website?</p>
-                                                    <p><input type="radio" value="1" class="buttons" name="firstVisit" onclick="showReason(0)"> Yes </p>
-                                                    <p><input type="radio" value="2" class="buttons" name="firstVisit" onclick="showReason(1)"> No  </p>
+                                                    <p><input type="radio" value="1" class="buttons" name="firstVisit" onclick="showReason(0)"> <span> Yes</span> </p>
+                                                    <p><input type="radio" value="2" class="buttons" name="firstVisit" onclick="showReason(1)"> <span>No</span>  </p>
                                                     <div id="reasonHidden"> 
                                                             What is the primary reason for your visit?
                                                             <textarea name="reason" class="textarea text" rows="5"></textarea>
@@ -444,7 +449,7 @@
                                             <p>How helpful did you find our guide (1-100)</p>
                                             <p><canvas id="sadFace" width="50" height="50"  ></canvas>
                                                 <input type="range" id="number" value="50" onchange="tellUsWhy()"> 
-                                                <canvas id="smileFace" width="50" height="50"  ></canvas><output name="x" for="number" ></output></p>
+                                                <canvas id="smileFace" width="50" height="50"  ></canvas><span id="output"><output name="x" for="number" ></output></span></p>
                                             <div id="tellUsWhyHidden">
                                                 Please tell us what went wrong:
                                                     <textarea name="wrong" class="textarea text" rows="5"></textarea>
@@ -457,7 +462,7 @@
                         </tbody>
                         <tfoot>
                             <td colspan="2">
-                                <div class="field">
+                                <div class="field rotate3d">
                                     <div class="label">
                                             <p>Do you have any other comment to add:</p>
                                         </div>

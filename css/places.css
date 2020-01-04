@@ -393,6 +393,14 @@ ol{
     width: 60%;
     display: inline;
     float: left;
+    }
+
+.video video{
+    transition: transform 1s;
+}
+
+.video:hover video{
+    transform: scale3d(1.1, 1.1, 1.1);
 }
 
 .fourth {
