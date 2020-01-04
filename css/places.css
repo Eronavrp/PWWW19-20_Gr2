@@ -260,10 +260,20 @@ article nav ul li {
     margin-left: 1%;
     
 }
-.short img{
+.miniSlideShow{
     width: 350px;
     height: 500px;
+    transform: rotate3d(0 , 1, 0, 150deg);
+    transition: transform 0.5s;
 }
+
+.shrink{
+    width: 350px;
+    height: 500px;
+    transform: rotate3d(0, 1, 0, 30deg);
+    transition: transform 0.5s;
+}
+
 .short h2,h3,h4,h5,h6 {
     text-align: center;
 }

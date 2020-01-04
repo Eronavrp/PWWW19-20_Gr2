@@ -49,9 +49,15 @@ function showStory(n)
     document.getElementById("main").style.height = "1500px";
     
 }
+var current = "miniSlideShow";
+var currentPlace;
 
+var count = 0;
 function showNextPicture(place,index)
 {   
+    
+    
+    
     resetColors(place);
     var pictures = [
         ["images/places/germia3.jpg","images/places/germia1.jpg","images/places/germia4.jpg","images/places/germia5.jpg"],
@@ -64,16 +70,63 @@ function showNextPicture(place,index)
         ["images/places/prevalla4.jpg","images/places/prevalla5.jpg","images/places/prevalla1.jpg","images/places/prevalla3.jpg"],
         
     ];
-    var s = document.getElementsByClassName("miniSlideShow");
     
+    
+    if(current == "shrink") { var s = document.getElementsByClassName("shrink"); current = "miniSlideShow";}
+    else { var s = document.getElementsByClassName("miniSlideShow"); current = "shrink";}
+    currentPlace = place;
     var d = document.getElementsByClassName("dot");
-    
-    s[place].src = pictures[place][index];
-    
-    //d[index+(place*4)].style.backgroundColor = "#0D153C";
     d[index+(place*4)].className = "dot blueDot";
     
+    document.getElementById("V").innerHTML = current + " " +index + " " + s.length;
     
+    s[place].src = pictures[place][index];
+    if(current=="miniSlideShow") switchAll(s,"miniSlideShow")
+    else switchAll(s,"shrink");
+    
+
+    //d[index+(place*4)].style.backgroundColor = "#0D153C";
+    
+    
+    
+}
+
+function switchAll(array,str)
+{
+    var arr = array;
+    for(i = 0; i<array.length; i++)
+    {
+        arr[i].className = str;
+    }
+    for(i = array.length; i<8; i++)
+    {
+        arr[i] = (array[i-array.length].className = str);
+    }
+    return arr;
+}
+
+
+function restore(array,str)
+{
+    var arr = array;
+    for(i = 0; i<array.length; i++)
+    {
+        arr[i].className = str;
+    }
+    for(i = array.length; i<8; i++)
+    {
+        arr[i] = (array[i-array.length].className = str);
+    }
+    return arr;
+}
+
+function copyArray(a,i)
+{
+    for(k=i; k<i+4; k++)
+    {
+        s[k].className = a;
+    }
+    return s;
 }
 
 function resetColors(c)
