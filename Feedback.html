@@ -594,11 +594,12 @@ function ClearAll() {
 
                 </canvas>
 
-                <button id="upButton" style="width:50px; height:30px; position: relative; top: 50px;left: 100px;" onclick="goUp()">UP</button>
-                <button id="downButton" style="width:50px; height:30px; position: relative; top: 150px;left: 50px;" onclick="goDown()">DOWN</button>
-                <button id="leftButton" style="width:50px; height:30px; position: relative; top: 100px;left: -70px;" onclick="goLeft()">LEFT</button>
-                <button id="upButton" style="width:50px; height:30px; position: relative; top: 100px;left: 0px;" onclick="goRight()">RIGHT</button>
                 
+                <button id="upButton" class="hiddenButtons" style="width:50px; height:30px; position: relative; top: 50px;left: 100px;" onclick="goUp()">UP</button>
+                <button id="downButton" class="hiddenButtons" style="width:50px; height:30px; position: relative; top: 150px;left: 50px;" onclick="goDown()">DOWN</button>
+                <button id="leftButton" class="hiddenButtons" style="width:50px; height:30px; position: relative; top: 100px;left: -70px;" onclick="goLeft()">LEFT</button>
+                <button id="upButton" class="hiddenButtons" style="width:50px; height:30px; position: relative; top: 100px;left: 0px;" onclick="goRight()">RIGHT</button>
+                <button id="playGame" style="width:50px; height:30px; position: relative; top: 100px;left: 50px;" onclick="startGame()">PLAY</button>
                 <script>
                     var c = document.getElementById("labyrinth");
                     var ctx = c.getContext("2d");
@@ -606,8 +607,19 @@ function ClearAll() {
                     var cheese = document.getElementById("cheese");
                     //ctx.drawImage(mouse, c.width-mouse.width,c.height-mouse.height);  
                     
-                    var yMovement = 5;
+                    var yMovement = 8;
                     var xMovement = 5;
+
+                    function startGame()
+                    {
+                        var x = document.getElementsByClassName("hiddenButtons");
+                        for(i= 0; i<x.length; i++)
+                        {
+                            x[i].className = "";
+                        }
+                        document.getElementById("playGame").className = "hiddenButtons";
+                        drawBarriers();
+                    }
 
                     //redraw()
                     //resetCoordinates
@@ -907,7 +919,7 @@ function ClearAll() {
                         
                         ctx.clearRect(0,0,c.width,c.height);
                         var eaten = true;
-                        if(coordinates.myLeft < 5 && coordinates.myTop<5) {eaten = false}
+                        if(coordinates.myLeft < cheese.width && coordinates.myTop<cheese.height) {eaten = false; window.alert("Congrats! You won.");}
                         if(eaten) {ctx. drawImage(cheese,0,0);}
                         ctx.drawImage(mouse, coordinates.myLeft,coordinates.myTop); 
                             ctx.fillStyle = "black";
