@@ -80,7 +80,10 @@ span.psw {
         </div>
         </form>
         <h3 style="text-align: center;" id="time"></h3>
-        <br/><br/>
+        <br/>
+        <p id="max" onclick="vlera()" style="text-align: center;">Click to find the max value of log ins</p>
+        <p id="max1" style="text-align: center;"></p>
+        <br/>
     </div>
     <script>
         function CheckPassword() 
@@ -123,6 +126,10 @@ span.psw {
         if(sessionStorage.getItem(time)>0 && sessionStorage.getItem(time)<12 ){
             el.style.backgroundColor='cornsilk'
         }
+        else if(sessionStorage.getItem(time)>17 && sessionStorage.getItem(time)<23 )
+        {
+            el.style.backgroundColor='gray'
+        }
         else{
             el.style.backgroundColor='white'
     
@@ -135,6 +142,10 @@ span.psw {
         document.getElementById('time').innerHTML=koha
     }
     time()
+    function vlera(){
+        var max=Math.max(2,7,21,9,5);
+        document.getElementById('max1').innerHTML=max.toExponential(3).toString()+" "+isNaN(max);
+    }
     </script>
 </body>
 </html>
