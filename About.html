@@ -38,8 +38,15 @@
             <h3>OFFICIAL STATE OF KOSOVA VACATION AND TRAVEL INFORMATION WEBSITE</h3>
         </header>
         <article id='about'>
-            <h1>Kosovo the land of hospitality
+            <h1 id="tx" onclick="myFunction()">Kosovo the land of hospitality
             </h1>
+            <script>
+            function myFunction() {
+                var str = document.getElementById('tx').innerHTML;
+                var result = str.search(/the/g);
+                document.getElementById("tx").innerHTML = result;
+                }
+            </script>
             <p>As a young and attractive country, Kosovo has a very rich culture and history. Kosovo Cultural Heritage
                 was created by ancients Illyrians and Romans with later indications by different empires in more recent
                 centuries. When traveling around Kosovo, there are many opportunities to experience the very old
@@ -114,7 +121,16 @@
                  <div style="display: inline-block;width: 450px;height: 450px; vertical-align: middle;" id="map">
                 </div>
             <div id="details">
-                <h2>Republic of Kosovo</h2>
+                <h2 id="check" onclick="kliko()">Republic of Kosovo</h2>
+                <script>
+                    function kliko() {
+                      var str = document.getElementById('check').innerHTML;
+                      var patt = new RegExp("Republic");
+                      //var res = patt.test(str);
+                      var res = patt.exec(str);
+                      document.getElementById("check").innerHTML = res;
+                    }
+                    </script>
                 <p><strong>Area: </strong> <em>10,887</em></p>
                 <p><strong>Population: </strong> <em>1.9 million</em></p>
                 <p><strong>Located: </strong> <em>South-Eastern Europe</em></p>

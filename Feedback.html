@@ -482,7 +482,7 @@
                 </form>
                 <img src="images/mouse.jpg" id="mouse">
                 <img src="images/cheese.jpg" id="cheese">
-                <canvas id="labyrinth" >
+                <canvas id="labyrinth" style="vertical-align: middle;" >
 
                 </canvas>
                 
@@ -630,12 +630,31 @@
 
 
                 </script>
+
+<div class="testimonials">
+    <h2 style="margin-bottom: 5%;">Testimonials</h2>
+    <h4 id="emri"></h4>
+    <p id="com"></p>
+
+</div>
+<script>
+    var person={
+        name: "emri",
+        surname: 'mbiemri',
+        age: 20,
+        comment: ''
+    }
+
+    person['name']='Andi'
+    person['surname']='Ahmeti'
+    person['age']=25
+    person['comment']='A very nice and helpful page'
+    document.getElementById('com').innerHTML=person['comment']
+    document.getElementById('emri').innerHTML=person['name']+"  "+person['surname'] 
+</script>
+
+
             </main>
-
-            
-
-
-
             <footer>
             <div>
                 <div class="footerDivs" id="blog">
