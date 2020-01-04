@@ -430,3 +430,12 @@ ol{
     display: inline;
     float:left;
 }
+
+#columnPurpose{
+    column-count: 3;
+    column-gap: 10px;
+    column-width: 133px;
+    column-rule-width: 3px;
+    column-rule-style: groove;
+    column-rule-color: #E2CBA0;
+}
