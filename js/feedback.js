@@ -66,7 +66,8 @@ function validate()
    var givenDate = document.getElementById("date");
    var currentDate = new Date().getTime();
   var date = new Date(givenDate.value + ' 00:00').getTime();
-  if(currentDate<date) {window.alert("Date is invalid. Please insert an older date to proceed"); proceed = false; givenDate.classList.add("error");}
+  if(currentDate<date) {console.warn("Date invalid");
+   window.alert("Date is invalid. Please insert an older date to proceed"); proceed = false; givenDate.classList.add("error");}
    else {removeErrors(givenDate);}
   var x = document.getElementById("telephone");
 

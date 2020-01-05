@@ -183,7 +183,7 @@ function ClearAll() {
 
         <main >
             <div onload="doShowAll()">
-                    <form  action="#" method="get" name="form" id="feedback" oninput="x.value=parseInt(number.value)+'%'" onsubmit="return validate()">
+                    <form  action="#labyrinth" method="get" name="form" id="feedback" oninput="x.value=parseInt(number.value)+'%'" onsubmit="return validate()">
                             <fieldset style="padding-left: 50px;">
                                 <legend>
                                     <h2>Please help us improve our service by completing the feedback::</h2>
@@ -597,6 +597,8 @@ function ClearAll() {
         </div>
         <img src="images/mouse.png" id="mouse">
                 <img src="images/cheese.jpg" id="cheese">
+
+                <h3>Thank you for your cooperation!!! <br>We've made up a little game for you</h3>
                 <canvas id="labyrinth" >
 
                 </canvas>
@@ -611,7 +613,9 @@ function ClearAll() {
                     var c = document.getElementById("labyrinth");
                     var ctx = c.getContext("2d");
                     var mouse = document.getElementById("mouse");
-                    var cheese = document.getElementById("cheese");
+                    
+                    
+                    //var cheese = new Image(30,50);
                     //ctx.drawImage(mouse, c.width-mouse.width,c.height-mouse.height);  
                     
                     var yMovement = 8;
@@ -619,6 +623,10 @@ function ClearAll() {
                     
                     function startGame()
                     {
+                        
+                        
+                        
+                        
                         var x = document.getElementsByClassName("hiddenButtons");
                         for(i= 0; i<x.length; i++)
                         {
@@ -628,16 +636,19 @@ function ClearAll() {
                         drawBarriers();
                     }
 
-                    //redraw()
-                    //resetCoordinates
+                    
 
-                    var coordinates = {
-                        myTop : 112,
-                        myLeft: 277,
-                        myRight: 277+mouse.width,
-                        myBottom: 140
+                    
+                    
+
+                    function coords(top,left,right,bottom){
+                        this.myTop = top;
+                        this.myLeft = left;
+                        this.myRight = right;
+                        this.myBottom = bottom;
                     }
 
+                    var coordinates = new coords(112,277,277+mouse.width,140);
                     var barriers = [
                         {//ctx.fillRect(267,38,10,112);
                             left: 267,
@@ -739,6 +750,7 @@ function ClearAll() {
                     }
 
                     
+                    var cheese = document.getElementById("cheese");
 
                     function getBarrier(k)
                     {
@@ -917,17 +929,32 @@ function ClearAll() {
                         }
                         return false;
                     }
-
                     
+                        
+                    function getCheese(cheesse)
+                    {
+                        var eaten = true;
+                        cheesse.src = "../images/cheese.jpg";
+                        if(coordinates.myLeft < cheese.width && coordinates.myTop<cheese.height) {eaten = false; window.alert("Congrats! You won.");}
+                        if(eaten) {ctx.drawImage(cheese,0,0);}
+                        
+                        
+                    }
 
+                   
 
                     function drawBarriers()
                     {
-                        c.style.transition = "mouse 1s";
+                        
+                        //this.cheese.setWidth(100);
+                        //this.cheese.height = "100px";
+                        //document.getElementById("V").innerHTML = typeof(cheese);
                         ctx.clearRect(0,0,c.width,c.height);
-                        var eaten = true;
-                        if(coordinates.myLeft < cheese.width && coordinates.myTop<cheese.height) {eaten = false; window.alert("Congrats! You won.");}
-                        if(eaten) {ctx. drawImage(cheese,0,0);}
+                        var cheesse = new Image(cheese.width,cheese.height);
+                        getCheese(cheesse);
+                        
+                        //if(coordinates.myLeft < cheese.width && coordinates.myTop<cheese.height) {eaten = false; window.alert("Congrats! You won.");}
+                        //if(eaten) { }
                         ctx.drawImage(mouse, coordinates.myLeft,coordinates.myTop); 
                             ctx.fillStyle = "black";
                         ctx.fillRect(267,38,8,112);
@@ -945,7 +972,7 @@ function ClearAll() {
 
 
 
-
+                
                 </script>
                 <div class="testimonials">
                     <h2 style="margin-bottom: 5%; border-bottom: 3px solid darkblue;">Testimonials</h2>
