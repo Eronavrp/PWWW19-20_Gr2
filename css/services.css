@@ -6,11 +6,14 @@ body
     width:100%;
     height:565px;
     background-color: rgba(13, 21, 60,0.7) ;
-    background:  -webkit-radial-gradient(#e66465, #9198e5);
-    background:  -moz-radial-gradient(#e66465, #9198e5);
-    background:  -o-radial-gradient(#e66465, #9198e5);
-    background:  radial-gradient(#e66465, #9198e5);
-    
+    background:radial-gradient(ellipse at top, #e66465, transparent),
+            radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+ background:-webkit-radial-gradient(ellipse at top, #e66465, transparent),
+ -webkit-radial-gradient(ellipse at bottom, #4d9f0c, transparent); 
+background: -moz-radial-gradient(ellipse at top, #e66465, transparent),
+-moz-radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+ background:-o-radial-gradient(ellipse at top, #e66465, transparent),
+ -o-radial-gradient(ellipse at bottom, #4d9f0c, transparent);
     background-size: cover;
     background-blend-mode: lighten;
     filter:blur(10px);
