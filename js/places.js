@@ -74,7 +74,7 @@ function showNextPicture(place,index,k)
     ];
     
     
-    if(k==0){if(current == "shrink") { var s = document.getElementsByClassName("shrink"); current = "miniSlideShow";}
+    /*if(k==0){if(current == "shrink") { var s = document.getElementsByClassName("shrink"); current = "miniSlideShow";}
     else { var s = document.getElementsByClassName("miniSlideShow"); current = "shrink";}
     currentPlace = place;}
     var d = document.getElementsByClassName("dot");
@@ -83,22 +83,33 @@ function showNextPicture(place,index,k)
     
     if(k!=0) { s = initial("miniSlideShow");if(current=="shrink") {s = initial("miniSlideShow");} else {s = initial("shrink");}}
     s[place].src = pictures[place][index];
-    if(k==0){if(current=="miniSlideShow") s = switchAll(s,"miniSlideShow")
-    else s = switchAll(s,"shrink");}
+    if(k==0){if(current=="miniSlideShow") s = switchAll(s,"miniSlideShow","shrink")
+    else s = switchAll(s,"shrink","miniSlideShow");}
     
 
-    //d[index+(place*4)].style.backgroundColor = "#0D153C";
+    //d[index+(place*4)].style.backgroundColor = "#0D153C";*/
+
+    if(current == "shrink") {var s = document.getElementsByClassName("fotot"); current = "miniSlideShow";}
+    else { var s = document.getElementsByClassName("fotot"); current = "shrink";}
+    
+    var d = document.getElementsByClassName("dot");
+    d[index+(place*4)].className = "dot blueDot";
+
+    s[place].src = pictures[place][index];
+    if(current=="miniSlideShow") s = switchAll(s,"miniSlideShow","shrink");
+    else s = switchAll(s,"shrink","miniSlideShow");
     
     
     
 }
 
-function switchAll(array,str)
+function switchAll(array,str,str2)
 {
     var arr = array;
     for(i = 0; i<array.length; i++)
     {
-        arr[i].className = str;
+        arr[i].classList.add(str);
+        arr[i].classList.remove(str2);
         
     }
     for(i = array.length; i<8; i++)
