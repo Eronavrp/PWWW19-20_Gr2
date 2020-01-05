@@ -7,7 +7,7 @@ body
 
 @font-face {
     font-family: fontiJone;
-    src: url(ChopinScript.ttf);
+    src: url(ChopinScript.ttf); 
 }
 
 #blur{

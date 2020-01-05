@@ -11,7 +11,6 @@ function showDivs(n)
     
 
     
-    //document.getElementById("V").innerHTML = currentClicked + " " + slideIndex;
     if (slideIndex+n > divs.length-4 && n>0) {   n=0;}
     else if (slideIndex+n < 1 && n<0) {n=0; }
   
@@ -38,7 +37,6 @@ function showStory(n)
 {
     resetSize();
     expand(n);
-    //document.getElementById("V").innerHTML += " " +currentClicked;
     if(n==4) {showDivs(1);resetSize(); expand(3);}
     var stories = document.getElementsByClassName("readMore");
     for( i = 0; i< stories.length; i++){
@@ -82,9 +80,6 @@ var currentPlace;
 var count = 0;
 function showNextPicture(place,index,k)
 {   
-    
-    
-    
     resetColors(place);
     var pictures = [
         ["images/places/germia3.jpg","images/places/germia1.jpg","images/places/germia4.jpg","images/places/germia5.jpg"],
@@ -97,23 +92,6 @@ function showNextPicture(place,index,k)
         ["images/places/prevalla4.jpg","images/places/prevalla5.jpg","images/places/prevalla1.jpg","images/places/prevalla3.jpg"],
         
     ];
-    
-    
-    /*if(k==0){if(current == "shrink") { var s = document.getElementsByClassName("shrink"); current = "miniSlideShow";}
-    else { var s = document.getElementsByClassName("miniSlideShow"); current = "shrink";}
-    currentPlace = place;}
-    var d = document.getElementsByClassName("dot");
-    d[index+(place*4)].className = "dot blueDot";
-    
-    
-    if(k!=0) { s = initial("miniSlideShow");if(current=="shrink") {s = initial("miniSlideShow");} else {s = initial("shrink");}}
-    s[place].src = pictures[place][index];
-    if(k==0){if(current=="miniSlideShow") s = switchAll(s,"miniSlideShow","shrink")
-    else s = switchAll(s,"shrink","miniSlideShow");}
-    
-
-    //d[index+(place*4)].style.backgroundColor = "#0D153C";*/
-
     if(current == "shrink") {var s = document.getElementsByClassName("fotot"); current = "miniSlideShow";}
     else { var s = document.getElementsByClassName("fotot"); current = "shrink";}
     
@@ -123,9 +101,7 @@ function showNextPicture(place,index,k)
     s[place].src = pictures[place][index];
     if(current=="miniSlideShow") s = switchAll(s,"miniSlideShow","shrink");
     else s = switchAll(s,"shrink","miniSlideShow");
-    
-    
-    
+
 }
 
 function switchAll(array,str,str2)
@@ -161,7 +137,6 @@ function initial(current)
 function resetColors(c)
 {
     var d = document.getElementsByClassName("blueDot");
-    //d[c].style.backgroundColor = "#E2CBA0";
     d[c].className = "dot";
     
 }

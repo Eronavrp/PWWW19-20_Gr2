@@ -43,7 +43,6 @@ function validate()
 {
   var proceed = true;
   
-  //document.getElementById("V").innerHTML = date;
   var requiredInputs = document.getElementsByClassName("required");
   for(i = 0; i<requiredInputs.length; i++)
   {
@@ -60,8 +59,6 @@ function validate()
           }
           removeErrors(requiredInputs[i]);
       }
-      //var x = getElementById("selectContinent");
-      //if(x.value  == 0) {x.classList.add("error");}
    }
    var givenDate = document.getElementById("date");
    var currentDate = new Date().getTime();
@@ -82,24 +79,20 @@ function correctFormat()
    var answer = true;
    
    var tokens = document.getElementById("telephone").value.split(" ");
-   //document.getElementById("V").innerHTML = " " + tokens[2];
    if(tokens[0].length!=5 || tokens[0][0]!='(' || tokens[0][4]!=')'){return false;}
    if(tokens[1].length!=2){return false;}
    if(tokens[2].length!=6){return false;}
-   //document.getElementById("V").innerHTML = " " + answer; 
    var code = 383;  var typedCode;
    
    try { typedCode = parseInt(tokens[0].substring(1,5)); if(code !=typedCode) {answer = false;}}
    catch(e){ answer = false;}
-   document.getElementById("V").innerHTML = " " + answer;
+
 
    try {typedCode = parseInt(tokens[1]+"");}
    catch(e) {answer = false;}
-   //document.getElementById("V").innerHTML += " " + answer;
 
    try {typedCode = parseInt(tokens[2]);}
    catch(e){answer = false;}
-   //document.getElementById("V").innerHTML += " " + answer;
 
    return answer;
 
@@ -115,7 +108,6 @@ window.addEventListener("load", function() {
         requiredInputs[i].addEventListener("focus",function(e){
           removeErrors(e.target);
         }); }
-  // add listeners for classes with hilightable ... 
   var hilightableInputs = document.getElementsByClassName("highlightable");
   for (var i=0; i < hilightableInputs.length; i++) {
       hilightableInputs[i].addEventListener("focus", function(e) {
