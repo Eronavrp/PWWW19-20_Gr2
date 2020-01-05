@@ -1015,21 +1015,61 @@ function ClearAll() {
                 </div>
                 <div class="footerDivs" id="contact">
                     <p class="divHeader">Contact Us</p>
-                    <form method="post" action="http://www.google.com">
-                        <input type="text" name="name" placeholder="Full Name" />
-                        <input type="text" name="email" placeholder="Email Address" />
-                        <input type="text" name="subject" placeholder="Subject" />
+                    <form method="post" action="http://www.google.com" id="form2">
+                        <input type="text" name="name" placeholder="Full Name" class="required1"/>
+                        <input type="text" name="email" placeholder="Email Address" class="required1"/>
+                        <input type="text" name="subject" placeholder="Subject" class="required1"/>
                         <textarea name="message" rows="4" cols="25" placeholder="Message"></textarea>
-                        <input type="submit" value="SUBMIT" />
+                        <input type="submit" value="SUBMIT"/>
                     </form>
-
+                    
                 </div>
             </div>
             <p>Copyright &COPY; 2013 Domain Name <span style="float:right">Template by OS Templates</span></p>
         </footer>
     </div>
 
+    <script>
+    function isBlank(inputField)
+{
+    if(inputField.value==""){
+        return true;
+    }
+    return false;
+}
 
+function makeClean(element)
+{
+    element.classList.remove("error");
+}
+
+window.addEventListener("load", function(){
+    var requiredInputs = document.querySelectorAll(".required1");
+    for (var i =0; i<requiredInputs.length; i++)
+    {
+        requiredInputs[i].addEventListener("change", function(e){
+            makeClean(e.target);
+        });
+    }
+    var mainForm = document.getElementById("form2");
+    mainForm.addEventListener("submit", function(e){
+    
+    var requiredInputs = document.querySelectorAll(".required1");
+    for (var i =0; i<requiredInputs.length; i++)
+    {
+        if(isBlank(requiredInputs[i]))
+        {
+            e.preventDefault();
+            requiredInputs[i].classList.add("error");
+        }
+        else
+        {
+            makeClean(requiredInputs[i]);
+        }
+    } 
+    });
+});
+    </script>
 </body>
 
 </html>
