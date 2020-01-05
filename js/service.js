@@ -15,14 +15,17 @@ var myMonument = new infoMonument("Lidhja e Prizerenit", "wikipedia", " Very pop
 
 document.getElementById("demo").innerHTML =
 "This monument" + myMonument.cityName + "was formed on" +myMonument.dateCreated+".";}
+
+
 function HideContent(obj) {
-    for (var i = 1; i < obj.length; i++) {
-        document.getElementById([obj[0]]).style.display = 'flex';
-        document.getElementById([obj[i]]).style.display = 'none';
-
-    }
+    
+  for (var i = 1; i < obj.length; i++) {
+      document.getElementById([obj[0]]).style.display = 'flex';
+      document.getElementById([obj[i]]).style.display = 'none';
+      document.getElementById("s"+obj[i][7]).style.color = "black";
+  }
+  document.getElementById("s"+obj[0][7]).style.color = "#E2CBA0";
 }
-
 
 function HideContent2(obj) {
   var i = 1;
