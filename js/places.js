@@ -48,8 +48,14 @@ function showStory(n)
     else stories[n+slideIndex-2].className = "readMore";
     document.getElementById("main").style.height = "1500px";
     var span = document.getElementById("exponentialNumber");
-    var value = parseInt(span.innerHTML);
-    span.innerHTML = value.toExponential();
+    var value = parseInt(span.innerHTML).toExponential();
+    span.innerHTML = value;
+
+    var span2 = document.getElementById("twoMathFunctions");
+    var v = parseInt(span2.innerHTML);
+    v = Math.floor(v*Math.SQRT2*Math.SQRT1_2);
+    span2.innerHTML = v;
+
 }
 var current = "miniSlideShow";
 var currentPlace;
@@ -162,9 +168,3 @@ function resetSize()
 
 
 
-/*$(document).ready(function(){
-       $('#fff').click(
-             function(){
-                 $('.images').slideDown();
-             });
-            });*/
