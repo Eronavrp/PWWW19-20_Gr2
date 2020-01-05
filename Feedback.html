@@ -940,6 +940,29 @@ function ClearAll() {
 
 
                 </script>
+                <div class="testimonials">
+                    <h2 style="margin-bottom: 5%; border-bottom: 3px solid darkblue;">Testimonials</h2>
+                    <h4 id="emri"></h4>
+                    <p id="com"></p>
+                    <p id="nat"></p>
+                </div>
+                <script>
+                       function Person(first, last, age, comment) {
+            this.name = first;
+            this.surname = last;
+            this.age = age;
+            this.comment = comment;}
+            Person.prototype.nationality='English'
+            
+            Person.prototype.fname = function() {
+            return this.name + " " + this.surname;
+            };
+
+            var person=new Person('Andi','Ahmeti',25,'A very nice and helpful page')
+            document.getElementById('com').innerHTML=person['comment']
+            document.getElementById('emri').innerHTML=person.fname()
+            document.getElementById('nat').innerHTML=person['nationality']
+                </script>
         </main>
 
 

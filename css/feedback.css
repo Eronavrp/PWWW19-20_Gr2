@@ -159,10 +159,12 @@ tfoot div{
     border-color: #E2CBA0;
 }
 .testimonials{
-    width: 35%;
-    padding: 10%;
-    display: inline-block;
+    width: 45%;
+    text-align: center;
+    display:block;
+    margin:30% 0 3% 27%;
     vertical-align: middle;
+    border: 2px solid darkblue;
 }
 
 fieldset{
