@@ -55,7 +55,26 @@ function showStory(n)
     var v = parseInt(span2.innerHTML);
     v = Math.floor(v*Math.SQRT2*Math.SQRT1_2);
     span2.innerHTML = v;
+    if(n==3) 
+    {
+        fillTable("Pej&euml;","Pej&euml;","Radavc",10000);
+        var fields = document.getElementsByClassName("objectPurpose");
+        
+        fields[0].innerHTML = this.city;
+        fields[1].innerHTML = this.municipality;
+        fields[2].innerHTML = this.street;
+        fields[3].innerHTML = this.postalCode;
+        
+    }
 
+}
+
+function fillTable(c,m,s,pc)
+{
+    this.city = c;
+    this.municipality = m;
+    this.street = s;
+    this.postalCode = pc;
 }
 var current = "miniSlideShow";
 var currentPlace;
