@@ -1,4 +1,20 @@
+function infoMonument(name, src, famous, date) {
+  this.cityName = name;
+  this.fotoSrc = src;
+  this.popularity= famous;
+  this.dateCreated = date;
+  
+}
 
+window.onload = function() {
+
+
+
+
+var myMonument = new infoMonument("Lidhja e Prizerenit", "wikipedia", " Very popular in Kosovo", "10/06/1878");
+
+document.getElementById("demo").innerHTML =
+"This monument" + myMonument.cityName + "was formed on" +myMonument.dateCreated+".";}
 function HideContent(obj) {
     for (var i = 1; i < obj.length; i++) {
         document.getElementById([obj[0]]).style.display = 'flex';
