@@ -43,9 +43,7 @@ function ClearAll() {
 	localStorage.clear();
 	doShowAll();
 }
-//--------------------------------------------------------------------------------------
-// dynamically populate the table with shopping list items
-//below step can be done via PHP and AJAX too. 
+
 function doShowAll() {
 	if (CheckBrowser()) {
 		var key = "";
@@ -73,7 +71,7 @@ function doShowAll() {
  =====> Checking the browser support
  //this step may not be required as most of modern browsers do support HTML5
  */
- //below function may be redundant
+
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
 		// we can use localStorage object to store data
@@ -82,7 +80,3 @@ function CheckBrowser() {
 			return false;
 	}
 }
-//-------------------------------------------------
-/*
-You can extend this script by inserting data to database or adding payment processing API to shopping cart..
-*/
