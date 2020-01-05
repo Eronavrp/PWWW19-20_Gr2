@@ -170,16 +170,27 @@ fieldset{
 }
 
 span{
-    transform: translate(50px,-10px);
+    -webkit-transform: 
+    -moz-transform: 
+    -ms-transform: 
+    -o-transform: 
+    transform: 
 }
 
 #smileFace{
-    transition: transform 2s, transform 2s;
+    -webkit-transition: transform 2s, transform 2s;
+    -moztransition: transform 2s, transform 2s;
+    -ms-transition: transform 2s, transform 2s;
+    -o-transition: transform 2s, transform 2s;
+    transition: transform 2s, transform 2s;    
 }
 
-.reachedMax{
+.reachedMax{ 
+    -webkit-transform: rotate(-180deg) scale(1.5,1.5) translate(-50px,-10px) ;
+    -moz-transform: rotate(-180deg) scale(1.5,1.5) translate(-50px,-10px) ;
+    -ms-transform: rotate(-180deg) scale(1.5,1.5) translate(-50px,-10px) ;
+    -o-transform: rotate(-180deg) scale(1.5,1.5) translate(-50px,-10px) ;
     transform: rotate(-180deg) scale(1.5,1.5) translate(-50px,-10px) ;
-    
     
 }
 

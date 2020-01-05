@@ -28,19 +28,38 @@ body{
     font-size:2em;
     display: inline-block;
     vertical-align: baseline;
-    
+    -webkit-transition: transform 1s;
+    -moz-transition:transform 1s;    
+    -ms-transition:transform 1s;
+    -o-transition:transform 1s;
     transition: transform 1s;
+    
 }
 
 #entrance>p:hover,#entrance1>p:hover{
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    transform: rotateX(35deg);
+
+    -webkit-transform: rotateX(35deg);
+    -moz-transform: rotateX(35deg);
+    -ms-transform: rotateX(35deg);    
+    -o-transform: rotateX(35deg);    
+    transform: rotateX(35deg);    
+
+    -webkit-transform: rotateY(-35deg);
+    -moz-transform: rotateY(-35deg);
+    -ms-transform: rotateY(-35deg);
+    -o-transform: rotateY(-35deg);
     transform: rotateY(-35deg);
+
+    -webkit-transform: scale3d(1.5,1.2,1);
+    -moz-transform: scale3d(1.5,1.2,1);
+    -ms-transform: scale3d(1.5,1.2,1);
+    -o-transform: scale3d(1.5,1.2,1);
     transform: scale3d(1.5,1.2,1);
-    
-    
-    
-    
 }
 #entrance nav,#entrance1 nav{
     display: inline;
@@ -79,7 +98,10 @@ nav ul li div#dropdown {
     height: 0px;
 
     -webkit-transition: height 1s;
-                transition: height 1s;
+    -moz-transition: height 1s;
+    -ms-transition: height 1s;
+    -o-transition: height 1s;
+    transition: height 1s;
   }
   nav ul li div#dropdown ul{
       display: none;

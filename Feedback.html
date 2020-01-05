@@ -151,7 +151,7 @@ function ClearAll() {
     </script>
 </head>
 
-<body onload="doShowAll()">
+<body>
 
     <div id="blur"></div>
     <div class="wrapper">
@@ -609,7 +609,7 @@ function ClearAll() {
                     
                     var yMovement = 8;
                     var xMovement = 5;
-
+                    
                     function startGame()
                     {
                         var x = document.getElementsByClassName("hiddenButtons");
@@ -857,7 +857,7 @@ function ClearAll() {
                             }
                             case 3: {
                                 var barrier = getBarrier(3);
-                                if(checkHorizontally1(coordinates.myTop,coordinates.myBottom,barrier) ){
+                                if(checkRight(coordinates.myTop,coordinates.myBottom,barrier) ){
                                         answer = true;
                                     }
                                 break;
@@ -889,7 +889,7 @@ function ClearAll() {
                         return false;
                     }
 
-                    function checkHorizontally1(a,b,i)
+                    function checkRight(a,b,i)
                     {
                         
                         if(i%2!=0){
@@ -916,7 +916,7 @@ function ClearAll() {
 
                     function drawBarriers()
                     {
-                        
+                        c.style.transition = "mouse 1s";
                         ctx.clearRect(0,0,c.width,c.height);
                         var eaten = true;
                         if(coordinates.myLeft < cheese.width && coordinates.myTop<cheese.height) {eaten = false; window.alert("Congrats! You won.");}
