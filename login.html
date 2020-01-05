@@ -39,8 +39,9 @@ span.psw {
   padding-top: 16px;
 }
 </style>
+<script src="js/nav.js"></script>
 </head>
-<body>
+<body onload="navActive('drop'); navActive('login');">
     <div class="wrapper" id="po">
         <div id='blur'>
         </div>
@@ -58,7 +59,7 @@ span.psw {
                         <div id="dropdown">
                             <ul >
                             <li><a href="Feedback.html">Feedback</a></li>
-                            <li><a href="login.html">Log in</a></li>
+                            <li><a href="login.html" id="login">Log in</a></li>
                         </ul>
                     </div>
                     </li>

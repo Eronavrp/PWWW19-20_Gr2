@@ -14,10 +14,11 @@ and open the template in the editor.
     <link rel="stylesheet" type="text/css" href="css/places.css" />
     
     <script src="js/places.js"></script>
-    
+    <script src="js/nav.js"></script>
 </head>
 
-<body>
+<body onload="navActive('places')">
+
     <div id="blur"></div>
     <div class="wrapper">
 
@@ -25,18 +26,18 @@ and open the template in the editor.
             <p>Kosovo</p>
             <nav>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About.html">ABOUT</a></li>
-                    <li><a href="Gallery.html">GALLERY</a></li>
-                    <li><a href="Places.html">PLACES</a></li>
-                    <li><a href="Services.html">SERVICES</a></li>
-                    <li ><a href="#drop" id="drop">MORE</a>
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="About.html" >ABOUT</a></li>
+                    <li><a href="Gallery.html" >GALLERY</a></li>
+                    <li><a href="Places.html" id="places">PLACES</a></li>
+                    <li><a href="Services.html" >SERVICES</a></li>
+                    <li><a href="#" id="drop">MORE</a>
                         <div id="dropdown">
-                            <ul >
-                            <li><a href="Feedback.html">Feedback</a></li>
-                            <li><a href="login.html">Log in</a></li>
-                        </ul>
-                    </div>
+                            <ul>
+                                <li><a href="Feedback.html">Feedback</a></li>
+                                <li><a href="https:\\google.com">Log in</a></li>
+                            </ul>
+                        </div>
                     </li>
             </nav>
             <h1>No sea?! No problem</h1>

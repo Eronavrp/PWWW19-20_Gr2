@@ -149,9 +149,10 @@ function ClearAll() {
         You can extend this script by inserting data to database or adding payment processing API to shopping cart..
         */
     </script>
+    <script src="js/nav.js"></script>
 </head>
 
-<body>
+<body onload="navActive('drop');navActive('feedbackNav');">
 
     <div id="blur"></div>
     <div class="wrapper">
@@ -160,16 +161,16 @@ function ClearAll() {
             <p>Kosovo</p>
             <nav>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="About.html">ABOUT</a></li>
-                    <li><a href="Gallery.html">GALLERY</a></li>
-                    <li><a href="Places.html">PLACES</a></li>
-                    <li><a href="Services.html">SERVICES</a></li>
+                    <li><a href="index.html" id="home">HOME</a></li>
+                    <li><a href="About.html" id="about">ABOUT</a></li>
+                    <li><a href="Gallery.html" id="gallery">GALLERY</a></li>
+                    <li><a href="Places.html" id="places">PLACES</a></li>
+                    <li><a href="Services.html" id="services">SERVICES</a></li>
                     <li><a href="#" id="drop">MORE</a>
                         <div id="dropdown">
                             <ul>
-                                <li><a href="Feedback.html">Feedback</a></li>
-                                <li><a href="https:\\google.com">Log in</a></li>
+                                <li><a href="Feedback.html" id="feedbackNav">Feedback</a></li>
+                                <li><a href="login.html">Log in</a></li>
                             </ul>
                         </div>
                     </li>

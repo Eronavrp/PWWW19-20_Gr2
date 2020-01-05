@@ -76,8 +76,17 @@ p {
 }
 
 #text button:hover{
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-  transform: rotateX(35deg);
+
+    -webkit-transform: rotateX(35deg);
+    -moz-transform: rotateX(35deg);
+    -ms-transform: rotateX(35deg);
+    -o-transform: rotateX(35deg);
+    transform: rotateX(35deg);
   background-color: #E2CBA0;
   
   

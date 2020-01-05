@@ -13,9 +13,10 @@
         window.onscroll = myFunction; //calling myFunction each time we scroll
     </script>
     <title>Services</title>
+    <script src="js/nav.js"></script>
 </head>
 
-<body>
+<body onload="navActive('serviceNav')">
 
     <div id="w1" class="wrapper">
         <div id='blur'>
@@ -30,7 +31,7 @@
                     <li><a href="About.html">ABOUT</a></li>
                     <li><a href="Gallery.html">GALLERY</a></li>
                     <li><a href="Places.html">PLACES</a></li>
-                    <li><a href="Services.html">SERVICES</a></li>
+                    <li><a href="Services.html" id="serviceNav">SERVICES</a></li>
                     <li><a href="#" id="drop">MORE</a>
                         <div id="dropdown">
                             <ul>
